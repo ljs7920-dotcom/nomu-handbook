@@ -2388,7 +2388,7 @@ async function saveTo(target, id, data, memo, okMsg) {
   applyOverrides(r.data.overrides);
   const d = $('#dlg'); if (d.open) d.close();
   renderLaws();
-  toast(okMsg || '저장했어요. 모든 사람에게 바로 반영돼요');
+  toast(okMsg || '저장했어요. 다른 사람 화면에는 1분 안에 반영돼요');
 }
 const memoField = '<label class="field"><span>변경 사유 <small>(선택, 변경 기록에 남아요)</small></span><input class="input" name="memo" maxlength="200" placeholder="예: 2027. 3. 1. 개정 확인"></label>';
 function handleAdm(act, id) {
