@@ -11,8 +11,9 @@
    - LAW_USER_AGENT  (선택) 기본값은 일반 브라우저 형식
 
    사용 예: /api/law?law=근로기준법&jo=제60조   /api/law?law=근로기준법&jo=제76조의2
+            /api/law?law=근로기준법&full=1 → 법령 전체 조문 목록 (장·절 제목 포함, '법령 전문 보기' 화면용)
             /api/law?admrul=최저임금   → 고시·훈령 등 행정규칙 최신 발령 목록 (첫 화면 변경 확인용)
-            /api/law?health   → 환경변수 설정 여부만 확인
+            /api/law?health=1 → 환경변수 설정 여부만 확인
    ===================================================================== */
 
 const BASE = 'https://www.law.go.kr/DRF';
@@ -114,6 +115,22 @@ function collectText(unit) {
   return lines.join('\n');
 }
 
+/* 조문 원문 속 <개정 2012.2.1, 2026.2.19>, 삭제 <2017.11.28>, [본조신설 2019.1.15] 표시 중 가장 늦은 날짜
+   → '이 조문'이 마지막으로 개정된 날 (법제처의 조문시행일자 항목은 법령 전체 시행일과 같아서 조문별 판단에 못 씀) */
+export function latestAmendDate(text) {
+  let max = '';
+  const blocks = String(text || '').match(/[<\[][^<>\[\]]*\d{4}\.\s*\d{1,2}\.\s*\d{1,2}[^<>\[\]]*[>\]]/g) || [];
+  blocks.forEach(b => {
+    const re = /(\d{4})\.\s*(\d{1,2})\.\s*(\d{1,2})/g;
+    let m;
+    while ((m = re.exec(b))) {
+      const d = m[1] + m[2].padStart(2, '0') + m[3].padStart(2, '0');
+      if (d > max) max = d;
+    }
+  });
+  return max;
+}
+
 function pickUnits(raw, jo) {
   const list = asArray(raw).filter(u => u && typeof u === 'object' && (u['조문여부'] === undefined || u['조문여부'] === '조문'));
   if (!jo) return list;
@@ -134,7 +151,7 @@ export default async function handler(req, res) {
   res.setHeader('X-Content-Type-Options', 'nosniff');
   const q = req.query || {};
 
-  if (q.health !== undefined) return send(res, 200, { ok: true, configured: !!process.env.LAW_OC });
+  if (q.health !== undefined || /[?&]health(?:[=&]|$)/.test(String(req.url || ''))) return send(res, 200, { ok: true, configured: !!process.env.LAW_OC });
   if (req.method !== 'GET') return send(res, 405, { error: 'GET 요청만 지원해요.' });
   if (!process.env.LAW_OC) return send(res, 500, { error: '서버에 LAW_OC 환경변수가 설정되지 않았어요. Vercel 설정에서 추가한 뒤 다시 배포하세요.' });
 
@@ -172,6 +189,37 @@ export default async function handler(req, res) {
 
   try {
     const info = await resolveLaw(law);
+
+    /* 법령 전체 조문 (법령 전문 보기) */
+    if (q.full !== undefined) {
+      const fj = await callLaw('lawService.do', { target: 'law', ID: info.id });
+      const froot = fj['법령'] || fj;
+      const fbasic = froot['기본정보'] || {};
+      const items = [];
+      asArray(froot['조문'] && froot['조문']['조문단위']).forEach(u => {
+        if (!u || typeof u !== 'object') return;
+        const isArticle = u['조문여부'] === undefined || u['조문여부'] === '조문';
+        if (!isArticle) {
+          const h = collectText(u).replace(/\s+/g, ' ').trim();
+          if (h) items.push({ type: 'heading', text: h });
+          return;
+        }
+        const num = String(u['조문번호'] || '').replace(/^0+/, '');
+        if (!num) return;
+        const sub = parseInt(u['조문가지번호'] || '0', 10) || 0;
+        const text = collectText(u);
+        items.push({ type: 'article', no: '제' + num + '조' + (sub ? '의' + sub : ''), title: String(u['조문제목'] || ''), text, amended: latestAmendDate(text) });
+      });
+      const count = items.filter(i => i.type === 'article').length;
+      if (!count) return send(res, 404, { error: '이 법령의 조문을 찾지 못했어요.' });
+      res.setHeader('Cache-Control', 'public, s-maxage=86400, stale-while-revalidate=604800');
+      return res.status(200).json({
+        law: fbasic['법령명_한글'] || info.name, lawId: info.id, count, items,
+        effectiveDate: String(fbasic['시행일자'] || ''), promulgationDate: String(fbasic['공포일자'] || ''),
+        source: '법제처 국가법령정보 Open API'
+      });
+    }
+
     const params = { target: 'law', ID: info.id };
     if (jo) params.JO = jo;
     const json = await callLaw('lawService.do', params);
@@ -191,6 +239,7 @@ export default async function handler(req, res) {
       text,
       effectiveDate: String(basic['시행일자'] || ''),
       joEffectiveDate: units.length === 1 ? String(units[0]['조문시행일자'] || '').replace(/\D/g, '') : '',
+      joAmendedDate: latestAmendDate(text),
       promulgationDate: String(basic['공포일자'] || ''),
       source: '법제처 국가법령정보 Open API'
     });

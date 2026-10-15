@@ -143,6 +143,72 @@ details[open]>summary.side-h::after{transform:translateY(1px) rotate(-135deg)}
 .gd-ref-label{font-size:12.5px;font-weight:700;color:var(--muted)}
 .gd-ref{padding:5px 12px;border:1px solid var(--blue);border-radius:999px;background:var(--blue-tint);color:var(--blue-ink);font-size:13px;font-weight:700}
 .gd-ref:hover{background:var(--blue);color:var(--on-blue)}
+.gd-how{display:block;margin-bottom:6px}
+.gd-muted{color:var(--muted);font-size:12.5px}
+.gd-how code,.gd-code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;background:var(--gray-tint);border-radius:5px;padding:1px 5px;color:var(--ink)}
+.gd-code-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:4px}
+.gd-code{padding:4px 8px;overflow-wrap:anywhere}
+.gd-copy{padding:3px 10px;border:1px solid var(--line-2);border-radius:6px;background:var(--surface);font-size:12px;font-weight:700;color:var(--ink-2)}
+.gd-copy:hover{border-color:var(--blue);color:var(--blue-ink)}
+.nav-sep{height:1px;margin:8px 10px;background:var(--line)}
+.side-note-top{margin:0 0 10px}
+.empty-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:14px}
+.empty-actions .btn{margin-top:0}
+.lv-head{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--line)}
+.lv-name{font-size:16px;font-weight:800;letter-spacing:-0.02em}
+.lv-meta{margin:2px 0 0;font-size:12.5px;color:var(--muted)}
+.lv-tools{display:flex;align-items:center;gap:14px}
+.lv-search{height:38px;width:230px;font-size:14px}
+.lv-tools .ext{white-space:nowrap}
+.lv-msg{margin:0;padding:28px 20px;color:var(--ink-2);font-size:14px}
+.lv-fallback{margin:0;padding:12px 20px;background:var(--amber-tint);color:var(--amber-ink);font-size:13px;font-weight:600;line-height:1.6}
+.lv-heading{padding:9px 20px;background:var(--surface-2);border-top:1px solid var(--line);font-size:13px;font-weight:800;color:var(--ink-2)}
+.lv-heading:first-child{border-top:0}
+.lv-art{border-top:1px solid var(--line);scroll-margin-top:88px}
+.lv-art:first-child{border-top:0}
+.lv-toggle{width:100%;display:flex;align-items:center;gap:10px;padding:13px 20px;border:0;background:none;text-align:left}
+.lv-toggle:hover{background:var(--surface-2)}
+.lv-no{flex:none;min-width:84px;color:var(--blue-ink);font-weight:800;font-variant-numeric:tabular-nums}
+.lv-t{flex:1;min-width:0;font-size:15px;font-weight:600}
+.lv-toggle .chev{margin:0 0 0 4px;flex:none}
+.lv-art.is-open .chev{transform:rotate(180deg)}
+.lv-body{padding:0 20px 18px 114px}
+.lv-text{max-height:none;margin-top:0;padding:14px 16px;border-radius:10px;background:var(--surface-2);border:1px solid var(--line)}
+.lv-am{margin-top:8px}
+.lv-sum{margin-bottom:12px;padding:12px 14px;border-radius:10px;background:var(--blue-tint)}
+.lv-sum-h{margin:0 0 4px;font-size:12.5px;font-weight:800;color:var(--blue-ink)}
+.lv-sum>p{margin:0 0 8px;font-size:14px;line-height:1.65}
+.lv-sum .pts{margin-bottom:6px}
+.lv-art.flash{animation:flash 1.6s ease-out}
+.admin-bar{display:flex;align-items:center;gap:4px;flex:none;font-size:13px;font-weight:600;color:var(--ink-2)}
+.admin-tag{padding:2px 8px;border-radius:6px;background:var(--blue);color:var(--on-blue);font-size:11.5px;font-weight:700}
+.foot-admin{margin:0 0 8px}
+.foot-admin .text-btn{padding:4px 0;color:var(--blue-ink)}
+.btn-sm{height:32px;padding:0 12px;font-size:13px}
+.adm-btns{display:flex;flex-wrap:wrap;gap:6px}
+.log-tools{margin-top:14px}
+.dlg{width:min(540px,calc(100vw - 32px));max-height:calc(100vh - 48px);padding:0;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--ink);box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.dlg::backdrop{background:rgba(15,20,30,.45)}
+.dlg-form{display:flex;flex-direction:column;max-height:calc(100vh - 50px);padding:22px 22px 18px}
+.dlg-body{overflow:auto;min-height:0}
+.dlg-title{margin:0 0 8px;font-size:18px;font-weight:800;letter-spacing:-0.03em}
+.dlg-desc{margin:0 0 14px;font-size:13.5px;line-height:1.65;color:var(--ink-2)}
+.dlg-desc.small{font-size:12.5px;color:var(--muted);margin-top:8px}
+.dlg-err{margin:6px 0 0;font-size:13px;font-weight:700;color:var(--red-ink)}
+.dlg-err:empty{display:none}
+.dlg-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px;margin-top:14px}
+textarea.input{height:auto;min-height:84px;padding:10px 12px;line-height:1.6;resize:vertical;font-family:inherit}
+textarea.input.tall{min-height:150px}
+.check-row{display:flex;gap:8px;align-items:center;margin:2px 0 12px;font-size:13.5px;color:var(--ink-2)}
+.log-list{margin:0;padding:0;list-style:none}
+.log-row{display:flex;gap:12px;align-items:flex-start;justify-content:space-between;padding:10px 0;border-top:1px solid var(--line);font-size:13.5px;line-height:1.55}
+.log-row:first-child{border-top:0}
+.log-row .btn{flex:none}
+.log-memo{display:block;color:var(--muted);font-size:12.5px}
+.fatal{margin:16px;padding:16px 18px;border-radius:12px;border:1px solid var(--red-ink);background:var(--red-tint);color:var(--red-ink);font-size:14.5px;line-height:1.6}
+.fatal strong{font-size:16px}
+.fatal p{margin:6px 0 0}
+.fatal-msg{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;opacity:.85}
 .switch-sm{gap:7px;font-size:13.5px;font-weight:600;color:var(--ink-2);margin-right:6px}
 .switch-sm .track{width:32px;height:18px}
 .switch-sm .track::after{width:12px;height:12px}
@@ -336,7 +402,7 @@ footer p{margin:0 0 4px}
   .art-toggle{display:block;padding:14px 16px 16px}
   .art-no{flex-direction:row;align-items:baseline;gap:8px;min-height:30px;padding-right:84px}
   .art-main{margin-top:2px}
-  .chev{position:absolute;top:19px;right:52px;margin:0}
+  .art .chev{position:absolute;top:19px;right:52px;margin:0}
   .art-actions{position:absolute;top:10px;right:8px;padding:0}
   .chips{flex-wrap:nowrap;overflow-x:auto;margin:14px -16px 0;padding:0 16px 4px;scrollbar-width:none}
   .chips::-webkit-scrollbar{display:none}
@@ -349,6 +415,13 @@ footer p{margin:0 0 4px}
   .chg{grid-template-columns:minmax(0,1fr);gap:6px;padding:14px 16px}
   .two{grid-template-columns:minmax(0,1fr)}
   .gd-rows{grid-template-columns:minmax(0,1fr);gap:0}
+  .lv-head{padding:14px 16px}
+  .lv-tools{width:100%;flex-wrap:wrap}
+  .lv-search{width:100%}
+  .lv-toggle{padding:12px 16px}
+  .lv-no{min-width:0}
+  .lv-body{padding:0 16px 16px}
+  .lv-heading{padding:9px 16px}
   .gd-rows dd{margin-bottom:8px}
   .g-detail{padding:14px 16px 16px}
   .panel{padding:18px}
@@ -380,6 +453,7 @@ footer p{margin:0 0 4px}
       <button class="tab" role="tab" id="tab-changes" aria-controls="view-changes" aria-selected="false" data-tab="changes">개정·시행 일정</button>
     </nav>
     <span class="stamp" id="stamp"></span>
+    <div class="admin-bar" id="adminBar" hidden><span class="admin-tag">관리자</span><span id="adminName"></span><button type="button" class="text-btn" id="adminLogBtn">변경 기록</button><button type="button" class="text-btn" id="adminOut">로그아웃</button></div>
   </div>
 </header>
 
@@ -404,11 +478,12 @@ footer p{margin:0 0 4px}
     <div class="layout">
       <aside class="side" aria-label="필터">
         <div class="side-sec">
-          <span class="side-h">분야</span>
+          <span class="side-h">분야별 핵심 조문</span>
           <ul class="nav-list" id="catList"></ul>
         </div>
         <details class="side-sec" id="lawDetails">
-          <summary class="side-h">법령</summary>
+          <summary class="side-h">법령 전문 보기</summary>
+          <p class="side-note side-note-top">법을 고르면 법제처 원문의 전체 조문을 보여줘요.</p>
           <ul class="nav-list" id="lawList"></ul>
         </details>
       </aside>
@@ -529,12 +604,15 @@ footer p{margin:0 0 4px}
 <footer>
   <div class="wrap">
     <p id="footStamp"></p>
+    <p class="foot-admin"><button type="button" class="text-btn" id="adminLink" hidden>관리자 로그인</button></p>
     <p>법령 요약과 계산 결과는 이해를 돕기 위한 참고 자료로, 법적 효력이 없어요. 정확한 내용은 <a href="https://www.law.go.kr" target="_blank" rel="noopener">국가법령정보센터</a>의 원문을 확인하고, 개별 사안은 노무사 확인을 받으세요.</p>
   </div>
 </footer>
 
+<dialog id="dlg" class="dlg" aria-labelledby="dlgTitle"></dialog>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+<script>window.__nomuErr=null;window.addEventListener('error',function(e){if(!window.NOMU_DATA&&!window.__nomuErr){window.__nomuErr={msg:e.message,line:e.lineno};}});</script>
 <script>
 /* =====================================================================
    노무핸드북 데이터
@@ -555,7 +633,8 @@ footer p{margin:0 0 4px}
 window.NOMU_DATA = {
 CONFIG: {
   DATA_DATE: '2026-10-14',        // 데이터 기준일
-  LAW_API_ENDPOINT: '/api/law'    // Vercel 중계 함수 주소. 파일을 PC에서 바로 열면(file://) 자동으로 꺼지고 원문 링크만 보여요
+  LAW_API_ENDPOINT: '/api/law',   // Vercel 중계 함수 주소. 파일을 PC에서 바로 열면(file://) 자동으로 꺼지고 원문 링크만 보여요
+  ADMIN_ENDPOINT: '/api/admin'    // 웹 수정(관리자) 기능 서버 주소
 },
 
 /* 이미 요약에 반영한 '예정된 개정' 시행일 — 이 날짜에 법령이 바뀌어도 빨간 표시를 띄우지 않아요 */
@@ -636,35 +715,49 @@ SYN: {
    watch : 법제처에서 개정 여부를 확인할 대상
            { law:'법령 전체 이름', jo:'제00조', name:'짧은 이름', checked:'확인한 날' }
            { admrul:'고시 검색어', match:'고시 이름에 들어갈 말', checked:'반영한 고시 발령일' }
-   빨간 표시를 지우려면: 값을 고친 뒤 steps에 줄을 추가하거나 checked 날짜를 오늘로 바꾸세요.
+   빨간 표시를 지우려면: 화면에서 빨간 칸을 눌러 '고치는 방법'을 따르세요 (자세한 설명은 운영_가이드.md)
    ===================================================================== */
 GLANCE: [
   { group: '{Y}년 임금·4대보험', items: [
     { id: 'minwage', kind: 'annual', due: '08-05', label: '최저임금', unit: '원/시간', nextUnit: '원', ref: 'mwa-5',
-      steps: [ { from: '2026-01-01', val: '10,320', sub: '월 2,156,880원 (209시간)' },
-               { from: '2027-01-01', val: '10,700', sub: '월 2,236,300원 (209시간)' } ],
-      watch: [ { admrul: '최저임금', match: '적용 최저임금', name: '최저임금 고시', checked: '2026-08-05' } ] },
+      steps: [
+        { from: '2026-01-01', val: '10,320', sub: '월 2,156,880원 (209시간)' },
+        { from: '2027-01-01', val: '10,700', sub: '월 2,236,300원 (209시간)' },
+      ],
+      watch: [ { admrul: '최저임금', match: '적용 최저임금 고시', name: '최저임금 고시', checked: '2026-08-05' } ] },
     { id: 'pension', kind: 'schedule', label: '국민연금 보험료율', unit: '%', nextUnit: '%', ref: 'npa-88',
-      steps: [ { from: '2026-01-01', val: '9.5', sub: '회사·근로자 각 4.75%' }, { from: '2027-01-01', val: '10', sub: '회사·근로자 각 5%' },
-               { from: '2028-01-01', val: '10.5', sub: '회사·근로자 각 5.25%' }, { from: '2029-01-01', val: '11', sub: '회사·근로자 각 5.5%' },
-               { from: '2030-01-01', val: '11.5', sub: '회사·근로자 각 5.75%' }, { from: '2031-01-01', val: '12', sub: '회사·근로자 각 6%' },
-               { from: '2032-01-01', val: '12.5', sub: '회사·근로자 각 6.25%' }, { from: '2033-01-01', val: '13', sub: '회사·근로자 각 6.5%' } ],
+      steps: [
+        { from: '2026-01-01', val: '9.5', sub: '회사·근로자 각 4.75%' },
+        { from: '2027-01-01', val: '10', sub: '회사·근로자 각 5%' },
+        { from: '2028-01-01', val: '10.5', sub: '회사·근로자 각 5.25%' },
+        { from: '2029-01-01', val: '11', sub: '회사·근로자 각 5.5%' },
+        { from: '2030-01-01', val: '11.5', sub: '회사·근로자 각 5.75%' },
+        { from: '2031-01-01', val: '12', sub: '회사·근로자 각 6%' },
+        { from: '2032-01-01', val: '12.5', sub: '회사·근로자 각 6.25%' },
+        { from: '2033-01-01', val: '13', sub: '회사·근로자 각 6.5%' },
+      ],
       watch: [ { law: '국민연금법', jo: '제88조', name: '국민연금법' } ] },
     { id: 'health', kind: 'annual', due: '09-30', label: '건강보험료율', unit: '%', nextUnit: '%', ref: 'nhi-73',
-      steps: [ { from: '2026-01-01', val: '7.19', sub: '각 3.595% · 장기요양은 건보료의 13.14%' },
-               { from: '2027-01-01', val: '7.19', brief: '회사·근로자 각 3.595%', sub: '각 3.595% (동결) · 장기요양 요율은 별도 결정' } ],
+      steps: [
+        { from: '2026-01-01', val: '7.19', sub: '각 3.595% · 장기요양은 건보료의 13.14%' },
+        { from: '2027-01-01', val: '7.19', brief: '회사·근로자 각 3.595%', sub: '각 3.595% (동결) · 장기요양 요율은 별도 결정' },
+      ],
       watch: [ { law: '국민건강보험법 시행령', jo: '제44조', name: '건강보험법 시행령' } ] },
     { id: 'eiprem', brief: '1,000명 이상은 0.85%', kind: 'law', label: '고용안정·직능 보험료(회사)', val: '0.65', unit: '%', sub: '150~999명 기준 · 1,000명 이상 0.85%', ref: 'ipa-14',
       watch: [ { law: '고용보험 및 산업재해보상보험의 보험료징수 등에 관한 법률 시행령', jo: '제12조', name: '보험료징수법 시행령' } ] }
   ] },
   { group: '고용·공시 의무', items: [
     { id: 'disrate', kind: 'schedule', note: '상시 100명 이상이 의무고용률에 못 미치면 고용부담금을 내요.', label: '장애인 의무고용률', unit: '%', nextUnit: '%', ref: 'dea-28',
-      steps: [ { from: '2026-01-01', val: '3.1', sub: '50명 이상 기업 의무' },
-               { from: '2027-01-01', val: '3.3', sub: '50명 이상 기업 의무' },
-               { from: '2029-01-01', val: '3.5', sub: '50명 이상 기업 의무' } ],
+      steps: [
+        { from: '2026-01-01', val: '3.1', sub: '50명 이상 기업 의무' },
+        { from: '2027-01-01', val: '3.3', sub: '50명 이상 기업 의무' },
+        { from: '2029-01-01', val: '3.5', sub: '50명 이상 기업 의무' },
+      ],
       watch: [ { law: '장애인고용촉진 및 직업재활법 시행령', jo: '제25조', name: '장애인고용법 시행령' } ] },
     { id: 'dislevy', brief: '미달 1명당 월 기준', kind: 'annual', label: '장애인 고용부담 기초액', unit: '만원/월', nextUnit: '만원', ref: 'dea-33',
-      steps: [ { from: '2026-01-01', val: '129.5', sub: '미달 1명당 · 고용률 낮을수록 가산' } ],
+      steps: [
+        { from: '2026-01-01', val: '129.5', sub: '미달 1명당 · 고용률 낮을수록 가산' },
+      ],
       watch: [ { admrul: '부담기초액', match: '부담기초액', name: '부담기초액 고시', checked: '2026-01-01' } ] },
     { id: 'aged', brief: '업종별 2~6%', kind: 'law', label: '고령자 기준고용률', val: '3', unit: '%', sub: '제조업 2% · 운수·부동산 6% · 노력의무', ref: 'age-12',
       watch: [ { law: '고용상 연령차별금지 및 고령자고용촉진에 관한 법률 시행령', jo: '제3조', name: '고령자고용법 시행령' } ] },
@@ -1351,7 +1444,7 @@ ARTICLES: [
 { id:'ipa-14', law:'ipa', no:'제14조', title:'보험료율의 결정 등', cat:'insure',
   sum:'고용보험료율과 산재보험료율을 정하는 근거 조문입니다. 실업급여 보험료는 1.8%(사용자·근로자 각 0.9%)이고, 고용안정·직업능력개발사업 보험료는 사업주만 규모별로 부담합니다.',
   pts:['고용안정·직업능력개발 요율(2026년): 150명 미만 0.25%, 150명 이상 우선지원대상기업 0.45%, 150명 이상 1,000명 미만 0.65%, 1,000명 이상 0.85%.',
-       '규모가 커져 다음 단계 요율에 해당하게 되면 그다음 해부터 3년간은 기존 요율을 적용합니다(시행령).',
+       '규모가 커져 다음 단계 요율에 해당하게 되면 그다음 해부터 3년간은 기존 요율을 적용합니다(시행령 제12조). 다만 상호출자제한기업집단 소속 회사는 이 유예가 적용되지 않습니다.',
        '산재보험료율은 업종별로 고시되고 전액 사업주가 부담합니다. 임금채권보장기금 부담금은 2026년 보수총액의 0.09%로 올랐습니다.'],
   tags:'고용보험료율 산재보험료율 실업급여 1.8% 고용안정 직업능력개발 0.65% 0.85% 임금채권 4대보험 보험료율 요율', rel:['npa-88','nhi-73','eia-40'] },
 
@@ -1440,6 +1533,17 @@ CHANGES: [
 'use strict';
 
 const D = window.NOMU_DATA;
+if (!D || !D.ARTICLES || !D.LAWS || !D.GLANCE) {
+  const er = window.__nomuErr || {};
+  const box = document.createElement('div');
+  box.className = 'fatal'; box.setAttribute('role', 'alert');
+  box.innerHTML = '<strong>데이터를 읽지 못했어요</strong><p>index.html의 데이터 부분에 문법 오류가 있는 것 같아요' +
+    (er.line ? ' (<b>' + er.line + '번째 줄</b> 근처)' : '') +
+    '. 최근에 고친 줄에서 쉼표(,), 작은따옴표(\'), 괄호가 빠지지 않았는지 확인하거나, GitHub의 History에서 직전 버전으로 되돌리세요.</p>' +
+    (er.msg ? '<p class="fatal-msg">' + String(er.msg).replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c])) + '</p>' : '');
+  document.body.insertBefore(box, document.body.firstChild);
+  return;
+}
 const { CONFIG, LAWS, CATS, ARTICLES, GLANCE, CHANGES, SYN, CHIPS } = D;
 const LAW_ORDER = Object.keys(LAWS);
 const byId = new Map(ARTICLES.map(a => [a.id, a]));
@@ -1447,6 +1551,9 @@ const byId = new Map(ARTICLES.map(a => [a.id, a]));
 const API_ON = !!CONFIG.LAW_API_ENDPOINT && /^https?:$/.test(location.protocol);
 /* 기준표: 묶음(group) 구조와 예전 평면 배열 모두 지원 */
 const GLANCE_GROUPS = (GLANCE.length && GLANCE[0].items) ? GLANCE : [{ group: '', items: GLANCE }];
+/* 웹 수정(관리자) */
+const ADMIN_EP = CONFIG.ADMIN_ENDPOINT || '/api/admin';
+const ADMIN = { on: false, name: '', token: '', exp: 0, storage: null };
 
 /* ── 공통 도구 ── */
 const $ = (s, el) => (el || document).querySelector(s);
@@ -1530,6 +1637,40 @@ ARTICLES.forEach(a => {
   };
 });
 
+/* ── 웹에서 고친 내용 반영: 원래 데이터를 보관해 두고 그 위에 덮어씀 ── */
+const BASE_CELLS = new Map();
+GLANCE_GROUPS.forEach(gr => gr.items.forEach(c => BASE_CELLS.set(c.id, JSON.stringify(c))));
+const BASE_ARTS = new Map(ARTICLES.map(a => [a.id, { sum: a.sum, pts: (a.pts || []).slice() }]));
+let OVERRIDES = { cells: {}, articles: {} };
+function applyOverrides(ov) {
+  OVERRIDES = { cells: (ov && ov.cells) || {}, articles: (ov && ov.articles) || {} };
+  GLANCE_GROUPS.forEach(gr => gr.items.forEach((c, i) => {
+    if (!BASE_CELLS.has(c.id)) return;
+    const g = JSON.parse(BASE_CELLS.get(c.id));
+    const o = OVERRIDES.cells[c.id];
+    if (o) {
+      ['val', 'brief', 'sub', 'note'].forEach(k => { if (typeof o[k] === 'string' && o[k]) g[k] = o[k]; });
+      if (Array.isArray(o.steps) && o.steps.length && g.steps) g.steps = o.steps;
+      if (o.checked) (g.watch || []).forEach(w => { const dd = o.checked[watchKey(w)]; if (dd) w.checked = dd; });
+      g._edited = { by: o.by || '', at: o.at || '' };
+    }
+    gr.items[i] = g;
+  }));
+  ARTICLES.forEach(a => {
+    const b = BASE_ARTS.get(a.id), o = OVERRIDES.articles[a.id];
+    a.sum = o && o.sum ? o.sum : b.sum;
+    a.pts = o && Array.isArray(o.pts) ? o.pts.slice() : b.pts.slice();
+    a._edited = o ? { by: o.by || '', at: o.at || '' } : null;
+    a._h.sum = norm(a.sum);
+    a._h.body = norm((a.pts || []).join(' ') + ' ' + (a.pen || '') + ' ' + (a.u5n || ''));
+  });
+}
+function fmtIso(iso) {
+  const d = new Date(iso);
+  if (isNaN(d)) return '';
+  return fmt(d) + ' ' + String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0');
+}
+
 function parseQuery(q) {
   let s = norm(q);
   const nums = [];
@@ -1570,7 +1711,7 @@ function highlighter(pq) {
 }
 
 /* ── 상태 ── */
-const state = { glanceOpen: null, q: '', cat: 'all', law: 'all', fav: false, u5: false, sort: 'rel', open: new Set(), tab: 'laws' };
+const state = { glanceOpen: null, q: '', cat: 'all', law: 'all', fav: false, u5: false, sort: 'rel', open: new Set(), tab: 'laws', lvQuery: '', lvOpen: new Set(), lvJump: null };
 let favs = new Set(store.get('nomu.favs', []).filter(id => byId.has(id)));
 
 function updStatus(a) {
@@ -1592,27 +1733,21 @@ function compute() {
 
 /* ── 렌더링: 사이드바 ── */
 function renderSide(ctx) {
-  const inLaw = a => state.law === 'all' || a.law === state.law;
-  const inCat = a => state.cat === 'all' || a.cat === state.cat;
+  const lawMode = state.law !== 'all';
   const matched = ARTICLES.filter(a => ctx.matches.has(a.id));
-  const catCount = k => matched.filter(a => inLaw(a) && (k === 'all' || a.cat === k)).length;
-  const lawCount = k => matched.filter(a => inCat(a) && (k === 'all' || a.law === k)).length;
-
+  const catCount = k => matched.filter(a => k === 'all' || a.cat === k).length;
   let h = '';
   [['all', '전체 분야']].concat(Object.entries(CATS)).forEach(([k, label]) => {
-    const on = !state.fav && state.cat === k;
+    const on = !lawMode && !state.fav && state.cat === k;
     h += '<li><button type="button" class="nav-item' + (on ? ' is-on' : '') + '" data-cat="' + k + '" aria-pressed="' + on + '"><span>' + esc(label) + '</span><span class="cnt num">' + catCount(k) + '</span></button></li>';
   });
-  h += '<li><button type="button" class="nav-item' + (state.fav ? ' is-on' : '') + '" data-fav="1" aria-pressed="' + state.fav + '"><span>★ 즐겨찾기</span><span class="cnt num">' + favs.size + '</span></button></li>';
+  const favOn = !lawMode && state.fav;
+  h += '<li class="nav-sep" aria-hidden="true"></li><li><button type="button" class="nav-item' + (favOn ? ' is-on' : '') + '" data-fav="1" aria-pressed="' + favOn + '"><span>★ 즐겨찾기</span><span class="cnt num">' + favs.size + '</span></button></li>';
   $('#catList').innerHTML = h;
-
-  let l = '';
-  [['all', { short: '전체 법령', full: '전체 법령' }]].concat(Object.entries(LAWS)).forEach(([k, law]) => {
+  $('#lawList').innerHTML = LAW_ORDER.map(k => {
     const on = state.law === k;
-    const n = lawCount(k);
-    l += '<li><button type="button" class="nav-item' + (on ? ' is-on' : '') + '" data-law="' + k + '" aria-pressed="' + on + '" title="' + esc(law.full) + '"' + (n === 0 && !on && k !== 'all' ? ' disabled' : '') + '><span>' + esc(law.short) + '</span><span class="cnt num">' + n + '</span></button></li>';
-  });
-  $('#lawList').innerHTML = l;
+    return '<li><button type="button" class="nav-item' + (on ? ' is-on' : '') + '" data-law="' + k + '" aria-pressed="' + on + '" title="' + esc(LAWS[k].full) + ' 전체 조문 보기"><span>' + esc(LAWS[k].short) + '</span></button></li>';
+  }).join('');
 }
 
 /* ── 렌더링: 한눈에 보는 기준 ── */
@@ -1635,9 +1770,9 @@ function findCell(id) { for (const gr of GLANCE_GROUPS) for (const c of gr.items
    main: 첫 화면 한 줄 (다음 변경 예고 > brief > 설명) / detail: 칸을 눌렀을 때 보이는 설명 */
 function cellView(g, date) {
   const flags = [];
-  if (!g.steps) return { val: g.val, main: g.brief || g.sub || '', detail: g.sub || '', next: null, flags };
+  if (!g.steps) return { val: g.val, main: g.brief || g.sub || '', detail: g.sub || '', next: null, flags, missingYear: null };
   const { cur, next, steps } = stepOn(g, date);
-  let nextText = '';
+  let nextText = '', missingYear = null;
   if (next) {
     const jan1 = next.d.getMonth() === 0 && next.d.getDate() === 1;
     const when = jan1 ? next.d.getFullYear() + '년' : fmt(next.d);
@@ -1646,18 +1781,18 @@ function cellView(g, date) {
   if (g.kind === 'annual') {
     const Y = date.getFullYear();
     const has = y => steps.some(x => x.d.getFullYear() === y);
-    if (!has(Y)) flags.push(Y + '년 값이 아직 입력되지 않았어요');
+    if (!has(Y)) { flags.push(Y + '년 값이 아직 입력되지 않았어요'); missingYear = Y; }
     else if (g.due) {
       const due = new Date(Y, +g.due.slice(0, 2) - 1, +g.due.slice(3, 5));
-      if (date >= due && !has(Y + 1)) flags.push((Y + 1) + '년 값 발표 시기가 지났어요');
+      if (date >= due && !has(Y + 1)) { flags.push((Y + 1) + '년 값 발표 시기가 지났어요'); missingYear = Y + 1; }
     }
   }
-  return { val: cur.val, main: nextText || cur.brief || g.brief || cur.sub || '', detail: cur.sub || '', next, flags };
+  return { val: cur.val, main: nextText || cur.brief || g.brief || cur.sub || '', detail: cur.sub || '', next, flags, missingYear };
 }
 
 /* 법제처 확인 결과 반영 */
 function watchFlags(g) {
-  const flags = []; let unknown = 0; const unknownNames = [];
+  const flags = [], fixes = []; let unknown = 0; const unknownNames = [];
   (g.watch || []).forEach(w => {
     const r = watchState.get(watchKey(w));
     if (!r) return;
@@ -1667,16 +1802,20 @@ function watchFlags(g) {
       const items = (r.data.items || []).filter(it => String(it.name || '').indexOf(w.match || w.admrul) !== -1)
         .map(it => Object.assign({}, it, { d: ymdToDate(it.issued || it.effective) })).filter(it => it.d).sort((a, b) => b.d - a.d);
       if (!items.length) { unknown++; unknownNames.push(w.name || w.admrul); return; }
-      if (items[0].d > checked) flags.push('새 ' + (w.name || '고시') + ' 발령(' + fmt(items[0].d) + ')');
+      if (items[0].d > checked) { flags.push('새 ' + (w.name || '고시') + ' 발령(' + fmt(items[0].d) + ')'); fixes.push({ type: 'admrul', w, date: items[0].d }); }
       return;
     }
-    const precise = !!r.data.joEffectiveDate;
-    const eff = ymdToDate(r.data.joEffectiveDate || r.data.effectiveDate);
+    if (r.data.text) {                       // 조문 원문 속 개정 표시로 '이 조문'만 판단
+      const am = ymdToDate(r.data.joAmendedDate);
+      if (am && am > checked) { flags.push((w.name || w.law) + ' ' + w.jo + ' 개정(' + fmt(am) + ')'); fixes.push({ type: 'law', w }); }
+      return;
+    }
+    const eff = ymdToDate(r.data.effectiveDate);  // 원문이 없을 때만 법령 전체 시행일로 보조 판단
     if (!eff || eff <= checked) return;
     if ((REVIEWED[w.law] || []).indexOf(toISO(eff)) !== -1) return;
-    flags.push((w.name || w.law) + ' ' + w.jo + (precise ? ' 개정' : ' 포함 법령 개정') + '(시행 ' + fmt(eff) + ')');
+    flags.push((w.name || w.law) + ' ' + w.jo + ' 포함 법령 개정(시행 ' + fmt(eff) + ')'); fixes.push({ type: 'law', w });
   });
-  return { flags, unknown, unknownNames };
+  return { flags, fixes, unknown, unknownNames };
 }
 
 const KIND_TEXT = {
@@ -1699,6 +1838,27 @@ function glanceDetail(g, now) {
   if (desc) rows.push(['설명', esc(desc)]);
   if (v.next) rows.push(['다음 변경', esc(fmt(v.next.d) + '부터 ' + v.next.val + (g.nextUnit || '') + (v.next.sub ? ' (' + v.next.sub + ')' : ''))]);
   if (flags.length) rows.push(['확인 필요', esc(flags.join(' / ')), 'is-red']);
+  if (ADMIN.on) {
+    const btn = (act, label, primary) => '<button type="button" class="btn btn-sm' + (primary ? ' btn-primary' : '') + '" data-adm="' + act + '" data-cell="' + esc(g.id) + '">' + label + '</button>';
+    rows.push(['관리', '<span class="adm-btns">' +
+      (wf.flags.length ? btn('ack', '확인 완료 (값 그대로)', true) : '') +
+      btn('edit', '값·설명 수정') +
+      (g.steps ? btn('add', '새 값 추가', !!v.missingYear) : '') +
+      (a ? btn('art', '근거 조문 요약 수정') : '') +
+      (OVERRIDES.cells[g.id] ? btn('reset', '웹 수정 지우기') : '') + '</span>']);
+  } else if (flags.length && ADMIN.storage) {
+    rows.push(['고치는 방법', '<span class="gd-how">관리자로 로그인하면 이 화면에서 바로 고칠 수 있어요. 화면 맨 아래 <b>관리자 로그인</b>을 누르세요.</span>']);
+  } else if (flags.length) {
+    const code = c => '<span class="gd-code-row"><code class="gd-code">' + esc(c) + '</code><button type="button" class="gd-copy" data-copy="' + esc(c) + '">복사</button></span>';
+    const steps = [];
+    if (v.missingYear) steps.push('발표된 값을 확인한 뒤 <code>steps</code> 목록의 <code>],</code> 바로 윗줄에 아래 한 줄을 붙여넣고 값을 채워요.' + code("{ from: '" + v.missingYear + "-01-01', val: '새 값', sub: '설명' },"));
+    wf.fixes.forEach(f => {
+      if (f.type === 'admrul') steps.push((v.missingYear ? '' : '새 고시의 값을 <code>steps</code>에 추가한 뒤, ') + '<code>watch</code>에서 <code>' + esc(f.w.name || f.w.admrul) + '</code> 항목의 <code>checked</code>를 고시 발령일로 바꿔요.' + code("checked: '" + toISO(f.date) + "'"));
+      else steps.push('근거 조문의 원문을 확인해 값이 바뀌었으면 <code>val</code>·<code>sub</code>를 고치고, <code>watch</code>에서 <code>jo: \'' + esc(f.w.jo) + '\'</code>가 있는 항목의 <code>}</code> 앞에 아래 내용을 넣어요(이미 있으면 날짜만 바꿔요).' + code(", checked: '" + toISO(today()) + "'"));
+    });
+    rows.push(['고치는 방법', '<span class="gd-how">GitHub에서 <code>index.html</code>을 열고 <code>id: \'' + esc(g.id) + '\'</code>를 찾아요.</span>' + steps.map((t, i) => '<span class="gd-how">' + (i + 1) + '. ' + t + '</span>').join('') + '<span class="gd-how gd-muted">자세한 방법은 운영_가이드.md를 참고하세요.</span>']);
+  }
+  if (g._edited && g._edited.at) rows.push(['웹 수정', esc(fmtIso(g._edited.at) + ' ' + g._edited.by)]);
   rows.push(['갱신 방식', esc(KIND_TEXT[g.kind] || '')]);
   rows.push(['자동 확인', esc(check)]);
   return '<div class="g-detail" id="gd-' + esc(g.id) + '" role="region" aria-label="' + esc(g.label) + ' 상세">' +
@@ -1784,6 +1944,7 @@ function articleBodyHtml(a, hl) {
   if (a.u5n) h += '<p class="meta-row"><span class="tag">5인 미만</span><span>' + esc(a.u5n) + '</span></p>';
   if (a.pen) h += '<p class="meta-row"><span class="tag tag-pen">벌칙</span><span>' + esc(a.pen) + '</span></p>';
   if (a.upd) h += '<p class="meta-row"><span class="tag tag-upd">개정</span><span>' + fmtUpd(a.upd) + ' ' + esc(a.upd.t) + '</span></p>';
+  if (a._edited && a._edited.at) h += '<p class="meta-row"><span class="tag">웹 수정</span><span>' + esc(fmtIso(a._edited.at) + ' ' + a._edited.by) + '</span></p>';
   const rel = (a.rel || []).map(id => byId.get(id)).filter(Boolean);
   if (rel.length) {
     h += '<div class="rel"><span class="rel-label">관련 조문</span>' + rel.map(r =>
@@ -1791,6 +1952,7 @@ function articleBodyHtml(a, hl) {
   }
   h += '<div class="art-foot"><a class="ext" href="' + lawUrl(a) + '" target="_blank" rel="noopener">국가법령정보센터에서 원문 보기 ' + ICON.ext + '</a>' +
     '<button type="button" class="text-btn" data-act="copy">요약 복사</button>' +
+    (ADMIN.on ? '<button type="button" class="text-btn adm-art" data-adm-art="' + a.id + '">요약 수정</button>' : '') +
     (API_ON ? '<button type="button" class="text-btn api-btn" data-act="orig" aria-expanded="false">법령 원문 보기</button>' : '') + '</div>' +
     '<div class="orig" hidden></div>';
   return h;
@@ -1823,6 +1985,11 @@ function articleHtml(a, hl) {
 let lastRows = [];
 let lastHl = t => esc(t);
 function renderList(ctx) {
+  const lawMode = state.law !== 'all';
+  $('#sort').hidden = lawMode;
+  $('.switch-sm').hidden = lawMode;
+  if (lawMode) { $('#u5Notice').hidden = true; renderLawView(state.law); return; }
+  $('#listH').innerHTML = '수록 조문 <span class="num" id="listCount">0</span>건';
   const lawIdx = a => LAW_ORDER.indexOf(a.law);
   let rows = ARTICLES
     .filter(a => ctx.matches.has(a.id))
@@ -1850,9 +2017,15 @@ function renderList(ctx) {
   if (!rows.length) {
     let msg;
     if (state.fav && !favs.size) msg = '<strong>아직 즐겨찾기한 조문이 없어요</strong>조문 오른쪽의 별 아이콘을 누르면 여기에 모아 볼 수 있어요.';
-    else if (ctx.hasQ) msg = '<strong>‘' + esc(state.q.trim()) + '’에 맞는 조문이 없어요</strong>다른 표현(예: 월차 → 연차)으로 찾아보거나 분야·법령 필터를 해제해 보세요.';
-    else msg = '<strong>조건에 맞는 조문이 없어요</strong>분야·법령 필터를 해제해 보세요.';
-    $('#list').innerHTML = '<div class="empty">' + msg + '<br><button type="button" class="btn" data-reset="1">필터 초기화</button></div>';
+    let extra = '';
+    if (state.fav && !favs.size) { /* 위의 즐겨찾기 안내 그대로 */ }
+    else if (ctx.hasQ) {
+      const lk = detectLaw(state.q);
+      const jo = ctx.pq.nums.length ? numToNo(ctx.pq.nums[0]) : '';
+      msg = '<strong>‘' + esc(state.q.trim()) + '’에 맞는 핵심 조문이 없어요</strong>다른 표현(예: 월차 → 연차)으로 찾아보세요. 핵심 조문에 없는 조문은 왼쪽 ‘법령 전문 보기’에서 법 전체를 볼 수 있어요.';
+      if (lk) extra = '<button type="button" class="btn btn-primary" data-lawgo="' + lk + '" data-jo="' + esc(jo) + '">「' + esc(LAWS[lk].short) + '」 ' + (jo ? esc(jo) + ' 원문 보기' : '전체 조문 보기') + '</button>';
+    } else msg = '<strong>이 분야에 맞는 조문이 없어요</strong>다른 분야를 골라 보세요.';
+    $('#list').innerHTML = '<div class="empty">' + msg + '<div class="empty-actions">' + extra + '<button type="button" class="btn" data-reset="1">검색·필터 초기화</button></div></div>';
   } else {
     $('#list').innerHTML = rows.map(r => articleHtml(r.a, lastHl)).join('');
   }
@@ -1876,6 +2049,145 @@ function renderLaws() {
   $('#qClear').hidden = !state.q;
 }
 
+/* ── 법령 전문 보기 : 법제처에서 법 전체 조문을 불러와 보여줌 ── */
+const lawFull = new Map();   // 법령키 → { status: 'loading' | 'ok' | 'error', data, error }
+function numToNo(n) { const a = Math.floor(n), b = Math.round((n - a) * 100); return '제' + a + '조' + (b ? '의' + b : ''); }
+function detectLaw(q) {
+  const n = norm(q).replace(/\s/g, '');
+  let best = null;
+  LAW_ORDER.forEach(k => {
+    const names = [LAWS[k].full, LAWS[k].short].map(x => norm(x).replace(/\s/g, ''));
+    if (names.some(x => n.indexOf(x) !== -1) && (!best || LAWS[k].full.length > LAWS[best].full.length)) best = k;
+  });
+  return best;
+}
+function wholeLawUrl(k) { return encodeURI('https://www.law.go.kr/법령/' + LAWS[k].full.replace(/\s+/g, '')); }
+async function loadFullLaw(k) {
+  const cur = lawFull.get(k);
+  if (cur && (cur.status === 'ok' || cur.status === 'loading')) return;
+  lawFull.set(k, { status: 'loading' });
+  const ctrl = new AbortController(); const timer = setTimeout(() => ctrl.abort(), 20000);
+  try {
+    const res = await fetch(CONFIG.LAW_API_ENDPOINT + '?law=' + encodeURIComponent(LAWS[k].full) + '&full=1', { signal: ctrl.signal, headers: { Accept: 'application/json' } });
+    let data = null; try { data = await res.json(); } catch (e) { data = null; }
+    if (!res.ok || !data || data.error || !Array.isArray(data.items)) throw new Error((data && data.error) || ('서버 응답 ' + res.status));
+    lawFull.set(k, { status: 'ok', data });
+  } catch (e) {
+    lawFull.set(k, { status: 'error', error: e.name === 'AbortError' ? '응답 시간이 초과됐어요.' : e.message });
+  } finally { clearTimeout(timer); }
+  if (state.law === k && state.tab === 'laws') renderLaws();
+}
+function openLaw(k, jo) {
+  if (!LAWS[k]) return;
+  setTab('laws', true);
+  state.law = k; state.cat = 'all'; state.fav = false;
+  state.lvQuery = ''; state.lvOpen.clear(); state.lvJump = jo || null;
+  $('#lawDetails').open = true;   // 사이드바에서 지금 보는 법이 보이도록
+  history.replaceState(null, '', location.pathname + location.search + '#law=' + k);
+  if (API_ON) loadFullLaw(k);
+  renderLaws();
+  const top = $('#listSec').getBoundingClientRect().top;
+  if (top < 0 || jo) $('#listSec').scrollIntoView({ block: 'start' });
+}
+function exitLaw() {
+  if (state.law === 'all') return;
+  state.law = 'all'; state.lvQuery = ''; state.lvOpen.clear(); state.lvJump = null;
+  if (location.hash.indexOf('#law=') === 0) history.replaceState(null, '', location.pathname + location.search);
+}
+function lvMatches(items) {
+  const words = norm(state.lvQuery).split(' ').filter(Boolean);
+  if (!words.length) return items;
+  return items.filter(it => it.type === 'article' && words.every(w => norm(it.no + ' ' + it.title + ' ' + it.text).indexOf(w) !== -1));
+}
+function lvHl() { const w = norm(state.lvQuery).split(' ').filter(Boolean); return w.length ? highlighter({ nums: [], words: w.map(x => [x]) }) : (t => esc(t)); }
+function lvBodyHtml(it, hl) {
+  const a = ARTICLES.find(x => x.law === state.law && x.no === it.no);
+  const am = ymdToDate(it.amended);
+  return (a ? '<div class="lv-sum"><p class="lv-sum-h">핵심 요약</p><p>' + esc(a.sum) + '</p>' +
+      (a.pts && a.pts.length ? '<ul class="pts">' + a.pts.map(x => '<li>' + esc(x) + '</li>').join('') + '</ul>' : '') +
+      '<button type="button" class="text-btn" data-go="' + a.id + '">요약 카드에서 보기</button></div>' : '') +
+    '<div class="orig-text lv-text">' + hl(it.text || '(본문 없음)') + '</div>' +
+    (am ? '<p class="orig-meta lv-am">이 조문 최종 개정 ' + fmt(am) + '</p>' : '');
+}
+function renderLawBody() {
+  const k = state.law, box = $('#lvBody');
+  if (!box) return;
+  const st = lawFull.get(k);
+  if (!st || st.status !== 'ok') return;
+  const all = st.data.items, list = lvMatches(all), hl = lvHl(), q = !!state.lvQuery.trim();
+  const curatedNos = new Set(ARTICLES.filter(a => a.law === k).map(a => a.no));
+  const yearAgo = addDays(today(), -365);
+  $('#lvCount').textContent = q ? '찾은 조문 ' + list.length + '개' : '조문 ' + st.data.count + '개';
+  if (!list.length) { box.innerHTML = '<p class="lv-msg">‘' + esc(state.lvQuery.trim()) + '’이(가) 들어간 조문이 없어요.</p>'; return; }
+  box.innerHTML = list.map(it => {
+    if (it.type === 'heading') return '<div class="lv-heading">' + esc(it.text) + '</div>';
+    const open = state.lvOpen.has(it.no);
+    const am = ymdToDate(it.amended);
+    return '<article class="lv-art' + (open ? ' is-open' : '') + '" data-no="' + esc(it.no) + '">' +
+      '<button type="button" class="lv-toggle" aria-expanded="' + open + '"><b class="lv-no">' + esc(it.no) + '</b><span class="lv-t">' + hl(it.title || '') + '</span>' +
+      (curatedNos.has(it.no) ? '<span class="badge b-scale">핵심 요약</span>' : '') +
+      (am && am >= yearAgo ? '<span class="badge b-new">최근 1년 개정</span>' : '') + ICON.chev + '</button>' +
+      '<div class="lv-body"' + (open ? '' : ' hidden') + '>' + (open ? lvBodyHtml(it, hl) : '') + '</div></article>';
+  }).join('');
+  const allOpen = list.filter(i => i.type === 'article').every(i => state.lvOpen.has(i.no));
+  $('#expandAll').textContent = allOpen ? '모두 접기' : '모두 펼치기';
+  $('#expandAll').disabled = false;
+  if (state.lvJump) {
+    const no = state.lvJump; state.lvJump = null;
+    const el = box.querySelector('.lv-art[data-no="' + no + '"]');
+    if (el) {
+      toggleLv(el, true);
+      el.scrollIntoView({ block: 'start' });
+      el.classList.add('flash');
+    }
+  }
+}
+function toggleLv(el, force) {
+  const no = el.dataset.no;
+  const open = force != null ? force : !el.classList.contains('is-open');
+  if (open) state.lvOpen.add(no); else state.lvOpen.delete(no);
+  const body = $('.lv-body', el);
+  if (open && !body.innerHTML) {
+    const it = lawFull.get(state.law).data.items.find(x => x.type === 'article' && x.no === no);
+    body.innerHTML = lvBodyHtml(it, lvHl());
+  }
+  body.hidden = !open;
+  el.classList.toggle('is-open', open);
+  $('.lv-toggle', el).setAttribute('aria-expanded', String(open));
+}
+function renderLawView(k) {
+  const law = LAWS[k];
+  const curated = ARTICLES.filter(a => a.law === k).sort((x, y) => x._num - y._num);
+  const st = lawFull.get(k);
+  $('#listH').textContent = '「' + law.short + '」 전체 조문';
+  let head = '<div class="lv-head"><div><strong class="lv-name">' + esc(law.full) + '</strong><p class="lv-meta">';
+  if (st && st.status === 'ok') {
+    const eff = ymdToDate(st.data.effectiveDate);
+    head += '법제처 현행 원문' + (eff ? ' (시행 ' + fmt(eff) + ')' : '') + ' · <span id="lvCount"></span> · 핵심 요약 ' + curated.length + '개';
+  } else head += '핵심 요약 ' + curated.length + '개';
+  head += '</p></div><div class="lv-tools">' +
+    (st && st.status === 'ok' ? '<label class="sr-only" for="lvq">이 법에서 찾기</label><input id="lvq" class="input lv-search" type="search" placeholder="이 법에서 찾기 (예: 휴가)" autocomplete="off" value="' + esc(state.lvQuery) + '">' : '') +
+    '<a class="ext" href="' + wholeLawUrl(k) + '" target="_blank" rel="noopener">국가법령정보센터 ' + ICON.ext + '</a></div></div>';
+
+  if (st && st.status === 'ok') {
+    $('#list').innerHTML = head + '<div id="lvBody"></div>';
+    renderLawBody();
+    return;
+  }
+  if (API_ON && (!st || st.status === 'loading')) {
+    $('#list').innerHTML = head + '<p class="lv-msg">법제처에서 「' + esc(law.short) + '」 전체 조문을 불러오는 중이에요…</p>';
+    $('#expandAll').disabled = true;
+    return;
+  }
+  const why = !API_ON ? '법령 전체 조문은 배포된 사이트에서 법제처와 연결된 뒤에 볼 수 있어요.' : '법제처에서 전체 조문을 불러오지 못했어요(' + esc(st.error || '') + ').';
+  lastRows = curated; lastHl = t => esc(t);
+  $('#list').innerHTML = head + '<p class="lv-fallback">' + why + ' 아래는 이 법의 핵심 조문 요약이에요. 전체 조문은 국가법령정보센터 링크에서 볼 수 있어요.</p>' +
+    (curated.length ? curated.map(a => articleHtml(a, lastHl)).join('') : '<p class="lv-msg">이 법에는 아직 핵심 조문 요약이 없어요.</p>');
+  const allOpen = curated.length && curated.every(a => state.open.has(a.id));
+  $('#expandAll').textContent = allOpen ? '모두 접기' : '모두 펼치기';
+  $('#expandAll').disabled = !curated.length;
+}
+
 /* ── 조문 동작 ── */
 function toggleArticle(id, force) {
   const el = document.getElementById('art-' + id);
@@ -1897,8 +2209,9 @@ function goTo(id) {
   setTab('laws', true);
   const ctx = compute();
   const a = byId.get(id);
-  const visible = ctx.matches.has(id) && (state.fav ? favs.has(id) : (state.cat === 'all' || state.cat === a.cat)) && (state.law === 'all' || state.law === a.law);
-  if (!visible) { state.q = ''; $('#q').value = ''; state.cat = 'all'; state.law = 'all'; state.fav = false; }
+  exitLaw();
+  const visible = ctx.matches.has(id) && (state.fav ? favs.has(id) : (state.cat === 'all' || state.cat === a.cat));
+  if (!visible) { state.q = ''; $('#q').value = ''; state.cat = 'all'; state.fav = false; }
   state.open.add(id);
   renderLaws();
   const el = document.getElementById('art-' + id);
@@ -1965,8 +2278,10 @@ function ymd(s) { const m = /^(\d{4})(\d{2})(\d{2})$/.exec(String(s || '')); ret
 function origHtml(r) {
   const eff = ymd(r.effectiveDate);
   const dataDate = parseDate(CONFIG.DATA_DATE);
-  let h = '<p class="orig-meta">법제처 국가법령정보 현행 원문' + (eff ? ' (법령 시행일 ' + fmt(eff) + ')' : '') + '</p>';
-  if (eff && dataDate && eff > dataDate) h += '<p class="orig-warn">이 법령은 요약 작성일(' + fmt(dataDate) + ') 이후 개정 시행됐어요. 위 요약이 지금도 맞는지 원문으로 확인하세요.</p>';
+  const am = ymd(r.joAmendedDate);
+  const meta = [eff ? '법령 시행일 ' + fmt(eff) : '', am ? '이 조문 최종 개정 ' + fmt(am) : ''].filter(Boolean).join(', ');
+  let h = '<p class="orig-meta">법제처 국가법령정보 현행 원문' + (meta ? ' (' + meta + ')' : '') + '</p>';
+  if (am && dataDate && am > dataDate) h += '<p class="orig-warn">이 조문은 요약 작성일(' + fmt(dataDate) + ') 이후 개정됐어요. 위 요약이 지금도 맞는지 원문으로 확인하세요.</p>';
   h += '<div class="orig-text">' + esc(r.text) + '</div>';
   return h;
 }
@@ -1977,6 +2292,223 @@ function toast(msg) {
   const t = $('#toast');
   t.textContent = msg; t.classList.add('show');
   clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove('show'), 1800);
+}
+
+/* =====================================================================
+   관리자: 로그인 · 수정 · 변경 기록 · 되돌리기
+   ===================================================================== */
+let dlgSubmit = null;
+const dlgActions = {};
+function openDialog(title, bodyHtml, actions) {
+  const d = $('#dlg');
+  d.innerHTML = '<form class="dlg-form" novalidate><h2 class="dlg-title" id="dlgTitle">' + esc(title) + '</h2><div class="dlg-body">' + bodyHtml + '</div>' +
+    '<p class="dlg-err" role="alert"></p><div class="dlg-actions">' + actions.map(x =>
+      x.close ? '<button type="button" class="btn" data-close-dlg="1">' + esc(x.label) + '</button>'
+      : x.act ? '<button type="button" class="btn' + (x.primary ? ' btn-primary' : '') + '" data-dlg-act="' + x.act + '">' + esc(x.label) + '</button>'
+      : '<button type="submit" class="btn btn-primary">' + esc(x.label) + '</button>').join('') + '</div></form>';
+  dlgSubmit = null;
+  if (!d.open) d.showModal();
+  const first = d.querySelector('input,textarea'); if (first) first.focus();
+}
+function dlgError(msg) { const e = $('#dlg .dlg-err'); if (e) e.textContent = msg || ''; }
+function dlgBusy(on) { $$('#dlg button').forEach(b => { b.disabled = on; }); }
+async function adminPost(body, withToken) {
+  try {
+    const res = await fetch(ADMIN_EP, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(withToken === false ? body : Object.assign({ token: ADMIN.token }, body)) });
+    let data = null; try { data = await res.json(); } catch (e) { data = null; }
+    if (res.status === 401 && withToken !== false) adminLogout(true);
+    if (!res.ok || !data || data.error) return { ok: false, error: (data && data.error) || ('서버 응답 ' + res.status) };
+    return { ok: true, data };
+  } catch (e) { return { ok: false, error: '서버에 연결하지 못했어요.' }; }
+}
+function renderAdminUI() {
+  document.body.classList.toggle('is-admin', ADMIN.on);
+  const link = $('#adminLink');
+  link.hidden = !API_ON;
+  link.textContent = ADMIN.on ? '관리자 메뉴 (변경 기록)' : '관리자 로그인';
+  $('#adminBar').hidden = !ADMIN.on;
+  $('#adminName').textContent = ADMIN.name;
+}
+function adminLogout(expired) {
+  ADMIN.on = false; ADMIN.name = ''; ADMIN.token = ''; ADMIN.exp = 0;
+  try { sessionStorage.removeItem('nomu.admin'); } catch (e) { /* 무시 */ }
+  const d = $('#dlg'); if (d.open) d.close();
+  renderAdminUI(); renderLaws();
+  toast(expired ? '로그인이 만료됐어요. 다시 로그인하세요' : '로그아웃했어요');
+}
+function openLogin() {
+  if (ADMIN.storage === false) {
+    openDialog('관리자 로그인', '<p class="dlg-desc">웹 수정 기능을 쓰려면 저장소와 관리자 암호를 먼저 설정해야 해요. 배포 가이드 6장(웹 수정 기능 켜기)을 확인하세요.</p>', [{ label: '닫기', close: true }]);
+    return;
+  }
+  openDialog('관리자 로그인', '<p class="dlg-desc">지정된 사람만 첫 화면 숫자와 조문 요약을 고칠 수 있어요.</p>' +
+    '<label class="field"><span>암호</span><input class="input" type="password" name="pw" autocomplete="current-password"></label>', [{ label: '로그인' }, { label: '취소', close: true }]);
+  dlgSubmit = async f => {
+    if (!f.pw.value) return dlgError('암호를 넣어 주세요.');
+    dlgBusy(true);
+    const r = await adminPost({ action: 'login', password: f.pw.value }, false);
+    dlgBusy(false);
+    if (!r.ok) { f.pw.select(); return dlgError(r.error); }
+    Object.assign(ADMIN, { on: true, name: r.data.name, token: r.data.token, exp: r.data.exp });
+    try { sessionStorage.setItem('nomu.admin', JSON.stringify({ name: ADMIN.name, token: ADMIN.token, exp: ADMIN.exp })); } catch (e) { /* 무시 */ }
+    $('#dlg').close();
+    renderAdminUI(); renderLaws();
+    setTab('laws', true);
+    const gs = $('.glance-sec');
+    if (gs && !gs.hidden) gs.scrollIntoView({ block: 'start' }); else window.scrollTo({ top: 0 });
+    toast(ADMIN.name + '님, 관리자 모드예요. 빨간 칸을 눌러 바로 고칠 수 있어요');
+  };
+}
+const todayIso = () => toISO(today());
+function cellData(id) { const o = JSON.parse(JSON.stringify(OVERRIDES.cells[id] || {})); delete o.by; delete o.at; return o; }
+function cleanSteps(g) { return (g.steps || []).map(x => { const y = { from: x.from, val: x.val, sub: x.sub || '' }; if (x.brief) y.brief = x.brief; return y; }); }
+/* 확인일 = 오늘과 '실제로 확인한 개정·고시 날짜' 중 늦은 날 (PC 시계가 틀려도 빨간 표시가 확실히 지워지게) */
+function observedIso(w) {
+  const r = watchState.get(watchKey(w));
+  if (!r || !r.ok) return null;
+  if (w.admrul) {
+    const ds = (r.data.items || []).filter(it => String(it.name || '').indexOf(w.match || w.admrul) !== -1)
+      .map(it => ymdToDate(it.issued || it.effective)).filter(Boolean).sort((x, y) => y - x);
+    return ds.length ? toISO(ds[0]) : null;
+  }
+  const d = ymdToDate(r.data.text ? r.data.joAmendedDate : r.data.effectiveDate);
+  return d ? toISO(d) : null;
+}
+function markChecked(g, data) {
+  data.checked = Object.assign({}, data.checked || {});
+  (g.watch || []).forEach(w => { const t = todayIso(), o = observedIso(w); data.checked[watchKey(w)] = (o && o > t) ? o : t; });
+  return data;
+}
+async function saveTo(target, id, data, memo, okMsg) {
+  dlgBusy(true);
+  const r = await adminPost({ action: 'save', target, id, data, memo });
+  dlgBusy(false);
+  if (!r.ok) return dlgError(r.error);
+  applyOverrides(r.data.overrides);
+  const d = $('#dlg'); if (d.open) d.close();
+  renderLaws();
+  toast(okMsg || '저장했어요. 모든 사람에게 바로 반영돼요');
+}
+const memoField = '<label class="field"><span>변경 사유 <small>(선택, 변경 기록에 남아요)</small></span><input class="input" name="memo" maxlength="200" placeholder="예: 2027. 3. 1. 개정 확인"></label>';
+function handleAdm(act, id) {
+  const g = findCell(id); if (!g) return;
+  const v = cellView(g, today()), wf = watchFlags(g), a = byId.get(g.ref);
+  if (act === 'ack') {
+    openDialog('확인 완료 처리', '<p class="dlg-desc">「' + esc(g.label) + '」 칸의 근거 법령이나 고시가 바뀐 것을 확인했고, 첫 화면 값은 그대로 두는 경우예요. 저장하면 빨간 표시가 사라져요.</p>' +
+      '<p class="dlg-desc"><b>확인한 내용</b><br>' + esc(wf.flags.join(' / ')) + '</p>' + memoField, [{ label: '확인 완료' }, { label: '취소', close: true }]);
+    dlgSubmit = f => saveTo('cell', id, markChecked(g, cellData(id)), f.memo.value, '확인 완료로 저장했어요');
+  } else if (act === 'edit') {
+    const cur = g.steps ? stepOn(g, today()).cur : g;
+    openDialog('값·설명 수정', '<p class="dlg-desc">「' + esc(g.label) + '」' + (g.steps ? ' 칸에서 지금 적용 중인 값(' + fmt(cur.d) + '부터)을 고쳐요. 다음 해 값은 "새 값 추가"를 쓰세요.' : ' 칸의 값을 고쳐요.') + '</p>' +
+      '<label class="field"><span>큰 숫자 <small>(단위 ' + esc(g.unit) + ' 제외)</small></span><input class="input" name="val" maxlength="20" value="' + esc(cur.val) + '"></label>' +
+      '<label class="field"><span>첫 화면 한 줄 설명</span><input class="input" name="brief" maxlength="60" value="' + esc(cur.brief || (g.steps ? '' : g.brief) || '') + '"></label>' +
+      '<label class="field"><span>상세 설명 <small>(칸을 누르면 보여요)</small></span><textarea class="input" name="sub" maxlength="500">' + esc(cur.sub || '') + '</textarea></label>' +
+      ((g.watch && g.watch.length) ? '<label class="check-row"><input type="checkbox" name="ack"' + (wf.flags.length ? ' checked' : '') + '> 법령·고시 변경 확인 완료로 함께 처리 (빨간 표시 지우기)</label>' : '') + memoField,
+      [{ label: '저장' }, { label: '취소', close: true }]);
+    dlgSubmit = f => {
+      const val = f.val.value.trim(); if (!val) return dlgError('큰 숫자를 넣어 주세요.');
+      let data = cellData(id);
+      if (g.steps) {
+        data.steps = cleanSteps(g).map(x => x.from === toISO(cur.d) ? Object.assign(x, { val, sub: f.sub.value.trim(), brief: f.brief.value.trim() || undefined }) : x);
+      } else { data.val = val; data.brief = f.brief.value.trim(); data.sub = f.sub.value.trim(); }
+      if (f.ack && f.ack.checked) data = markChecked(g, data);
+      return saveTo('cell', id, data, f.memo.value);
+    };
+  } else if (act === 'add') {
+    const steps = cleanSteps(g);
+    const last = steps.length ? +steps[steps.length - 1].from.slice(0, 4) : today().getFullYear();
+    const from = v.missingYear ? v.missingYear + '-01-01' : (last + 1) + '-01-01';
+    openDialog('새 값 추가', '<p class="dlg-desc">「' + esc(g.label) + '」 칸에 새로 정해진 값을 넣어요. 적용 시작일이 되면 첫 화면이 자동으로 바뀌고, 그 전에는 "' + from.slice(0, 4) + '년부터 …"처럼 미리 보여요.</p>' +
+      '<label class="field"><span>적용 시작일</span><input class="input" type="date" name="from" value="' + from + '"></label>' +
+      '<label class="field"><span>큰 숫자 <small>(단위 ' + esc(g.unit) + ' 제외, 예: 11,000)</small></span><input class="input" name="val" maxlength="20"></label>' +
+      '<label class="field"><span>첫 화면 한 줄 설명 <small>(선택)</small></span><input class="input" name="brief" maxlength="60"></label>' +
+      '<label class="field"><span>상세 설명</span><textarea class="input" name="sub" maxlength="300" placeholder="예: 월 2,299,000원 (209시간)"></textarea></label>' + memoField,
+      [{ label: '추가' }, { label: '취소', close: true }]);
+    $('#dlg input[name=val]').focus();
+    dlgSubmit = f => {
+      const fr = f.from.value, val = f.val.value.trim();
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(fr)) return dlgError('적용 시작일을 넣어 주세요.');
+      if (!val) return dlgError('큰 숫자를 넣어 주세요.');
+      const st = { from: fr, val, sub: f.sub.value.trim() }; if (f.brief.value.trim()) st.brief = f.brief.value.trim();
+      const data = markChecked(g, cellData(id));
+      data.steps = steps.filter(x => x.from !== fr).concat([st]).sort((x, y) => x.from.localeCompare(y.from));
+      return saveTo('cell', id, data, f.memo.value, '새 값을 추가했어요. ' + fr.slice(0, 4) + '년부터 자동으로 바뀌어요');
+    };
+  } else if (act === 'art' && a) {
+    openArt(a);
+  } else if (act === 'reset') {
+    openDialog('웹 수정 지우기', '<p class="dlg-desc">「' + esc(g.label) + '」 칸을 웹에서 고친 내용을 모두 지우고 원래 파일의 값으로 되돌려요. 빨간 표시가 다시 나타날 수 있어요.</p>' + memoField,
+      [{ label: '지우기' }, { label: '취소', close: true }]);
+    dlgSubmit = f => saveTo('cell', id, null, f.memo.value, '원래 값으로 되돌렸어요');
+  }
+}
+function openArt(a) {
+  openDialog('조문 요약 수정', '<p class="dlg-desc">' + esc(LAWS[a.law].short + ' ' + a.no + ' ' + a.title) + '의 요약과 실무 포인트를 고쳐요. 원문은 법제처에서 그대로 불러와요.</p>' +
+    '<label class="field"><span>핵심 요약</span><textarea class="input" name="sum" maxlength="1000">' + esc(a.sum) + '</textarea></label>' +
+    '<label class="field"><span>실무 포인트 <small>(한 줄에 하나씩)</small></span><textarea class="input tall" name="pts">' + esc((a.pts || []).join('\n')) + '</textarea></label>' + memoField,
+    [{ label: '저장' }].concat(OVERRIDES.articles[a.id] ? [{ label: '원래 요약으로', act: 'artReset' }] : []).concat([{ label: '취소', close: true }]));
+  dlgSubmit = f => {
+    if (!f.sum.value.trim()) return dlgError('핵심 요약을 넣어 주세요.');
+    return saveTo('article', a.id, { sum: f.sum.value.trim(), pts: f.pts.value.split('\n').map(x => x.trim()).filter(Boolean) }, f.memo.value);
+  };
+  dlgActions.artReset = () => saveTo('article', a.id, null, '원래 요약으로', '원래 요약으로 되돌렸어요');
+}
+function logTarget(r) {
+  if (r.target === 'cell') { const g = findCell(r.id); return '첫 화면 「' + (g ? g.label : r.id) + '」'; }
+  const a = byId.get(r.id); return a ? LAWS[a.law].short + ' ' + a.no + ' 요약' : r.id;
+}
+async function openLog() {
+  openDialog('관리자 메뉴 · 변경 기록', '<p class="dlg-desc">불러오는 중이에요…</p>', [{ label: '로그아웃', act: 'logout' }, { label: '닫기', close: true }]);
+  dlgActions.logout = () => adminLogout(false);
+  const r = await adminPost({ action: 'log' });
+  const body = $('#dlg .dlg-body'); if (!body) return;
+  if (!r.ok) { body.innerHTML = '<p class="dlg-desc">' + esc(r.error) + '</p>'; return; }
+  const rows = r.data.log || [];
+  body.innerHTML = '<p class="dlg-desc">' + esc(ADMIN.name) + '님으로 로그인 중이에요. 최근 변경 50건까지 보여요.</p>' +
+    (rows.length ? '<ul class="log-list">' + rows.map(x => '<li class="log-row"><div><b>' + esc(fmtIso(x.at)) + '</b> ' + esc(x.by) + '<br>' + esc(logTarget(x)) +
+      (x.memo ? '<span class="log-memo">' + esc(x.memo) + '</span>' : '') + '</div><button type="button" class="btn btn-sm" data-dlg-act="revert" data-at="' + esc(x.at) + '">이 변경 되돌리기</button></li>').join('') + '</ul>'
+      : '<p class="dlg-desc">아직 변경 기록이 없어요.</p>') +
+    '<div class="adm-btns log-tools"><button type="button" class="btn btn-sm" data-dlg-act="copyJson">웹 수정 내용 복사</button><button type="button" class="btn btn-sm" data-dlg-act="download">백업 내려받기</button></div>' +
+    '<p class="dlg-desc small">웹 수정 내용을 복사해 Claude에게 보내면 index.html에 영구 반영할 수 있어요.</p>';
+  dlgActions.revert = async btn => {
+    dlgBusy(true);
+    const rr = await adminPost({ action: 'revert', at: btn.dataset.at });
+    dlgBusy(false);
+    if (!rr.ok) return dlgError(rr.error);
+    applyOverrides(rr.data.overrides); renderLaws(); toast('되돌렸어요'); openLog();
+  };
+  dlgActions.copyJson = () => copyText(JSON.stringify(OVERRIDES, null, 2)).then(() => toast('웹 수정 내용을 복사했어요'), () => toast('복사하지 못했어요'));
+  dlgActions.download = () => {
+    const blob = new Blob([JSON.stringify(OVERRIDES, null, 2)], { type: 'application/json' });
+    const link = document.createElement('a'); link.href = URL.createObjectURL(blob); link.download = 'nomu-web-edits-' + todayIso() + '.json';
+    document.body.appendChild(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+  };
+}
+async function loadOverrides() {
+  try {
+    const res = await fetch(ADMIN_EP + '?overrides=1', { headers: { Accept: 'application/json' } });
+    const data = await res.json();
+    if (!res.ok || data.error) throw new Error(data.error || String(res.status));
+    ADMIN.storage = !!data.storage;
+    if (data.storage) applyOverrides(data);
+  } catch (e) { ADMIN.storage = false; }
+  renderAdminUI(); renderLaws();
+}
+
+/* ── 첫 화면으로 (로고) : 검색·필터·정렬·펼침·탭을 모두 처음 상태로 ── */
+function goHome() {
+  state.q = ''; $('#q').value = '';
+  state.cat = 'all'; state.law = 'all'; state.fav = false;
+  state.u5 = false; $('#u5').checked = false;
+  state.sort = 'rel'; $('#sort').value = 'rel';
+  state.open.clear(); state.glanceOpen = null;
+  state.lvQuery = ''; state.lvOpen.clear(); state.lvJump = null;
+  $('#lawDetails').open = false;
+  setTab('laws');
+  if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+  renderLaws();
+  window.scrollTo({ top: 0 });
 }
 
 /* ── 탭 ── */
@@ -2195,8 +2727,8 @@ function renderChanges() {
    ===================================================================== */
 function init() {
   const dataDate = parseDate(CONFIG.DATA_DATE);
-  $('#stamp').textContent = fmt(dataDate) + ' 기준';
-  $('#footStamp').textContent = fmt(dataDate) + ' 기준 데이터예요. 법령 ' + LAW_ORDER.length + '개, 핵심 조문 ' + ARTICLES.length + '개를 담았어요.';
+  $('#stamp').textContent = '요약 기준일 ' + fmt(dataDate);
+  $('#footStamp').textContent = '핵심 조문 요약은 ' + fmt(dataDate) + ' 기준이고, 법령 원문과 전체 조문은 법제처에서 그때그때 불러와요. 법령 ' + LAW_ORDER.length + '개, 핵심 조문 ' + ARTICLES.length + '개를 담았어요.';
   $('#glanceNote').textContent = '상시 300명 이상 기업 기준';
   $('#chips').insertAdjacentHTML('beforeend', CHIPS.map(c => '<button type="button" class="chip" data-q="' + esc(c.q) + '">' + esc(c.t) + '</button>').join(''));
 
@@ -2205,19 +2737,19 @@ function init() {
   let timer;
   q.addEventListener('input', () => {
     clearTimeout(timer);
-    timer = setTimeout(() => { state.q = q.value; if (state.tab !== 'laws') setTab('laws'); renderLaws(); }, 120);
+    timer = setTimeout(() => { state.q = q.value; if (q.value.trim()) exitLaw(); if (state.tab !== 'laws') setTab('laws'); renderLaws(); }, 120);
   });
   q.addEventListener('keydown', e => {
-    if (e.key === 'Enter') { clearTimeout(timer); state.q = q.value; setTab('laws'); renderLaws(); $('#listSec').scrollIntoView({ block: 'start' }); }
+    if (e.key === 'Enter') { clearTimeout(timer); state.q = q.value; exitLaw(); setTab('laws'); renderLaws(); $('#listSec').scrollIntoView({ block: 'start' }); }
     if (e.key === 'Escape') { q.value = ''; state.q = ''; renderLaws(); }
   });
-  $('#qBtn').addEventListener('click', () => { clearTimeout(timer); state.q = q.value; setTab('laws'); renderLaws(); $('#listSec').scrollIntoView({ block: 'start' }); });
+  $('#qBtn').addEventListener('click', () => { clearTimeout(timer); state.q = q.value; exitLaw(); setTab('laws'); renderLaws(); $('#listSec').scrollIntoView({ block: 'start' }); });
   $('#qClear').addEventListener('click', () => { q.value = ''; state.q = ''; renderLaws(); q.focus(); });
   $('#chips').addEventListener('click', e => {
     const c = e.target.closest('.chip'); if (!c) return;
     const same = norm(state.q) === norm(c.dataset.q);
     state.q = same ? '' : c.dataset.q; q.value = state.q;
-    state.cat = 'all'; state.law = 'all'; state.fav = false;
+    state.cat = 'all'; state.fav = false; exitLaw();
     setTab('laws'); renderLaws();
   });
   document.addEventListener('keydown', e => {
@@ -2231,15 +2763,25 @@ function init() {
   $('#u5').addEventListener('change', e => { state.u5 = e.target.checked; renderLaws(); });
   $('.side').addEventListener('click', e => {
     const b = e.target.closest('.nav-item'); if (!b || b.disabled) return;
+    if (b.dataset.law) { openLaw(b.dataset.law); return; }
+    const wasLaw = state.law !== 'all';
+    exitLaw();
     if (b.dataset.cat) { state.cat = b.dataset.cat; state.fav = false; }
-    else if (b.dataset.fav) { state.fav = !state.fav; }
-    else if (b.dataset.law) { state.law = b.dataset.law; }
+    else if (b.dataset.fav) { state.fav = wasLaw ? true : !state.fav; }
     renderLaws();
     const top = $('#listSec').getBoundingClientRect().top;
     if (top < 0) $('#listSec').scrollIntoView({ block: 'start' });
   });
   $('#sort').addEventListener('change', e => { state.sort = e.target.value; renderLaws(); });
   $('#expandAll').addEventListener('click', () => {
+    const st = state.law !== 'all' ? lawFull.get(state.law) : null;
+    if (st && st.status === 'ok') {
+      const vis = lvMatches(st.data.items).filter(i => i.type === 'article');
+      const openAll = !vis.every(i => state.lvOpen.has(i.no));
+      vis.forEach(i => { if (openAll) state.lvOpen.add(i.no); else state.lvOpen.delete(i.no); });
+      renderLawView(state.law);
+      return;
+    }
     const allOpen = lastRows.length && lastRows.every(a => state.open.has(a.id));
     lastRows.forEach(a => toggleArticle(a.id, !allOpen));
   });
@@ -2249,7 +2791,13 @@ function init() {
     const art = e.target.closest('.art');
     const go = e.target.closest('[data-go]');
     if (go) { goTo(go.dataset.go); return; }
-    if (e.target.closest('[data-reset]')) { state.q = ''; q.value = ''; state.cat = 'all'; state.law = 'all'; state.fav = false; renderLaws(); return; }
+    if (e.target.closest('[data-reset]')) { state.q = ''; q.value = ''; state.cat = 'all'; state.fav = false; exitLaw(); renderLaws(); return; }
+    const aa = e.target.closest('[data-adm-art]');
+    if (aa) { const ar = byId.get(aa.dataset.admArt); if (ar && ADMIN.on) openArt(ar); return; }
+    const lg = e.target.closest('[data-lawgo]');
+    if (lg) { state.q = ''; q.value = ''; openLaw(lg.dataset.lawgo, lg.dataset.jo || null); return; }
+    const lv = e.target.closest('.lv-toggle');
+    if (lv) { toggleLv(lv.closest('.lv-art')); const st = lawFull.get(state.law); if (st && st.status === 'ok') { const vis = lvMatches(st.data.items).filter(i => i.type === 'article'); $('#expandAll').textContent = vis.every(i => state.lvOpen.has(i.no)) ? '모두 접기' : '모두 펼치기'; } return; }
     if (!art) return;
     const id = art.dataset.id, a = byId.get(id);
     const act = e.target.closest('[data-act]');
@@ -2274,14 +2822,32 @@ function init() {
     }
     if (e.target.closest('.art-toggle')) toggleArticle(id);
   });
+  let lvTimer;
+  $('#list').addEventListener('input', e => {
+    if (e.target.id !== 'lvq') return;
+    clearTimeout(lvTimer);
+    lvTimer = setTimeout(() => {
+      state.lvQuery = e.target.value;
+      const st = lawFull.get(state.law);
+      if (st && st.status === 'ok' && state.lvQuery.trim()) {      // 찾은 조문이 10개 이하면 한 번 펼쳐 줌 (접기는 자유)
+        const found = lvMatches(st.data.items).filter(i => i.type === 'article');
+        if (found.length <= 10) found.forEach(i => state.lvOpen.add(i.no));
+      }
+      renderLawBody();
+    }, 150);
+  });
   /* 기준표: 칸을 누르면 상세(근거 조문 등) 펼침 */
   $('#glance').addEventListener('click', e => {
+    const adm = e.target.closest('[data-adm]');
+    if (adm) { handleAdm(adm.dataset.adm, adm.dataset.cell); return; }
+    const cp = e.target.closest('[data-copy]');
+    if (cp) { copyText(cp.dataset.copy).then(() => toast('복사했어요. index.html에 붙여넣으세요'), () => toast('복사하지 못했어요')); return; }
     if (e.target.closest('[data-go]')) return;
     if (e.target.closest('[data-close]')) { const id = state.glanceOpen; if (id) toggleGlance(id); return; }
     const c = e.target.closest('.g-cell'); if (c) toggleGlance(c.dataset.cell);
   });
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && state.glanceOpen && !/INPUT|TEXTAREA|SELECT/.test((document.activeElement || {}).tagName || '')) toggleGlance(state.glanceOpen);
+    if (e.key === 'Escape' && state.glanceOpen && !document.querySelector('dialog[open]') && !/INPUT|TEXTAREA|SELECT/.test((document.activeElement || {}).tagName || '')) toggleGlance(state.glanceOpen);
   });
   /* 기준표 상세·기한·개정 화면의 조문 이동 */
   ['#glance', '#dlList', '#chgWrap'].forEach(sel => $(sel).addEventListener('click', e => {
@@ -2290,7 +2856,7 @@ function init() {
 
   /* 탭 */
   $$('.tab').forEach(t => t.addEventListener('click', () => { setTab(t.dataset.tab); window.scrollTo({ top: 0 }); }));
-  $('.brand').addEventListener('click', () => { setTab('laws'); window.scrollTo({ top: 0 }); });
+  $('.brand').addEventListener('click', goHome);
   $('.tabs').addEventListener('keydown', e => {
     if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
     const tabs = $$('.tab'); const i = tabs.indexOf(document.activeElement); if (i < 0) return;
@@ -2316,13 +2882,30 @@ function init() {
   $('#dlType').addEventListener('change', renderDeadlines);
   $('#dlDate').addEventListener('input', renderDeadlines);
 
+  const dlg = $('#dlg');
+  dlg.addEventListener('submit', e => { e.preventDefault(); if (dlgSubmit) dlgSubmit(e.target); });
+  dlg.addEventListener('click', e => {
+    if (e.target.closest('[data-close-dlg]')) { dlg.close(); return; }
+    const b = e.target.closest('[data-dlg-act]');
+    if (b && dlgActions[b.dataset.dlgAct]) dlgActions[b.dataset.dlgAct](b);
+  });
+  $('#adminLink').addEventListener('click', () => ADMIN.on ? openLog() : openLogin());
+  $('#adminLogBtn').addEventListener('click', openLog);
+  $('#adminOut').addEventListener('click', () => adminLogout(false));
+  try {
+    const sv = JSON.parse(sessionStorage.getItem('nomu.admin') || 'null');
+    if (sv && sv.token && sv.exp > Date.now()) Object.assign(ADMIN, { on: true, name: sv.name, token: sv.token, exp: sv.exp });
+  } catch (e) { /* 무시 */ }
+  renderAdminUI();
+
   renderLaws(); renderAnnual(); renderWeekly(); renderSeverance(); renderDeadlines(); renderChanges();
-  if (API_ON) runWatch();
+  if (API_ON) { runWatch(); loadOverrides(); }
 
   /* 주소 # 처리: #calc, #deadline, #changes, #art=lsa-60 (페이지가 열린 상태에서 바뀌어도 반응) */
   const handleHash = () => {
     const h = decodeURIComponent(location.hash.slice(1));
     if (h.indexOf('art=') === 0) goTo(h.slice(4));
+    else if (h.indexOf('law=') === 0) openLaw(h.slice(4));
     else if (['calc', 'deadline', 'changes'].indexOf(h) !== -1) setTab(h, true);
     else if (h === '') setTab('laws', true);
   };
