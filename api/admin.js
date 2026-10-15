@@ -9,7 +9,7 @@
    - ADMIN_SECRET (선택) : 로그인 표 서명용 비밀값. 없으면 EDITORS 등에서 자동으로 만들어요.
 
    GET  /api/admin?health=1     → 저장소·관리자 설정 여부
-   GET  /api/admin?overrides=1  → 웹에서 고친 내용 (누구나 읽기 가능, 화면에 반영용)
+   GET  /api/admin?overrides=1  → 웹에서 고친 내용 (누구나 읽기 가능, 화면에 반영용, 1분 단위로 새로 읽음)
    POST /api/admin  { action: 'login',  password }
                     { action: 'save',   token, target: 'cell'|'article', id, data, memo }
                     { action: 'log',    token }
@@ -132,7 +132,8 @@ export default async function handler(req, res) {
       }
       if (!hasStorage()) return send(res, 200, { cells: {}, articles: {}, storage: false, editors: editors.length > 0 });
       const ov = await getOverrides();
-      res.setHeader('Cache-Control', 'public, s-maxage=10, stale-while-revalidate=30');
+      // 복사본을 1분 동안 재사용 → 저장소 읽기 횟수 절약 (다른 사람 화면 반영은 최대 1분 정도 늦어짐)
+      res.setHeader('Cache-Control', 'public, s-maxage=60, stale-while-revalidate=60');
       return res.status(200).json(Object.assign(ov, { storage: true, editors: editors.length > 0 }));
     }
     if (req.method !== 'POST') return send(res, 405, { error: 'GET 또는 POST만 지원해요.' });
