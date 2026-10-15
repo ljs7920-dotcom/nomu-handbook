@@ -1,0 +1,2341 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="인사담당자가 자주 찾는 노동법 핵심 조문, 실무 계산기, 법정 기한을 한곳에서 확인하는 노무핸드북">
+<title>노무핸드북 · 인사담당자를 위한 노동법 조문 찾기</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234876EF'/%3E%3Ctext x='16' y='23' font-size='19' font-weight='800' text-anchor='middle' fill='white' font-family='sans-serif'%3E%C2%A7%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  color-scheme: light;
+  --bg:#F4F6FA; --surface:#FFFFFF; --surface-2:#F8FAFD;
+  --ink:#1B2232; --ink-2:#465063; --muted:#7E889B; --line:#E2E7EF; --line-2:#CDD5E2;
+  --blue:#4876EF; --blue-press:#3360DE; --blue-ink:#2C55C9; --blue-tint:#EAF0FE;
+  --amber-ink:#8F5300; --amber-tint:#FFF1D6; --green-ink:#0B7550; --green-tint:#E0F4EA;
+  --gray-tint:#EEF1F5; --mark:#FFE7A0; --red-ink:#C4262E; --red-tint:#FDEDEE; --on-blue:#FFFFFF; --toast-bg:#1B2232; --toast-ink:#FFFFFF;
+  --radius:12px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Noto Sans CJK KR","Malgun Gothic","Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --bg:#0E131D; --surface:#161C29; --surface-2:#1B2232;
+    --ink:#E7EBF3; --ink-2:#B3BBCA; --muted:#8089A0; --line:#273044; --line-2:#36405A;
+    --blue:#6B91FF; --blue-press:#5A82F5; --blue-ink:#A9C1FF; --blue-tint:#1D2A4B;
+    --amber-ink:#F3C266; --amber-tint:#3A2C10; --green-ink:#62D4A3; --green-tint:#10342A;
+    --gray-tint:#222A3B; --mark:#5B4A12; --red-ink:#FF8A90; --red-tint:#3A1A1E; --on-blue:#0E131D; --toast-bg:#E7EBF3; --toast-ink:#0E131D;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --bg:#0E131D; --surface:#161C29; --surface-2:#1B2232;
+  --ink:#E7EBF3; --ink-2:#B3BBCA; --muted:#8089A0; --line:#273044; --line-2:#36405A;
+  --blue:#6B91FF; --blue-press:#5A82F5; --blue-ink:#A9C1FF; --blue-tint:#1D2A4B;
+  --amber-ink:#F3C266; --amber-tint:#3A2C10; --green-ink:#62D4A3; --green-tint:#10342A;
+  --gray-tint:#222A3B; --mark:#5B4A12; --red-ink:#FF8A90; --red-tint:#3A1A1E; --on-blue:#0E131D; --toast-bg:#E7EBF3; --toast-ink:#0E131D;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.6;letter-spacing:-0.01em;word-break:keep-all;overflow-wrap:anywhere}
+button,input,select{font:inherit;color:inherit;letter-spacing:inherit}
+button{cursor:pointer}
+a{color:var(--blue-ink)}
+img,svg{max-width:100%}
+[hidden]{display:none !important}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:6px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.num{font-variant-numeric:tabular-nums}
+
+/* ── 상단 바 ── */
+.gnb{position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.gnb-in{display:flex;align-items:center;gap:28px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);flex:none;background:none;border:0;padding:0}
+.mark{display:grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--blue);color:var(--on-blue);font-weight:800;font-size:18px;line-height:1}
+.brand-name{font-size:19px;font-weight:800;letter-spacing:-0.03em}
+.tabs{display:flex;gap:4px;height:100%;flex:1;min-width:0}
+.tab{position:relative;height:100%;padding:0 12px;background:none;border:0;color:var(--ink-2);font-size:15px;font-weight:600;white-space:nowrap}
+.tab:hover{color:var(--ink)}
+.tab[aria-selected="true"]{color:var(--blue-ink);font-weight:700}
+.tab[aria-selected="true"]::after{content:"";position:absolute;left:12px;right:12px;bottom:-1px;height:3px;border-radius:3px 3px 0 0;background:var(--blue)}
+.stamp{flex:none;font-size:13px;color:var(--muted)}
+
+/* ── 검색 영역 ── */
+.hero{background:var(--surface);border-bottom:1px solid var(--line)}
+.hero .wrap{padding-top:26px;padding-bottom:20px}
+.hero-title{margin:0;font-size:24px;line-height:1.3;font-weight:800;letter-spacing:-0.035em}
+.hero-sub{margin:6px 0 0;color:var(--ink-2);font-size:15px}
+.search{display:flex;align-items:center;margin-top:18px;height:58px;background:var(--surface);border:2px solid var(--blue);border-radius:14px;overflow:hidden;transition:box-shadow .15s}
+.search:focus-within{box-shadow:0 0 0 4px var(--blue-tint)}
+.search-ico{flex:none;width:22px;height:22px;margin:0 6px 0 18px;color:var(--blue)}
+.search input{flex:1;min-width:0;height:100%;border:0;outline:0;background:transparent;font-size:17px;padding:0 8px}
+.search input::placeholder{color:var(--muted)}
+.search input::-webkit-search-cancel-button{display:none}
+.kbd{flex:none;display:grid;place-items:center;width:24px;height:24px;margin-right:10px;border:1px solid var(--line-2);border-radius:6px;font:600 12px/1 var(--font);color:var(--muted)}
+.clear-btn{flex:none;width:32px;height:32px;margin-right:6px;border:0;border-radius:50%;background:var(--gray-tint);color:var(--ink-2);display:grid;place-items:center}
+.search-btn{flex:none;height:100%;padding:0 26px;border:0;background:var(--blue);color:var(--on-blue);font-size:16px;font-weight:700}
+.search-btn:hover{background:var(--blue-press)}
+.chips{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:14px}
+.chips-label{font-size:13px;font-weight:700;color:var(--ink-2);margin-right:6px}
+.chip{padding:5px 12px;border:1px solid var(--line-2);border-radius:999px;background:var(--surface);font-size:13.5px;color:var(--ink-2);line-height:1.5}
+.chip:hover{border-color:var(--blue);color:var(--blue-ink)}
+.chip.is-on{border-color:var(--blue);background:var(--blue-tint);color:var(--blue-ink);font-weight:700}
+
+/* ── 본문 레이아웃 ── */
+main.wrap{padding-top:28px;padding-bottom:64px}
+.layout{display:grid;grid-template-columns:228px minmax(0,1fr);gap:32px;align-items:start}
+.side{position:sticky;top:88px;max-height:calc(100vh - 104px);overflow:auto;padding-right:4px;scrollbar-width:thin}
+.side-sec{padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid var(--line)}
+.side-sec:last-child{border-bottom:0}
+.side-h{display:block;margin:0 0 10px;font-size:13px;font-weight:700;color:var(--muted)}
+summary.side-h{cursor:pointer;list-style:none}
+summary.side-h::-webkit-details-marker{display:none}
+summary.side-h::after{content:"";display:inline-block;width:6px;height:6px;margin-left:8px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg)}
+details[open]>summary.side-h::after{transform:translateY(1px) rotate(-135deg)}
+.switch{display:flex;align-items:center;gap:10px;cursor:pointer;font-size:14.5px;font-weight:600}
+.switch input{position:absolute;opacity:0;width:1px;height:1px}
+.track{position:relative;flex:none;width:38px;height:22px;border-radius:999px;background:var(--line-2);transition:background .15s}
+.track::after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.2);transition:transform .15s}
+.switch input:checked+.track{background:var(--blue)}
+.switch input:checked+.track::after{transform:translateX(16px)}
+.switch input:focus-visible+.track{outline:2px solid var(--blue);outline-offset:2px}
+.side-note{margin:8px 0 0;font-size:12.5px;line-height:1.55;color:var(--muted)}
+.nav-list{display:flex;flex-direction:column;gap:2px;margin:0;padding:0;list-style:none}
+.nav-item{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;padding:7px 10px;border:0;border-radius:8px;background:none;text-align:left;font-size:14.5px;color:var(--ink-2)}
+.nav-item:hover{background:var(--gray-tint);color:var(--ink)}
+.nav-item.is-on{background:var(--blue-tint);color:var(--blue-ink);font-weight:700}
+.nav-item .cnt{font-size:12.5px;color:var(--muted);font-weight:500}
+.nav-item.is-on .cnt{color:var(--blue-ink)}
+.nav-item[disabled]{opacity:.4;cursor:default}
+
+/* ── 한눈에 보는 기준 ── */
+.sec-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:12px}
+.sec-head h2{margin:0;font-size:19px;font-weight:800;letter-spacing:-0.03em}
+.sec-note{font-size:13px;color:var(--muted)}
+.glance-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.g-group{grid-column:1/-1;padding:8px 18px;background:var(--surface-2);font-size:12.5px;font-weight:700;color:var(--ink-2)}
+.g-cell{display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:16px 18px 14px;border:0;background:var(--surface);text-align:left;transition:background .12s,opacity .12s}
+.g-cell:hover{background:var(--surface-2)}
+.g-label{font-size:13.5px;font-weight:700;color:var(--ink-2)}
+.g-val{margin-top:4px;font-size:28px;line-height:1.15;font-weight:800;letter-spacing:-0.03em;font-variant-numeric:tabular-nums}
+.g-unit{margin-left:3px;font-size:13.5px;font-weight:600;color:var(--ink-2);letter-spacing:0}
+.g-sub{font-size:12.5px;color:var(--muted);line-height:1.45}
+.g-ref{margin-top:6px;font-size:12.5px;font-weight:600;color:var(--blue-ink)}
+.g-cell.is-dim{opacity:.38}
+.g-cell[aria-expanded="true"]{background:var(--blue-tint);box-shadow:inset 0 -3px 0 var(--blue)}
+.g-cell.is-alert[aria-expanded="true"]{background:var(--red-tint);box-shadow:inset 3px 0 0 var(--red-ink),inset 0 -3px 0 var(--red-ink)}
+.g-detail{grid-column:1/-1;background:var(--surface);padding:16px 20px 18px}
+.gd-head{display:flex;align-items:baseline;gap:10px}
+.gd-head strong{font-size:15px;font-weight:800;letter-spacing:-0.02em}
+.gd-val{font-size:15px;font-weight:700;color:var(--blue-ink);font-variant-numeric:tabular-nums}
+.gd-close{margin-left:auto;align-self:center;display:grid;place-items:center;width:30px;height:30px;border:0;border-radius:8px;background:none;color:var(--muted)}
+.gd-close:hover{background:var(--gray-tint);color:var(--ink)}
+.gd-rows{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 18px;margin:10px 0 0;font-size:13.5px;line-height:1.6}
+.gd-rows dt{color:var(--muted);font-weight:600;white-space:nowrap}
+.gd-rows dd{margin:0;color:var(--ink-2)}
+.gd-rows dd.is-red{color:var(--red-ink);font-weight:700}
+.gd-foot{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:12px;padding-top:12px;border-top:1px dashed var(--line)}
+.gd-ref-label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.gd-ref{padding:5px 12px;border:1px solid var(--blue);border-radius:999px;background:var(--blue-tint);color:var(--blue-ink);font-size:13px;font-weight:700}
+.gd-ref:hover{background:var(--blue);color:var(--on-blue)}
+.switch-sm{gap:7px;font-size:13.5px;font-weight:600;color:var(--ink-2);margin-right:6px}
+.switch-sm .track{width:32px;height:18px}
+.switch-sm .track::after{width:12px;height:12px}
+.switch-sm input:checked+.track::after{transform:translateX(14px)}
+.g-cell.is-alert,.g-cell.is-alert:hover{background:var(--red-tint);box-shadow:inset 3px 0 0 var(--red-ink)}
+.g-alert{display:inline-block;margin-left:4px;padding:1px 7px;border-radius:6px;background:var(--red-ink);color:var(--surface);font-size:11px;font-weight:700;vertical-align:1px}
+.g-why{margin-top:4px;font-size:12.5px;font-weight:700;line-height:1.45;color:var(--red-ink)}
+.glance-status{margin:-4px 0 10px;font-size:13px;color:var(--ink-2)}
+.glance-status:empty{display:none}
+.glance-status.has-alert{color:var(--red-ink);font-weight:700}
+.g-flag{font-size:11.5px;font-weight:700;color:var(--ink-2);background:var(--gray-tint);border-radius:5px;padding:1px 6px;margin-top:4px}
+
+/* ── 조문 목록 ── */
+.list-sec{margin-top:36px}
+.glance-sec[hidden]+.list-sec{margin-top:0}
+.list-tools{display:flex;align-items:center;gap:8px}
+.text-btn{border:0;background:none;color:var(--ink-2);font-size:13.5px;font-weight:600;padding:6px 8px;border-radius:6px}
+.text-btn:hover{background:var(--gray-tint);color:var(--ink)}
+.select{height:36px;padding:0 30px 0 12px;border:1px solid var(--line-2);border-radius:8px;background:var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%237E889B' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 12px center;appearance:none;font-size:13.5px;font-weight:600}
+.notice{margin:0 0 10px;padding:9px 12px;border-radius:8px;background:var(--gray-tint);font-size:13px;color:var(--ink-2)}
+.arts{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+.art{border-top:1px solid var(--line);scroll-margin-top:88px}
+.art:first-child{border-top:0}
+.art-row{display:flex;align-items:flex-start}
+.art-toggle{flex:1;min-width:0;display:grid;grid-template-columns:96px minmax(0,1fr) 20px;gap:16px;padding:18px 0 18px 20px;border:0;background:none;text-align:left}
+.art-no{display:flex;flex-direction:column;gap:2px}
+.art-no b{font-size:16px;font-weight:800;color:var(--blue-ink);letter-spacing:-0.02em;font-variant-numeric:tabular-nums}
+.art-no small{font-size:12px;color:var(--muted);line-height:1.35}
+.art-main{display:block;min-width:0}
+.art-title{font-size:17px;font-weight:700;letter-spacing:-0.025em;margin-right:6px}
+.badges{display:inline-flex;flex-wrap:wrap;gap:4px;vertical-align:2px}
+.art:not(.is-open) .art-sum{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.art-sum{display:block;margin-top:6px;font-size:14.5px;line-height:1.65;color:var(--ink-2)}
+.chev{width:20px;height:20px;margin-top:2px;color:var(--muted);transition:transform .18s}
+.art.is-open .chev{transform:rotate(180deg)}
+.art-actions{display:flex;gap:2px;padding:14px 12px 0 6px}
+.icon-btn{display:grid;place-items:center;width:34px;height:34px;border:0;border-radius:8px;background:none;color:var(--muted)}
+.icon-btn:hover{background:var(--gray-tint);color:var(--ink)}
+.icon-btn svg{width:19px;height:19px}
+.icon-btn[aria-pressed="true"]{color:var(--blue)}
+.icon-btn[aria-pressed="true"] svg path{fill:currentColor}
+.art.is-dim .art-toggle{opacity:.42}
+.art-body{padding:0 24px 22px 132px}
+.pts{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.pts li{position:relative;padding-left:16px;font-size:14.5px;line-height:1.65}
+.pts li::before{content:"";position:absolute;left:2px;top:.72em;width:5px;height:5px;border-radius:50%;background:var(--blue)}
+.meta-row{display:flex;gap:10px;align-items:baseline;margin:12px 0 0;font-size:14px;line-height:1.6;color:var(--ink-2)}
+.tag{flex:none;display:inline-block;min-width:52px;text-align:center;padding:1px 8px;border-radius:6px;font-size:12px;font-weight:700;background:var(--gray-tint);color:var(--ink-2)}
+.tag-pen{background:#FDECEC;color:#B4232C}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tag-pen{background:#3D1A1D;color:#FF9AA0}}
+:root[data-theme="dark"] .tag-pen{background:#3D1A1D;color:#FF9AA0}
+.tag-upd{background:var(--amber-tint);color:var(--amber-ink)}
+.rel{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:14px}
+.rel-label{font-size:12.5px;font-weight:700;color:var(--muted);margin-right:2px}
+.rel-chip{padding:3px 10px;border:1px solid var(--line-2);border-radius:999px;background:var(--surface);font-size:12.5px;color:var(--ink-2)}
+.rel-chip:hover{border-color:var(--blue);color:var(--blue-ink)}
+.art-foot{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin-top:16px;padding-top:14px;border-top:1px dashed var(--line)}
+.ext{display:inline-flex;align-items:center;gap:4px;font-size:13.5px;font-weight:600;text-decoration:none}
+.ext:hover{text-decoration:underline}
+.ext svg{width:14px;height:14px}
+.orig{margin-top:12px;padding:14px 16px;border-radius:10px;background:var(--surface-2);border:1px solid var(--line)}
+.orig-meta{margin:0;font-size:12.5px;font-weight:600;color:var(--muted)}
+.orig-warn{margin:8px 0 0;padding:8px 10px;border-radius:8px;background:var(--amber-tint);color:var(--amber-ink);font-size:13px;font-weight:600}
+.orig-text{margin-top:10px;font-size:14px;line-height:1.8;white-space:pre-wrap;max-height:420px;overflow:auto}
+.api-btn{color:var(--blue-ink)}
+.badge{display:inline-block;padding:1px 7px;border-radius:6px;font-size:11.5px;font-weight:700;line-height:1.6;white-space:nowrap;letter-spacing:0}
+.b-u5{background:var(--gray-tint);color:var(--ink-2)}
+.b-scale{background:var(--blue-tint);color:var(--blue-ink)}
+.b-new{background:var(--green-tint);color:var(--green-ink)}
+.b-soon{background:var(--amber-tint);color:var(--amber-ink)}
+mark{background:var(--mark);color:inherit;border-radius:3px;padding:0 1px}
+.art.flash{animation:flash 1.6s ease-out}
+@keyframes flash{0%{background:var(--blue-tint)}100%{background:transparent}}
+.empty{padding:48px 24px;text-align:center;color:var(--ink-2)}
+.empty strong{display:block;font-size:16px;color:var(--ink);margin-bottom:6px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;height:38px;padding:0 16px;border-radius:8px;border:1px solid var(--line-2);background:var(--surface);font-size:14px;font-weight:700;color:var(--ink)}
+.btn:hover{border-color:var(--blue);color:var(--blue-ink)}
+.btn-primary{background:var(--blue);border-color:var(--blue);color:var(--on-blue)}
+.btn-primary:hover{background:var(--blue-press);color:var(--on-blue)}
+.empty .btn{margin-top:14px}
+
+/* ── 계산기 · 기한 · 개정 ── */
+.page-head{margin-bottom:18px}
+.page-head h2{margin:0;font-size:22px;font-weight:800;letter-spacing:-0.035em}
+.page-head p{margin:4px 0 0;color:var(--ink-2);font-size:14.5px}
+.calc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.panel.wide{grid-column:1/-1}
+.panel h3{margin:0;font-size:18px;font-weight:800;letter-spacing:-0.03em}
+.panel-desc{margin:4px 0 16px;font-size:13.5px;color:var(--muted)}
+.panel-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:24px;align-items:start}
+.field{display:block;margin-bottom:12px}
+.field>span{display:block;margin-bottom:6px;font-size:13px;font-weight:700;color:var(--ink-2)}
+.field small{font-weight:500;color:var(--muted)}
+.input{width:100%;height:44px;padding:0 12px;border:1px solid var(--line-2);border-radius:8px;background:var(--surface);font-size:15px;font-variant-numeric:tabular-nums}
+.input:focus{outline:0;border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-tint)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.result{margin-top:6px;padding:16px 18px;border-radius:10px;background:var(--surface-2);border:1px solid var(--line)}
+.res-big{font-size:26px;font-weight:800;letter-spacing:-0.03em;color:var(--blue-ink);font-variant-numeric:tabular-nums;line-height:1.25}
+.res-big small{font-size:14px;font-weight:600;color:var(--ink-2);margin-left:4px}
+.res-cap{font-size:13px;font-weight:700;color:var(--ink-2);margin-bottom:2px}
+.res-rows{margin:12px 0 0;padding:12px 0 0;border-top:1px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:14px}
+.res-rows dt{color:var(--muted)}
+.res-rows dd{margin:0;text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+.res-note{margin:12px 0 0;font-size:12.5px;line-height:1.6;color:var(--muted)}
+.res-warn{margin:12px 0 0;padding:8px 10px;border-radius:8px;background:var(--amber-tint);color:var(--amber-ink);font-size:13px;font-weight:600}
+.res-empty{color:var(--muted);font-size:14px;padding:6px 0}
+.sched{width:100%;border-collapse:collapse;font-size:14px}
+.sched caption{text-align:left;font-size:13px;font-weight:700;color:var(--ink-2);padding-bottom:8px}
+.sched th,.sched td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;font-variant-numeric:tabular-nums}
+.sched th{font-size:12.5px;color:var(--muted);font-weight:700}
+.sched td:last-child,.sched th:last-child{text-align:right}
+.sched tr.is-cur td{background:var(--blue-tint);color:var(--blue-ink);font-weight:700}
+.sched-wrap{overflow-x:auto}
+.disclaimer{margin-top:16px;font-size:12.5px;color:var(--muted)}
+
+.dl-layout{display:grid;grid-template-columns:320px minmax(0,1fr);gap:24px;align-items:start}
+.seg{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-bottom:14px}
+.seg label{position:relative}
+.seg input{position:absolute;opacity:0;inset:0}
+.seg span{display:flex;align-items:center;justify-content:center;height:42px;border:1px solid var(--line-2);border-radius:8px;font-size:14.5px;font-weight:600;color:var(--ink-2);cursor:pointer}
+.seg input:checked+span{border-color:var(--blue);background:var(--blue-tint);color:var(--blue-ink);font-weight:700}
+.seg input:focus-visible+span{outline:2px solid var(--blue);outline-offset:2px}
+.dl-list{margin:0;padding:0;list-style:none;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+.dl-item{display:grid;grid-template-columns:132px minmax(0,1fr) auto;gap:16px;align-items:start;padding:16px 20px;border-top:1px solid var(--line)}
+.dl-item:first-child{border-top:0}
+.dl-date{font-size:15px;font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-0.02em}
+.dl-date small{display:block;font-size:12.5px;font-weight:500;color:var(--muted)}
+.dl-label{font-size:15px;font-weight:700;letter-spacing:-0.02em}
+.dl-note{margin-top:3px;font-size:13.5px;color:var(--ink-2);line-height:1.6}
+.dl-ref{margin-top:6px;padding:0;border:0;background:none;font-size:12.5px;font-weight:600;color:var(--blue-ink)}
+.dl-ref:hover{text-decoration:underline}
+.dl-ref-text{display:block;margin-top:6px;font-size:12.5px;color:var(--muted)}
+.dday{padding:3px 9px;border-radius:999px;font-size:12.5px;font-weight:700;white-space:nowrap;background:var(--blue-tint);color:var(--blue-ink);font-variant-numeric:tabular-nums}
+.dday.soon{background:var(--amber-tint);color:var(--amber-ink)}
+.dday.past{background:var(--gray-tint);color:var(--muted)}
+.dday.none{background:none;color:var(--muted);font-weight:600}
+.dl-wknd{display:inline-block;margin-top:6px;padding:1px 7px;border-radius:6px;background:var(--amber-tint);color:var(--amber-ink);font-size:12px;font-weight:700}
+
+.chg-group{margin-bottom:28px}
+.chg-group h3{margin:0 0 10px;font-size:15px;font-weight:800;color:var(--ink-2)}
+.chg-list{margin:0;padding:0;list-style:none;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+.chg{display:grid;grid-template-columns:132px minmax(0,1fr);gap:16px;padding:16px 20px;border-top:1px solid var(--line)}
+.chg:first-child{border-top:0}
+.chg-date{font-size:15px;font-weight:800;font-variant-numeric:tabular-nums}
+.chg-date .dday{display:inline-block;margin-top:6px}
+.chg-title{font-size:15.5px;font-weight:700;letter-spacing:-0.02em}
+.chg-body{margin-top:3px;font-size:14px;color:var(--ink-2);line-height:1.65}
+.chg .rel{margin-top:8px}
+
+footer{border-top:1px solid var(--line);background:var(--surface)}
+footer .wrap{padding-top:24px;padding-bottom:36px;font-size:13px;color:var(--muted);line-height:1.7}
+footer p{margin:0 0 4px}
+
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,12px);padding:10px 18px;border-radius:10px;background:var(--toast-bg);color:var(--toast-ink);font-size:14px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;z-index:50}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ── 반응형 ── */
+@media (max-width:960px){
+  .layout{grid-template-columns:minmax(0,1fr);gap:20px}
+  .side{position:static;max-height:none;overflow:visible;padding:16px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+  .side-sec{padding-bottom:14px;margin-bottom:14px}
+  .nav-list{flex-direction:row;flex-wrap:wrap;gap:6px}
+  .nav-item{width:auto;padding:5px 11px;border:1px solid var(--line-2);border-radius:999px;font-size:13.5px}
+  .nav-item.is-on{border-color:var(--blue)}
+  .layout{display:flex;flex-direction:column}
+  .content{display:contents}
+  .glance-sec{order:1}
+  .side{order:2}
+  .list-sec{order:3;margin-top:4px}
+  .calc-grid,.dl-layout{grid-template-columns:minmax(0,1fr)}
+  .panel-split{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:760px){
+  .wrap{padding:0 16px}
+  .gnb-in{flex-wrap:wrap;height:auto;gap:0 16px;padding-top:10px}
+  .tabs{order:3;flex-basis:100%;height:46px;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 4px}
+  .tabs::-webkit-scrollbar{display:none}
+  .stamp{margin-left:auto}
+  .hero .wrap{padding-top:20px;padding-bottom:18px}
+  .hero-title{font-size:21px}
+  .hero-sub{font-size:14px}
+  .search{height:52px}
+  .search input{font-size:16px}
+  .kbd{display:none}
+  .search-btn{padding:0 18px}
+  .glance-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .g-cell{padding:14px 14px 12px}
+  .g-val{font-size:24px}
+  .art{position:relative}
+  .art-toggle{display:block;padding:14px 16px 16px}
+  .art-no{flex-direction:row;align-items:baseline;gap:8px;min-height:30px;padding-right:84px}
+  .art-main{margin-top:2px}
+  .chev{position:absolute;top:19px;right:52px;margin:0}
+  .art-actions{position:absolute;top:10px;right:8px;padding:0}
+  .chips{flex-wrap:nowrap;overflow-x:auto;margin:14px -16px 0;padding:0 16px 4px;scrollbar-width:none}
+  .chips::-webkit-scrollbar{display:none}
+  .chip,.chips-label{flex:none}
+  .art-body{padding:0 16px 18px}
+  .dl-item{grid-template-columns:minmax(0,1fr) auto;gap:6px 12px;padding:14px 16px}
+  .dl-date{grid-column:1/2}
+  .dl-item .dday{grid-column:2/3;grid-row:1/2;justify-self:end}
+  .dl-body{grid-column:1/-1}
+  .chg{grid-template-columns:minmax(0,1fr);gap:6px;padding:14px 16px}
+  .two{grid-template-columns:minmax(0,1fr)}
+  .gd-rows{grid-template-columns:minmax(0,1fr);gap:0}
+  .gd-rows dd{margin-bottom:8px}
+  .g-detail{padding:14px 16px 16px}
+  .panel{padding:18px}
+}
+@media (max-width:420px){
+  .stamp{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none !important;animation:none !important;scroll-behavior:auto !important}
+}
+@media print{
+  .gnb,.hero,.side,.art-actions,footer,.list-tools{display:none !important}
+  .layout{display:block}
+  .art-body[hidden]{display:block !important}
+}
+
+</style>
+</head>
+<body>
+<header class="gnb">
+  <div class="wrap gnb-in">
+    <button class="brand" type="button" data-tab-go="laws" aria-label="노무핸드북 처음 화면">
+      <span class="mark" aria-hidden="true">§</span><span class="brand-name">노무핸드북</span>
+    </button>
+    <nav class="tabs" role="tablist" aria-label="메뉴">
+      <button class="tab" role="tab" id="tab-laws" aria-controls="view-laws" aria-selected="true" data-tab="laws">조문 찾기</button>
+      <button class="tab" role="tab" id="tab-calc" aria-controls="view-calc" aria-selected="false" data-tab="calc">실무 계산기</button>
+      <button class="tab" role="tab" id="tab-deadline" aria-controls="view-deadline" aria-selected="false" data-tab="deadline">법정 기한</button>
+      <button class="tab" role="tab" id="tab-changes" aria-controls="view-changes" aria-selected="false" data-tab="changes">개정·시행 일정</button>
+    </nav>
+    <span class="stamp" id="stamp"></span>
+  </div>
+</header>
+
+<section class="hero" aria-label="조문 검색">
+  <div class="wrap">
+    <h1 class="hero-title">인사담당자가 자주 찾는 노동법 조문을 한곳에서</h1>
+    <div class="search" role="search">
+      <svg class="search-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <label for="q" class="sr-only">조문 검색어</label>
+      <input id="q" type="search" placeholder="예: 연차 수당, 주휴, 해고 예고, 근로기준법 60조" autocomplete="off" spellcheck="false" enterkeyhint="search">
+      <button class="clear-btn" id="qClear" type="button" aria-label="검색어 지우기" hidden><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+      <span class="kbd" aria-hidden="true" title="/ 키로 바로 검색">/</span>
+      <button class="search-btn" id="qBtn" type="button">검색</button>
+    </div>
+    <div class="chips" id="chips"><span class="chips-label">자주 찾는 주제</span></div>
+  </div>
+</section>
+
+<main class="wrap">
+  <!-- 조문 찾기 -->
+  <section class="view" id="view-laws" role="tabpanel" aria-labelledby="tab-laws">
+    <div class="layout">
+      <aside class="side" aria-label="필터">
+        <div class="side-sec">
+          <span class="side-h">분야</span>
+          <ul class="nav-list" id="catList"></ul>
+        </div>
+        <details class="side-sec" id="lawDetails">
+          <summary class="side-h">법령</summary>
+          <ul class="nav-list" id="lawList"></ul>
+        </details>
+      </aside>
+
+      <div class="content">
+        <section class="glance-sec" aria-labelledby="glanceH">
+          <div class="sec-head">
+            <h2 id="glanceH">한눈에 보는 기준</h2>
+            <span class="sec-note" id="glanceNote"></span>
+          </div>
+          <p class="glance-status" id="glanceStatus" aria-live="polite"></p>
+          <div class="glance-grid" id="glance"></div>
+        </section>
+
+        <section class="list-sec" aria-labelledby="listH" id="listSec">
+          <div class="sec-head">
+            <h2 id="listH">수록 조문 <span class="num" id="listCount">0</span>건</h2>
+            <div class="list-tools">
+              <label class="switch switch-sm" title="켜면 5명 미만 사업장에 적용되지 않는 조문을 흐리게 표시해요"><input type="checkbox" id="u5" role="switch"><span class="track" aria-hidden="true"></span>5인 미만 기준</label>
+              <button class="text-btn" id="expandAll" type="button">모두 펼치기</button>
+              <label for="sort" class="sr-only">정렬</label>
+              <select class="select" id="sort">
+                <option value="rel">관련도순</option>
+                <option value="law">법령·조문순</option>
+                <option value="recent">최근 개정순</option>
+              </select>
+            </div>
+          </div>
+          <p class="notice" id="u5Notice" hidden></p>
+          <div class="arts" id="list" aria-live="polite"></div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- 실무 계산기 -->
+  <section class="view" id="view-calc" role="tabpanel" aria-labelledby="tab-calc" hidden>
+    <div class="page-head">
+      <h2>실무 계산기</h2>
+      <p>자주 묻는 연차, 주휴수당, 퇴직금을 빠르게 어림해 보세요. 입력한 값은 이 화면에서만 계산되고 어디에도 전송되지 않아요.</p>
+    </div>
+    <div class="calc-grid">
+      <article class="panel wide" aria-labelledby="anH">
+        <h3 id="anH">연차 계산기</h3>
+        <p class="panel-desc">입사일 기준으로 지금까지 생긴 연차와 다음 발생일을 계산해요.</p>
+        <div class="panel-split">
+          <div>
+            <div class="two">
+              <label class="field"><span>입사일</span><input class="input" type="date" id="an-hire"></label>
+              <label class="field"><span>기준일 <small>(비우면 오늘)</small></span><input class="input" type="date" id="an-ref"></label>
+            </div>
+            <div class="result" id="an-out"></div>
+          </div>
+          <div class="sched-wrap" id="an-sched"></div>
+        </div>
+        <p class="disclaimer">매월 개근하고 연간 출근율이 80% 이상이라고 가정한 입사일 기준 계산이에요. 회계연도 기준으로 운영하는 회사는 결과가 다를 수 있고, 상시 5명 미만 사업장은 연차 규정이 적용되지 않아요.</p>
+      </article>
+
+      <article class="panel" aria-labelledby="wkH">
+        <h3 id="wkH">주휴수당 계산기</h3>
+        <p class="panel-desc">시급과 1주 소정근로시간으로 주휴수당과 월 환산액을 계산해요.</p>
+        <div class="two">
+          <label class="field"><span>시급(원)</span><input class="input money" type="text" inputmode="numeric" id="wk-wage"></label>
+          <label class="field"><span>1주 소정근로시간</span><input class="input" type="number" inputmode="decimal" min="0" max="40" step="0.5" id="wk-hours" value="20"></label>
+        </div>
+        <div class="result" id="wk-out"></div>
+      </article>
+
+      <article class="panel" aria-labelledby="rtH">
+        <h3 id="rtH">퇴직금 계산기</h3>
+        <p class="panel-desc">평균임금 × 30일 × 재직일수 ÷ 365로 어림해요. 예시 값이 들어 있어요.</p>
+        <div class="two">
+          <label class="field"><span>입사일</span><input class="input" type="date" id="rt-hire" value="2021-03-02"></label>
+          <label class="field"><span>마지막 근무일</span><input class="input" type="date" id="rt-last" value="2026-09-30"></label>
+        </div>
+        <label class="field"><span>퇴직 전 3개월 임금 총액(원) <small>세전, 기본급과 매월 수당 합계</small></span><input class="input money" type="text" inputmode="numeric" id="rt-wage3" value="10,500,000"></label>
+        <div class="two">
+          <label class="field"><span>최근 1년 상여금(원)</span><input class="input money" type="text" inputmode="numeric" id="rt-bonus" value="6,000,000"></label>
+          <label class="field"><span>최근 1년 연차수당(원)</span><input class="input money" type="text" inputmode="numeric" id="rt-leave" value="600,000"></label>
+        </div>
+        <div class="result" id="rt-out"></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 법정 기한 -->
+  <section class="view" id="view-deadline" role="tabpanel" aria-labelledby="tab-deadline" hidden>
+    <div class="page-head">
+      <h2>법정 기한 계산</h2>
+      <p>입사, 퇴사, 해고, 출산처럼 날짜가 정해지면 챙겨야 할 신고·지급·청구 기한을 한 번에 보여줘요.</p>
+    </div>
+    <div class="dl-layout">
+      <div class="panel">
+        <fieldset style="border:0;margin:0;padding:0">
+          <legend class="field" style="padding:0"><span style="display:block;margin-bottom:6px;font-size:13px;font-weight:700;color:var(--ink-2)">상황</span></legend>
+          <div class="seg" id="dlType"></div>
+        </fieldset>
+        <label class="field"><span id="dlDateLabel">날짜</span><input class="input" type="date" id="dlDate"></label>
+        <p class="side-note" id="dlHint"></p>
+      </div>
+      <div>
+        <ol class="dl-list" id="dlList"></ol>
+        <p class="disclaimer">기간은 민법의 초일 불산입 원칙을 기준으로 어림한 날짜예요. 기한 마지막 날이 공휴일이면 다음 날로 늘어나는 경우가 있으니, 중요한 기한은 하루 이상 여유를 두세요.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 개정·시행 일정 -->
+  <section class="view" id="view-changes" role="tabpanel" aria-labelledby="tab-changes" hidden>
+    <div class="page-head">
+      <h2>개정·시행 일정</h2>
+      <p>인사 실무에 영향이 큰 최근 개정과 시행 예정 제도를 날짜순으로 모았어요.</p>
+    </div>
+    <div id="chgWrap"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p id="footStamp"></p>
+    <p>법령 요약과 계산 결과는 이해를 돕기 위한 참고 자료로, 법적 효력이 없어요. 정확한 내용은 <a href="https://www.law.go.kr" target="_blank" rel="noopener">국가법령정보센터</a>의 원문을 확인하고, 개별 사안은 노무사 확인을 받으세요.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* =====================================================================
+   노무핸드북 데이터
+   - 이 블록만 고치면 화면 내용이 바뀝니다. (코드 수정 불필요)
+   - 조문 항목 필드
+       id    : 고유값 (법령키-조번호, 예: lsa-60, lsa-76-2)
+       law   : LAWS의 키
+       no    : 조문 번호 표기 (예: '제60조', '제76조의2', 조문이 없으면 '전문')
+       cat   : CATS의 키
+       u5    : 5인 미만 적용 여부  'Y'(적용, 생략 가능) / 'N'(미적용) / 'P'(일부 적용)
+       u5n   : 5인 미만 관련 보충 설명 (선택)
+       scale : 적용 규모 배지 (선택, 예: '상시 10명 이상')
+       sum   : 핵심 요약 / pts: 실무 포인트 / pen: 벌칙·과태료 (선택)
+       tags  : 검색용 키워드 (띄어쓰기로 구분)
+       rel   : 관련 조문 id 목록
+       upd   : 최근 개정 {d:'YYYY-MM-DD', t:'내용', m:true(월까지만 표시)} (선택)
+   ===================================================================== */
+window.NOMU_DATA = {
+CONFIG: {
+  DATA_DATE: '2026-10-14',        // 데이터 기준일
+  LAW_API_ENDPOINT: '/api/law'    // Vercel 중계 함수 주소. 파일을 PC에서 바로 열면(file://) 자동으로 꺼지고 원문 링크만 보여요
+},
+
+/* 이미 요약에 반영한 '예정된 개정' 시행일 — 이 날짜에 법령이 바뀌어도 빨간 표시를 띄우지 않아요 */
+REVIEWED_LAW_DATES: {
+  '근로기준법': ['2026-12-10', '2027-06-10'],
+  '남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률': ['2026-11-27']
+},
+
+LAWS: {
+  lsa:  { full: '근로기준법', short: '근로기준법' },
+  lsr:  { full: '근로기준법 시행령', short: '근로기준법 시행령' },
+  mwa:  { full: '최저임금법', short: '최저임금법' },
+  rba:  { full: '근로자퇴직급여 보장법', short: '퇴직급여법' },
+  eea:  { full: '남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률', short: '남녀고용평등법' },
+  nra:  { full: '기간제 및 단시간근로자 보호 등에 관한 법률', short: '기간제법' },
+  dwa:  { full: '파견근로자 보호 등에 관한 법률', short: '파견법' },
+  osh:  { full: '산업안전보건법', short: '산업안전보건법' },
+  sfa:  { full: '중대재해 처벌 등에 관한 법률', short: '중대재해처벌법' },
+  eia:  { full: '고용보험법', short: '고용보험법' },
+  iaci: { full: '산업재해보상보험법', short: '산재보험법' },
+  ipa:  { full: '고용보험 및 산업재해보상보험의 보험료징수 등에 관한 법률', short: '보험료징수법' },
+  npa:  { full: '국민연금법', short: '국민연금법' },
+  nhi:  { full: '국민건강보험법', short: '국민건강보험법' },
+  tua:  { full: '노동조합 및 노동관계조정법', short: '노동조합법' },
+  wpa:  { full: '근로자참여 및 협력증진에 관한 법률', short: '근로자참여법' },
+  age:  { full: '고용상 연령차별금지 및 고령자고용촉진에 관한 법률', short: '고령자고용법' },
+  epa:  { full: '고용정책 기본법', short: '고용정책기본법' },
+  ra:   { full: '채용절차의 공정화에 관한 법률', short: '채용절차법' },
+  dea:  { full: '장애인고용촉진 및 직업재활법', short: '장애인고용법' },
+  cca:  { full: '영유아보육법', short: '영유아보육법' },
+  ld:   { full: '노동절 제정에 관한 법률', short: '노동절법' }
+},
+
+CATS: {
+  contract: '근로계약·채용',
+  wage:     '임금·퇴직금',
+  time:     '근로시간·휴일·휴가',
+  dismiss:  '해고·징계·정년',
+  family:   '모성보호·일가정양립',
+  harass:   '차별·괴롭힘·성희롱',
+  nonreg:   '기간제·단시간·파견',
+  safety:   '산업안전·중대재해',
+  insure:   '4대보험·급여',
+  large:    '규모별 의무·공시',
+  union:    '노사관계'
+},
+
+CHIPS: [
+  { t: '연차', q: '연차' }, { t: '주휴수당', q: '주휴' }, { t: '퇴직금', q: '퇴직금' }, { t: '해고', q: '해고' },
+  { t: '4대보험 요율', q: '4대보험' }, { t: '육아휴직', q: '육아휴직' }, { t: '괴롭힘', q: '괴롭힘' }, { t: '법정의무교육', q: '법정의무교육' }
+],
+
+/* 검색 동의어: 왼쪽 단어로 검색하면 오른쪽 단어로도 찾아줍니다 */
+SYN: {
+  '월차': ['연차'], '연차수당': ['연차', '미사용'], '반차': ['연차', '휴게'],
+  '알바': ['단시간', '아르바이트'], '아르바이트': ['단시간', '알바'], '파트타임': ['단시간'],
+  '야근': ['연장', '야간'], '초과근무': ['연장'], '잔업': ['연장'], '특근': ['휴일근로'],
+  '짤림': ['해고'], '잘림': ['해고'], '해임': ['해고'],
+  '출산휴가': ['출산전후휴가', '배우자 출산'], '육휴': ['육아휴직'], '아빠휴가': ['배우자 출산'],
+  '실업급여': ['구직급여'], '갑질': ['괴롭힘'], '왕따': ['괴롭힘', '따돌림'],
+  '계약직': ['기간제'], '비정규직': ['기간제', '단시간', '파견'],
+  '최저시급': ['최저임금'], '월급': ['임금'], '급여': ['임금'], '임금체불': ['체불'],
+  '주52시간': ['연장', '근로시간'], '52시간': ['연장', '근로시간'],
+  '산재': ['업무상', '산업재해'], '법정교육': ['법정의무교육'], '의무교육': ['법정의무교육'],
+  '주휴수당': ['주휴'], '정년연장': ['정년'], '단축근무': ['근로시간 단축'],
+  '근로자의날': ['노동절'], '수습': ['수습'], '중처법': ['중대재해'],
+  '국민연금': ['국민연금', '연금보험료'], '건강보험': ['건강보험', '보험료율'], '건보': ['건강보험'],
+  'aa': ['적극적고용개선조치'], '어린이집': ['직장어린이집'], '산안위': ['산업안전보건위원회'], '요율': ['보험료율']
+},
+
+/* =====================================================================
+   한눈에 보는 기준 (상시 300명 이상 기업 기준)
+   kind 'schedule' : 이미 정해진 일정대로 바뀌는 값 → steps의 날짜가 지나면 자동 전환
+   kind 'annual'   : 매년 새로 정해지는 값 → 올해 값이 없거나(due 이후) 내년 값이 없으면 빨간 표시
+   kind 'law'      : 법령에 정해진 값 → watch의 법령이 개정되면 빨간 표시
+   steps : [{ from:'시작일', val:'값', sub:'상세 설명', brief:'첫 화면 한 줄(선택)' }]   (새 값이 정해지면 한 줄 추가)
+   brief : 첫 화면에 보이는 한 줄 설명 / sub·note : 칸을 눌렀을 때 보이는 상세 설명
+   watch : 법제처에서 개정 여부를 확인할 대상
+           { law:'법령 전체 이름', jo:'제00조', name:'짧은 이름', checked:'확인한 날' }
+           { admrul:'고시 검색어', match:'고시 이름에 들어갈 말', checked:'반영한 고시 발령일' }
+   빨간 표시를 지우려면: 값을 고친 뒤 steps에 줄을 추가하거나 checked 날짜를 오늘로 바꾸세요.
+   ===================================================================== */
+GLANCE: [
+  { group: '{Y}년 임금·4대보험', items: [
+    { id: 'minwage', kind: 'annual', due: '08-05', label: '최저임금', unit: '원/시간', nextUnit: '원', ref: 'mwa-5',
+      steps: [ { from: '2026-01-01', val: '10,320', sub: '월 2,156,880원 (209시간)' },
+               { from: '2027-01-01', val: '10,700', sub: '월 2,236,300원 (209시간)' } ],
+      watch: [ { admrul: '최저임금', match: '적용 최저임금', name: '최저임금 고시', checked: '2026-08-05' } ] },
+    { id: 'pension', kind: 'schedule', label: '국민연금 보험료율', unit: '%', nextUnit: '%', ref: 'npa-88',
+      steps: [ { from: '2026-01-01', val: '9.5', sub: '회사·근로자 각 4.75%' }, { from: '2027-01-01', val: '10', sub: '회사·근로자 각 5%' },
+               { from: '2028-01-01', val: '10.5', sub: '회사·근로자 각 5.25%' }, { from: '2029-01-01', val: '11', sub: '회사·근로자 각 5.5%' },
+               { from: '2030-01-01', val: '11.5', sub: '회사·근로자 각 5.75%' }, { from: '2031-01-01', val: '12', sub: '회사·근로자 각 6%' },
+               { from: '2032-01-01', val: '12.5', sub: '회사·근로자 각 6.25%' }, { from: '2033-01-01', val: '13', sub: '회사·근로자 각 6.5%' } ],
+      watch: [ { law: '국민연금법', jo: '제88조', name: '국민연금법' } ] },
+    { id: 'health', kind: 'annual', due: '09-30', label: '건강보험료율', unit: '%', nextUnit: '%', ref: 'nhi-73',
+      steps: [ { from: '2026-01-01', val: '7.19', sub: '각 3.595% · 장기요양은 건보료의 13.14%' },
+               { from: '2027-01-01', val: '7.19', brief: '회사·근로자 각 3.595%', sub: '각 3.595% (동결) · 장기요양 요율은 별도 결정' } ],
+      watch: [ { law: '국민건강보험법 시행령', jo: '제44조', name: '건강보험법 시행령' } ] },
+    { id: 'eiprem', brief: '1,000명 이상은 0.85%', kind: 'law', label: '고용안정·직능 보험료(회사)', val: '0.65', unit: '%', sub: '150~999명 기준 · 1,000명 이상 0.85%', ref: 'ipa-14',
+      watch: [ { law: '고용보험 및 산업재해보상보험의 보험료징수 등에 관한 법률 시행령', jo: '제12조', name: '보험료징수법 시행령' } ] }
+  ] },
+  { group: '고용·공시 의무', items: [
+    { id: 'disrate', kind: 'schedule', note: '상시 100명 이상이 의무고용률에 못 미치면 고용부담금을 내요.', label: '장애인 의무고용률', unit: '%', nextUnit: '%', ref: 'dea-28',
+      steps: [ { from: '2026-01-01', val: '3.1', sub: '50명 이상 기업 의무' },
+               { from: '2027-01-01', val: '3.3', sub: '50명 이상 기업 의무' },
+               { from: '2029-01-01', val: '3.5', sub: '50명 이상 기업 의무' } ],
+      watch: [ { law: '장애인고용촉진 및 직업재활법 시행령', jo: '제25조', name: '장애인고용법 시행령' } ] },
+    { id: 'dislevy', brief: '미달 1명당 월 기준', kind: 'annual', label: '장애인 고용부담 기초액', unit: '만원/월', nextUnit: '만원', ref: 'dea-33',
+      steps: [ { from: '2026-01-01', val: '129.5', sub: '미달 1명당 · 고용률 낮을수록 가산' } ],
+      watch: [ { admrul: '부담기초액', match: '부담기초액', name: '부담기초액 고시', checked: '2026-01-01' } ] },
+    { id: 'aged', brief: '업종별 2~6%', kind: 'law', label: '고령자 기준고용률', val: '3', unit: '%', sub: '제조업 2% · 운수·부동산 6% · 노력의무', ref: 'age-12',
+      watch: [ { law: '고용상 연령차별금지 및 고령자고용촉진에 관한 법률 시행령', jo: '제3조', name: '고령자고용법 시행령' } ] },
+    { id: 'gongsi', brief: '3월 31일 기준 현황', kind: 'law', label: '고용형태 공시', val: '4. 30.', unit: '까지', sub: '매년 3월 31일 기준 현황 공시', ref: 'epa-15-6',
+      watch: [ { law: '고용정책 기본법', jo: '제15조의6', name: '고용정책기본법' } ] }
+  ] },
+  { group: '모성·육아·보육', items: [
+    { id: 'maternity', brief: '대규모기업 회사 부담분', kind: 'law', label: '출산전후휴가 회사 지급', val: '60', unit: '일', sub: '대규모기업은 최초 60일 통상임금 회사 부담', ref: 'eia-75',
+      watch: [ { law: '근로기준법', jo: '제74조', name: '근로기준법' }, { law: '고용보험법', jo: '제75조', name: '고용보험법' } ] },
+    { id: 'paternity', brief: '대기업은 회사가 전액 부담', kind: 'law', label: '배우자 출산전후휴가', val: '20', unit: '일 유급', sub: '정부 급여 지원은 우선지원대상기업만', ref: 'eea-18-2',
+      watch: [ { law: '남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률', jo: '제18조의2', name: '남녀고용평등법' } ] },
+    { id: 'parental', brief: '기본 1년 + 6개월', kind: 'law', label: '육아휴직', val: '18', unit: '개월까지', sub: '기본 1년 · 부모 각 3개월 이상 쓰면 +6개월', ref: 'eea-19',
+      watch: [ { law: '남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률', jo: '제19조', name: '남녀고용평등법' } ] },
+    { id: 'daycare', brief: '또는 여성 300명 이상', kind: 'law', label: '직장어린이집', val: '500', unit: '명 이상', sub: '또는 여성 근로자 300명 이상이면 설치 의무', ref: 'cca-14',
+      watch: [ { law: '영유아보육법 시행령', jo: '제20조', name: '영유아보육법 시행령' } ] }
+  ] },
+  { group: '근로시간·회의체·교육', items: [
+    { id: 'maxhours', brief: '법정 40 + 연장 12', kind: 'law', label: '주 최대 근로시간', val: '52', unit: '시간', sub: '법정 40시간 + 연장 12시간 · 휴일 포함', ref: 'lsa-53',
+      watch: [ { law: '근로기준법', jo: '제50조', name: '근로기준법' }, { law: '근로기준법', jo: '제53조', name: '근로기준법' } ] },
+    { id: 'leave', brief: '근속에 따라 가산', kind: 'law', label: '연차 유급휴가', val: '15~25', unit: '일', sub: '사용촉진을 지키면 미사용수당 면제', ref: 'lsa-60',
+      watch: [ { law: '근로기준법', jo: '제60조', name: '근로기준법' } ] },
+    { id: 'committee', brief: '분기마다 정기회의', kind: 'law', label: '노사협의회·산안위', val: '3', unit: '개월마다', sub: '노사협의회와 산업안전보건위원회 모두 3개월(분기)마다 정기회의를 열고 회의록을 보존해요', ref: 'wpa-4',
+      watch: [ { law: '근로자참여 및 협력증진에 관한 법률', jo: '제12조', name: '근로자참여법' }, { law: '산업안전보건법 시행령', jo: '제37조', name: '산업안전보건법 시행령' } ] },
+    { id: 'training', brief: '성희롱·장애인·퇴직연금', kind: 'law', label: '법정의무교육', val: '연 1회', unit: '이상', sub: '성희롱 예방 · 장애인 인식개선 · 퇴직연금', ref: 'eea-13',
+      watch: [ { law: '남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률', jo: '제13조', name: '남녀고용평등법' }, { law: '장애인고용촉진 및 직업재활법', jo: '제5조의2', name: '장애인고용법' },
+               { law: '근로자퇴직급여 보장법', jo: '제32조', name: '퇴직급여법' } ] }
+  ] }
+],
+
+ARTICLES: [
+/* ───────── 근로기준법 ───────── */
+{ id:'lsa-2', law:'lsa', no:'제2조', title:'정의', cat:'contract',
+  sum:'근로자·사용자·근로계약·임금·평균임금·소정근로시간·단시간근로자 등 노동법 전반에 쓰이는 기본 용어를 정합니다.',
+  pts:['근로자인지는 계약 이름(도급·위임·프리랜서)이 아니라 실제로 사용자의 지휘·감독을 받으며 일했는지로 판단합니다.',
+       '평균임금은 산정 사유 발생일 이전 3개월 동안 지급된 임금 총액을 그 기간의 총일수로 나눈 금액으로, 퇴직금·휴업수당·산재 급여의 기준이 됩니다.',
+       '평균임금이 통상임금보다 적으면 통상임금을 평균임금으로 봅니다.'],
+  tags:'근로자성 프리랜서 3.3 평균임금 소정근로시간 정의 용어', rel:['lsr-6','rba-8'] },
+
+{ id:'lsa-11', law:'lsa', no:'제11조', title:'적용 범위', cat:'contract',
+  sum:'상시 5명 이상을 사용하는 사업장에는 근로기준법 전체가, 4명 이하 사업장에는 시행령으로 정한 일부 규정만 적용됩니다.',
+  pts:['동거하는 친족만 사용하는 사업장과 가사사용인에게는 적용되지 않습니다.',
+       '상시 근로자 수는 산정 사유 발생일 전 1개월 동안 사용한 근로자 연인원을 같은 기간의 가동 일수로 나눠 계산합니다(시행령 제7조의2).',
+       '5명 미만 사업장에 적용되지 않는 대표 규정: 부당해고 제한, 법정근로시간·연장근로 한도, 가산임금, 연차, 휴업수당, 직장 내 괴롭힘.'],
+  tags:'5인 미만 상시근로자 적용범위 소규모 사업장 인원 산정', rel:['lsa-23','lsa-60','lsa-50'] },
+
+{ id:'lsa-17', law:'lsa', no:'제17조', title:'근로조건의 명시', cat:'contract',
+  sum:'근로계약을 맺을 때 임금, 소정근로시간, 휴일, 연차 유급휴가 등 근로조건을 명시해야 하며, 핵심 항목은 서면으로 작성해 근로자에게 교부해야 합니다.',
+  pts:['서면 명시·교부 대상: 임금의 구성항목·계산방법·지급방법, 소정근로시간, 주휴일, 연차 유급휴가.',
+       '근로조건이 바뀌어 위 항목이 변경되면 변경된 내용도 서면으로 다시 교부해야 합니다.',
+       '기간제·단시간 근로자는 기간제법 제17조에 따라 계약기간, 근로일과 근로일별 근로시간 등을 추가로 적어야 합니다.'],
+  pen:'500만원 이하 벌금', tags:'근로계약서 서면 교부 근로조건 계약서 입사', rel:['nra-17','lsa-48'] },
+
+{ id:'lsa-18', law:'lsa', no:'제18조', title:'단시간근로자의 근로조건', cat:'nonreg',
+  sum:'단시간근로자의 근로조건은 같은 사업장에서 같은 종류의 업무를 하는 통상근로자의 근로시간에 비례해 정합니다.',
+  pts:['4주 동안을 평균해 1주 소정근로시간이 15시간 미만인 초단시간근로자에게는 주휴일과 연차 유급휴가가 적용되지 않습니다.',
+       '초단시간근로자는 퇴직급여 적용 대상에서도 빠집니다(퇴직급여법 제4조).',
+       '주 15시간 기준은 실제 근로시간이 아니라 계약상 소정근로시간으로 판단합니다.'],
+  tags:'알바 아르바이트 단시간 초단시간 15시간 파트타임 주휴', rel:['lsa-55','nra-6','rba-4'] },
+
+{ id:'lsa-20', law:'lsa', no:'제20조', title:'위약 예정의 금지', cat:'contract',
+  sum:'근로계약을 지키지 않았을 때 낼 위약금이나 손해배상액을 미리 정해 두는 계약을 할 수 없습니다.',
+  pts:['"1년 안에 퇴사하면 OO만원 배상" 같은 조항은 무효입니다.',
+       '회사가 비용을 낸 교육·연수 뒤 일정 기간 근무를 약정하고, 어기면 실제 지출 비용을 돌려받는 약정은 판례상 합리적 범위에서 허용될 수 있습니다.',
+       '실제로 생긴 손해에 대한 배상 청구까지 막는 규정은 아닙니다.'],
+  pen:'500만원 이하 벌금', tags:'위약금 손해배상 교육비 반환 의무재직 퇴사', rel:['lsa-43'] },
+
+{ id:'lsa-23', law:'lsa', no:'제23조', title:'해고 등의 제한', cat:'dismiss', u5:'P',
+  u5n:'제1항(정당한 이유 없는 해고 금지)은 5인 미만에 적용되지 않고, 제2항(해고 시기 제한)은 적용됩니다.',
+  sum:'정당한 이유 없이 해고, 휴직, 정직, 전직, 감봉 등 징벌을 할 수 없고, 업무상 재해 요양 기간과 출산전후휴가 기간 및 그 후 30일 동안은 해고할 수 없습니다.',
+  pts:['정당한 이유는 사회통념상 근로관계를 이어갈 수 없을 정도의 책임 있는 사유가 있는지로 판단하며, 입증 책임은 사용자에게 있습니다.',
+       '징계는 취업규칙·단체협약의 사유와 절차(소명 기회, 징계위원회 등)를 지키고, 징계 수준이 잘못의 정도에 비해 지나치지 않아야 합니다.',
+       '해고 시기 제한(제2항)은 일시보상을 했거나 사업을 계속할 수 없게 된 경우 예외입니다.'],
+  pen:'제2항 위반 시 5년 이하 징역 또는 5천만원 이하 벌금', tags:'해고 징계 정당한 이유 부당해고 정직 감봉 전직 해고금지', rel:['lsa-27','lsa-28','lsa-95'] },
+
+{ id:'lsa-24', law:'lsa', no:'제24조', title:'경영상 이유에 의한 해고의 제한', cat:'dismiss', u5:'N',
+  sum:'정리해고는 긴박한 경영상 필요, 해고 회피 노력, 합리적이고 공정한 대상자 선정, 근로자대표와의 성실한 협의라는 요건을 모두 갖춰야 합니다.',
+  pts:['해고하려는 날의 50일 전까지 근로자대표에게 해고 회피 방법과 해고 기준을 통보하고 성실하게 협의해야 합니다.',
+       '일정 규모 이상을 해고하려면 고용노동부장관에게 신고해야 합니다(시행령 제10조).',
+       '해고한 날부터 3년 안에 같은 업무에 사람을 뽑을 때 해고된 근로자가 원하면 우선 고용해야 합니다(제25조).'],
+  tags:'정리해고 구조조정 경영상 해고 희망퇴직', rel:['lsa-23','lsa-28'] },
+
+{ id:'lsa-26', law:'lsa', no:'제26조', title:'해고의 예고', cat:'dismiss',
+  sum:'근로자를 해고하려면 적어도 30일 전에 예고해야 하고, 예고하지 않았다면 30일분 이상의 통상임금(해고예고수당)을 지급해야 합니다.',
+  pts:['예외: 계속 근로 기간이 3개월 미만인 경우, 천재·사변 등으로 사업을 계속할 수 없는 경우, 근로자가 고의로 사업에 막대한 지장이나 손해를 끼친 경우.',
+       '예고를 했더라도 해고 자체가 정당한지는 따로 판단합니다. 예고는 절차 요건일 뿐입니다.',
+       '예고를 서면으로 하면서 해고 사유와 시기를 적으면 제27조의 서면통지를 한 것으로 봅니다.'],
+  pen:'2년 이하 징역 또는 2천만원 이하 벌금', tags:'해고예고 해고예고수당 30일 통상임금 수습', rel:['lsa-27','lsa-23'] },
+
+{ id:'lsa-27', law:'lsa', no:'제27조', title:'해고사유 등의 서면통지', cat:'dismiss', u5:'N',
+  sum:'해고할 때는 해고 사유와 해고 시기를 서면으로 알려야 하며, 서면으로 통지하지 않은 해고는 효력이 없습니다.',
+  pts:['문자·메신저·이메일 통지는 사유와 시기가 구체적으로 담기고 수령이 확인되는 등 예외적인 경우에만 인정될 수 있어, 문서 교부를 원칙으로 하는 것이 안전합니다.',
+       '해고 사유는 근로자가 무엇 때문에 해고되었는지 알 수 있을 만큼 구체적으로 적어야 합니다.'],
+  tags:'해고통지서 서면통지 해고사유 문자해고', rel:['lsa-26','lsa-28'] },
+
+{ id:'lsa-28', law:'lsa', no:'제28조', title:'부당해고등의 구제신청', cat:'dismiss', u5:'N',
+  sum:'부당하게 해고·휴직·정직·전직·감봉 등을 당한 근로자는 그날부터 3개월 이내에 노동위원회에 구제를 신청할 수 있습니다.',
+  pts:['사업장 관할 지방노동위원회에 신청하고, 판정에 불복하면 중앙노동위원회에 재심을 신청할 수 있습니다.',
+       '구제명령을 이행하지 않으면 이행강제금이 부과될 수 있습니다(제33조).',
+       '근로자가 원직복직을 원하지 않으면 해고 기간 임금 상당액 이상의 금품 지급을 명할 수 있습니다(제30조).'],
+  tags:'부당해고 구제신청 노동위원회 3개월 원직복직', rel:['lsa-23','lsa-27'] },
+
+{ id:'lsa-36', law:'lsa', no:'제36조', title:'금품 청산', cat:'wage',
+  sum:'근로자가 사망하거나 퇴직하면 지급 사유가 생긴 때부터 14일 이내에 임금, 보상금, 그 밖의 모든 금품을 지급해야 합니다.',
+  pts:['특별한 사정이 있으면 당사자 합의로 지급 기일을 연장할 수 있습니다. 합의는 서면으로 남겨 두는 것이 안전합니다.',
+       '14일이 지나면 미지급 금액에 연 20%의 지연이자가 붙습니다(제37조).',
+       '퇴직금 지급 기한도 같은 14일입니다(퇴직급여법 제9조).'],
+  pen:'5년 이하 징역 또는 5천만원 이하 벌금(2026. 10. 8. 상향)', tags:'금품청산 퇴사 14일 체불 정산 마지막 월급',
+  rel:['lsa-37','rba-9','lsa-43'], upd:{ d:'2026-10-08', t:'임금 체불 벌칙 상향(3년·3천만원 → 5년·5천만원)' } },
+
+{ id:'lsa-37', law:'lsa', no:'제37조', title:'미지급 임금에 대한 지연이자', cat:'wage',
+  sum:'지급 기일까지 임금이나 퇴직금을 주지 않으면 그 다음 날부터 지급하는 날까지 지연 일수에 대해 연 20%의 지연이자를 지급해야 합니다.',
+  pts:['종전에는 퇴직·사망한 근로자에게만 적용됐지만, 2025. 10. 23.부터 재직 중인 근로자의 체불 임금에도 적용됩니다.',
+       '천재·사변이나 법원·노동위원회에서 다투는 경우 등 시행령이 정한 사유가 있으면 그 기간에는 적용되지 않습니다.',
+       '고의·장기 체불 등 요건을 갖추면 근로자는 법원에 체불액의 최대 3배 손해배상을 청구할 수 있습니다(제43조의8).'],
+  tags:'지연이자 20% 체불 이자 징벌적 손해배상', rel:['lsa-36','lsa-43'], upd:{ d:'2025-10-23', t:'재직자 체불 임금까지 지연이자 확대' } },
+
+{ id:'lsa-43', law:'lsa', no:'제43조', title:'임금 지급', cat:'wage',
+  sum:'임금은 통화로, 근로자에게 직접, 전액을, 매월 1회 이상 일정한 날짜를 정해 지급해야 합니다.',
+  pts:['법령이나 단체협약에 근거가 있으면 소득세·4대보험료 등을 공제할 수 있습니다. 근거 없이 비품 파손비 등을 임의로 빼면 전액 지급 원칙 위반입니다.',
+       '상습 체불 사업주는 명단 공개, 신용 제재, 정부 지원 제한, 출국금지 대상이 될 수 있습니다(2025. 10. 23. 시행).'],
+  pen:'5년 이하 징역 또는 5천만원 이하 벌금(2026. 10. 8. 상향)', tags:'월급 급여 임금지급 공제 체불 전액불 직접불 정기지급 상습체불',
+  rel:['lsa-36','lsa-37','lsa-48','lsa-49'], upd:{ d:'2026-10-08', t:'임금 체불 벌칙 상향' } },
+
+{ id:'lsa-46', law:'lsa', no:'제46조', title:'휴업수당', cat:'wage', u5:'N',
+  sum:'회사 사정으로 휴업하면 휴업 기간 동안 평균임금의 70% 이상을 휴업수당으로 지급해야 합니다.',
+  pts:['평균임금의 70%가 통상임금보다 많으면 통상임금을 휴업수당으로 지급할 수 있습니다.',
+       '부득이한 사유로 사업을 계속할 수 없어 노동위원회 승인을 받으면 기준보다 적게 지급할 수 있습니다.',
+       '특정 근로자에게 일을 주지 않는 대기발령·자택 대기도 회사 사정이라면 휴업에 해당할 수 있습니다.'],
+  tags:'휴업수당 70% 휴업 대기발령 가동중단', rel:['lsa-2'] },
+
+{ id:'lsa-48', law:'lsa', no:'제48조', title:'임금대장 및 임금명세서', cat:'wage',
+  sum:'사업장마다 임금대장을 작성해야 하고, 임금을 지급할 때는 구성항목·계산방법·공제 내역 등을 적은 임금명세서를 서면(전자문서 포함)으로 교부해야 합니다.',
+  pts:['연장·야간·휴일근로를 시켰다면 그 시간 수와 계산 방법도 명세서에 적어야 합니다.',
+       '이메일, 사내 시스템, 메신저 등 전자문서로 교부해도 됩니다.',
+       '임금대장 등 근로계약 관련 서류는 3년간 보존해야 합니다(제42조).'],
+  pen:'500만원 이하 과태료', tags:'급여명세서 임금명세서 임금대장 교부', rel:['lsa-43','lsa-17'] },
+
+{ id:'lsa-49', law:'lsa', no:'제49조', title:'임금의 시효', cat:'wage',
+  sum:'임금채권은 3년간 행사하지 않으면 시효로 소멸합니다.',
+  pts:['퇴직금 청구권도 퇴직한 날부터 3년간 행사하지 않으면 소멸합니다(퇴직급여법 제10조).',
+       '시효는 각 임금의 정기 지급일부터 진행하므로, 못 받은 수당은 지급일별로 3년이 지나면 차례로 소멸합니다.'],
+  tags:'임금채권 시효 3년 소멸시효 체불', rel:['lsa-43','rba-9'] },
+
+{ id:'lsa-50', law:'lsa', no:'제50조', title:'근로시간', cat:'time', u5:'N',
+  sum:'1주 근로시간은 휴게시간을 빼고 40시간, 1일 근로시간은 8시간을 넘을 수 없습니다.',
+  pts:['작업을 위해 사용자의 지휘·감독 아래 있는 대기시간도 근로시간으로 봅니다.',
+       '회사가 참석을 지시한 교육·워크숍 등은 근로시간에 해당할 수 있습니다.',
+       '연장근로는 당사자 합의로 1주 12시간까지 가능합니다(제53조).'],
+  tags:'법정근로시간 40시간 8시간 주52시간 대기시간 교육시간', rel:['lsa-53','lsa-51','lsa-52','lsa-54'] },
+
+{ id:'lsa-51', law:'lsa', no:'제51조', title:'3개월 이내의 탄력적 근로시간제', cat:'time', u5:'N',
+  sum:'일정 기간을 평균해 1주 40시간을 넘지 않는 범위에서 특정 주·특정 날에 법정근로시간보다 길게 근로하게 할 수 있습니다.',
+  pts:['2주 이내 단위: 취업규칙으로 도입하며 특정 주 48시간이 한도입니다.',
+       '3개월 이내 단위: 근로자대표와 서면합의가 필요하며 특정 주 52시간, 특정 날 12시간이 한도입니다.',
+       '3개월 초과 6개월 이내 단위는 제51조의2에 따르며, 근로일 사이에 11시간 연속 휴식을 보장해야 합니다.',
+       '15세 이상 18세 미만 근로자와 임신 중인 여성에게는 적용할 수 없습니다.'],
+  tags:'탄력근무 탄력적근로시간제 유연근무 교대제', rel:['lsa-50','lsa-52'] },
+
+{ id:'lsa-52', law:'lsa', no:'제52조', title:'선택적 근로시간제', cat:'time', u5:'N',
+  sum:'업무 시작·종료 시각을 근로자가 정하기로 한 경우, 정산기간(1개월 이내)을 평균해 1주 40시간 범위에서 특정 주·날의 근로시간을 자유롭게 정할 수 있습니다.',
+  pts:['취업규칙에 규정하고 근로자대표와 서면합의(대상, 정산기간, 총 근로시간, 의무·선택 시간대 등)를 해야 합니다.',
+       '신상품·신기술 연구개발 업무는 정산기간을 3개월까지 할 수 있고, 이때는 근로일 사이 11시간 연속 휴식을 줘야 합니다.',
+       '정산기간의 총 근로시간을 넘긴 시간은 연장근로로 가산임금 대상입니다.'],
+  tags:'선택근무 시차출퇴근 플렉스 유연근무 코어타임', rel:['lsa-51','lsa-50'] },
+
+{ id:'lsa-53', law:'lsa', no:'제53조', title:'연장 근로의 제한', cat:'time', u5:'N',
+  sum:'당사자가 합의하면 1주 12시간 한도로 연장근로를 할 수 있습니다. 법정근로시간과 합치면 주 최대 52시간입니다.',
+  pts:['1주는 휴일을 포함한 연속 7일이므로 휴일근로도 주 52시간 한도에 포함됩니다.',
+       '재해·재난, 인명 보호, 돌발 상황, 업무량 폭증 등 특별한 사정이 있으면 고용노동부장관 인가를 받아 특별연장근로를 할 수 있습니다.',
+       '합의는 개별 근로자와 하는 것이 원칙이며, 근로계약서에 미리 정해 두는 방식도 일반적으로 쓰입니다.'],
+  pen:'2년 이하 징역 또는 2천만원 이하 벌금', tags:'연장근로 야근 초과근무 주52시간 특별연장근로 12시간', rel:['lsa-50','lsa-56'] },
+
+{ id:'lsa-54', law:'lsa', no:'제54조', title:'휴게', cat:'time',
+  sum:'근로시간이 4시간이면 30분 이상, 8시간이면 1시간 이상의 휴게시간을 근로시간 도중에 줘야 하며, 휴게시간은 근로자가 자유롭게 쓸 수 있어야 합니다.',
+  pts:['출근 직후나 퇴근 직전에 휴게시간을 몰아 주는 것은 허용되지 않습니다.',
+       '전화 응대 대기처럼 사용자의 지휘 아래 있으면 휴게가 아니라 근로시간입니다.',
+       '2026. 12. 10.부터 1일 근로시간이 4시간인 근로자가 휴게를 쓰지 않겠다고 명시적으로 요청하면 휴게 없이 근무를 마칠 수 있습니다(반차 후 바로 퇴근 등).'],
+  pen:'2년 이하 징역 또는 2천만원 이하 벌금', tags:'휴게시간 점심시간 반차 휴식', rel:['lsa-50'], upd:{ d:'2026-12-10', t:'4시간 근무 시 근로자 요청으로 휴게 면제 가능' } },
+
+{ id:'lsa-55', law:'lsa', no:'제55조', title:'휴일', cat:'time', u5:'P',
+  u5n:'주휴일(제1항)은 5인 미만에도 적용되고, 관공서 공휴일 유급휴일(제2항)은 적용되지 않습니다.',
+  sum:'1주 소정근로일을 개근한 근로자에게 평균 1회 이상 유급 주휴일을 줘야 하고, 관공서 공휴일과 대체공휴일도 유급휴일로 보장해야 합니다.',
+  pts:['주휴수당은 1주 소정근로시간이 15시간 이상이고 그 주 소정근로일을 개근하면 생깁니다. 지각·조퇴가 있어도 결근이 아니면 개근입니다.',
+       '단시간근로자의 주휴시간은 보통 (1주 소정근로시간 ÷ 40) × 8시간으로 계산합니다.',
+       '공휴일은 근로자대표와 서면합의하면 다른 근로일로 대체할 수 있습니다. 5월 1일 노동절은 별도 법률에 따른 유급휴일입니다.'],
+  pen:'2년 이하 징역 또는 2천만원 이하 벌금', tags:'주휴 주휴수당 주휴일 공휴일 대체공휴일 빨간날 휴일대체', rel:['lsa-18','lsa-56','ld-1'] },
+
+{ id:'lsa-56', law:'lsa', no:'제56조', title:'연장·야간 및 휴일 근로', cat:'time', u5:'N',
+  sum:'연장근로와 야간근로(오후 10시~오전 6시)에는 통상임금의 50% 이상을 가산해 지급하고, 휴일근로는 8시간 이내 50%, 8시간 초과분은 100% 이상 가산합니다.',
+  pts:['연장과 야간이 겹치면 가산이 각각 붙습니다(예: 밤 10시 이후 연장근로는 50% + 50%).',
+       '휴일근로 가산과 연장근로 가산은 겹쳐 붙지 않습니다. 휴일 8시간까지 50%, 초과분 100%입니다.',
+       '포괄임금 약정을 했더라도 실제 근로시간으로 계산한 법정 수당보다 적으면 차액을 지급해야 합니다.'],
+  tags:'연장수당 야간수당 휴일수당 가산수당 시간외수당 포괄임금 야근 1.5배', rel:['lsa-53','lsa-57','lsr-6'] },
+
+{ id:'lsa-57', law:'lsa', no:'제57조', title:'보상 휴가제', cat:'time', u5:'N',
+  sum:'근로자대표와 서면합의하면 연장·야간·휴일근로에 대한 임금 대신 그에 상응하는 휴가를 줄 수 있습니다.',
+  pts:['가산분까지 포함해 환산해야 합니다(예: 연장 2시간 → 휴가 3시간).',
+       '보상휴가를 쓰지 못하고 남으면 해당 임금을 지급해야 합니다.'],
+  tags:'보상휴가 대체휴가 대휴 시간외', rel:['lsa-56'] },
+
+{ id:'lsa-58', law:'lsa', no:'제58조', title:'근로시간 계산의 특례(간주·재량근로)', cat:'time', u5:'N',
+  sum:'출장 등 사업장 밖에서 일해 근로시간을 산정하기 어려우면 소정근로시간을 근로한 것으로 보고, 연구개발 등 재량 업무는 서면합의로 정한 시간을 근로한 것으로 봅니다.',
+  pts:['업무에 통상 필요한 시간이 소정근로시간보다 길면 그 시간을 근로한 것으로 보며, 근로자대표와 서면합의로 정할 수 있습니다.',
+       '재량근로 대상 업무는 시행령에 정해져 있습니다(연구개발, 정보처리시스템 설계·분석, 기사 취재·편집, 디자인, 방송 프로듀서, 회계·법률 등 전문 업무).',
+       '재량근로라도 휴게·휴일·야간근로 규정은 적용됩니다.'],
+  tags:'간주근로 재량근로 외근 출장 영업직 사업장 밖', rel:['lsa-50'] },
+
+{ id:'lsa-60', law:'lsa', no:'제60조', title:'연차 유급휴가', cat:'time', u5:'N',
+  sum:'1년간 80% 이상 출근하면 15일의 연차가 생기고, 3년 이상 계속 근로하면 2년마다 1일씩 늘어 최대 25일이 됩니다. 1년 미만이거나 출근율이 80% 미만이면 1개월 개근 시 1일씩 생깁니다.',
+  pts:['1년 미만 기간에 생긴 연차(최대 11일)는 입사일부터 1년 안에 사용해야 합니다.',
+       '업무상 재해 휴업, 출산전후휴가, 유산·사산휴가, 육아휴직 기간은 출근한 것으로 보며, 임신기·육아기 근로시간 단축으로 줄어든 시간도 출근으로 봅니다.',
+       '딱 1년(365일) 근무하고 끝나는 계약은 1년 차 15일이 생기지 않습니다(대법원 2021. 10. 14. 판결). 1년을 넘겨 근로관계가 이어져야 생깁니다.',
+       '2027. 6. 10.부터 연차를 나눠 쓸 근거가 명시되고(시행령안: 연 5일 한도 반일 단위), 연차 청구·사용을 이유로 한 불리한 처우가 금지됩니다(위반 시 500만원 이하 벌금).'],
+  pen:'2년 이하 징역 또는 2천만원 이하 벌금', tags:'연차 월차 연차휴가 연차수당 미사용 반차 1년 미만 연차발생 연차계산',
+  rel:['lsa-61','lsa-62','lsa-18'], upd:{ d:'2027-06-10', t:'연차 분할 사용 근거 명시·연차 사용 불이익 금지' } },
+
+{ id:'lsa-61', law:'lsa', no:'제61조', title:'연차 유급휴가의 사용 촉진', cat:'time', u5:'N',
+  sum:'사용자가 법에 정한 시기와 방식으로 연차 사용을 촉진했는데도 근로자가 쓰지 않아 소멸하면 미사용 연차수당을 지급하지 않아도 됩니다.',
+  pts:['1년 이상 근로자: 연차 소멸 6개월 전을 기준으로 10일 안에 미사용 일수를 알리고 사용 시기를 정해 달라고 서면 촉구 → 10일 안에 답이 없으면 소멸 2개월 전까지 사용 시기를 정해 서면 통보.',
+       '1년 미만 근로자(최대 11일): 9일분은 소멸 3개월 전, 2일분은 소멸 1개월 전을 기준으로 따로 절차를 밟습니다.',
+       '이메일·사내 시스템으로 통보하면 근로자가 확실히 받았다는 기록을 남기세요.',
+       '지정한 날 근로자가 출근하면 노무 수령을 거부한다는 의사를 분명히 해야 촉진으로 인정됩니다.'],
+  tags:'연차촉진 사용촉진 연차수당 미사용수당 소멸', rel:['lsa-60'] },
+
+{ id:'lsa-62', law:'lsa', no:'제62조', title:'유급휴가의 대체', cat:'time', u5:'N',
+  sum:'근로자대표와 서면합의하면 연차 유급휴가일을 갈음해 특정한 근로일에 쉬게 할 수 있습니다.',
+  pts:['징검다리 휴일 등에 전사 휴무를 하고 연차에서 빼려면 이 서면합의가 필요합니다.',
+       '서면합의 없이 회사가 일방적으로 연차를 차감할 수는 없습니다.'],
+  tags:'연차대체 전사휴무 샌드위치 징검다리', rel:['lsa-60'] },
+
+{ id:'lsa-63', law:'lsa', no:'제63조', title:'적용의 제외', cat:'time',
+  sum:'농림·수산업 종사자, 승인받은 감시·단속적 근로자, 관리·감독 업무나 기밀 취급 업무 종사자에게는 근로시간·휴게·휴일 규정이 적용되지 않습니다.',
+  pts:['야간근로 가산수당과 연차 유급휴가 규정은 이들에게도 적용됩니다.',
+       '감시·단속적 근로자(경비원 등)는 관할 노동관서의 승인을 받아야 적용이 제외됩니다.',
+       '관리·감독자인지는 직함이 아니라 출퇴근 등에 엄격한 제한을 받지 않고 경영자와 일체적 지위에 있는지로 판단합니다.'],
+  tags:'적용제외 관리감독자 감시단속 경비원 임원', rel:['lsa-50','lsa-55'] },
+
+{ id:'lsa-69', law:'lsa', no:'제69조', title:'연소자의 근로시간', cat:'contract',
+  sum:'15세 이상 18세 미만 근로자의 근로시간은 1일 7시간, 1주 35시간을 넘을 수 없으며, 합의하면 1일 1시간·1주 5시간까지 연장할 수 있습니다.',
+  pts:['18세 미만을 채용하면 가족관계기록사항 증명서와 친권자(후견인) 동의서를 사업장에 갖춰 둬야 합니다(제66조).',
+       '근로계약은 연소자 본인과 체결하고 근로조건을 서면으로 교부해야 합니다(제67조).',
+       '15세 미만은 고용노동부장관의 취직인허증이 있어야 고용할 수 있습니다(제64조).',
+       '18세 미만은 오후 10시~오전 6시 야간근로와 휴일근로가 원칙적으로 금지됩니다(제70조).'],
+  pen:'2년 이하 징역 또는 2천만원 이하 벌금', tags:'청소년 미성년자 알바 연소자 18세 친권자동의서', rel:['lsa-17'] },
+
+{ id:'lsa-74', law:'lsa', no:'제74조', title:'임산부의 보호', cat:'family',
+  sum:'출산전후휴가 90일(다태아 120일, 미숙아 100일)을 주되 출산 후에 45일(다태아 60일) 이상이 되도록 해야 하며, 최초 60일(다태아 75일)은 유급입니다.',
+  pts:['유산·사산 경험, 만 40세 이상, 유산 위험 진단이 있으면 출산 전에도 휴가를 나눠 쓸 수 있습니다.',
+       '유산·사산하면 임신 기간에 따라 5일(11주 이내)부터 90일(28주 이상)까지 유산·사산휴가를 줘야 합니다.',
+       '임신 12주 이내 또는 32주 이후 근로자가 신청하면 1일 2시간 근로시간 단축을 허용해야 하며 임금을 깎을 수 없습니다.',
+       '임신 중인 여성에게는 시간외근로를 시킬 수 없고, 요구하면 쉬운 업무로 바꿔 줘야 합니다. 출퇴근 시각 변경 신청도 허용해야 합니다.'],
+  pen:'출산전후휴가 미부여 시 2년 이하 징역 또는 2천만원 이하 벌금', tags:'출산휴가 출산전후휴가 산전후휴가 임신 유산 사산 미숙아 다태아 임신기 근로시간 단축 모성보호',
+  rel:['eea-18-2','eea-19','lsa-75','lsa-23'], upd:{ d:'2025-02-23', t:'미숙아 출산 시 100일, 임신기 단축 32주 이후로 확대' } },
+
+{ id:'lsa-75', law:'lsa', no:'제75조', title:'육아 시간', cat:'family',
+  sum:'생후 1년 미만의 유아를 가진 여성 근로자가 청구하면 1일 2회, 각각 30분 이상의 유급 수유 시간을 줘야 합니다.',
+  pts:['수유 시간은 근로한 것으로 보고 임금을 지급합니다.',
+       '남녀고용평등법의 육아기 근로시간 단축과는 별개 제도입니다.'],
+  pen:'2년 이하 징역 또는 2천만원 이하 벌금', tags:'수유시간 육아시간 모유', rel:['lsa-74','eea-19-2'] },
+
+{ id:'lsa-76-2', law:'lsa', no:'제76조의2', title:'직장 내 괴롭힘의 금지', cat:'harass', u5:'N',
+  sum:'사용자나 근로자는 직장에서의 지위나 관계 등의 우위를 이용해 업무상 적정 범위를 넘어 다른 근로자에게 신체적·정신적 고통을 주거나 근무환경을 악화시켜서는 안 됩니다.',
+  pts:['판단 요소: 우위를 이용했는지, 업무상 적정 범위를 넘었는지, 고통이나 근무환경 악화가 있었는지.',
+       '직급상 상급자뿐 아니라 동료·하급자도 인원 수, 전문성, 정규직 여부 등에서 관계상 우위가 있으면 행위자가 될 수 있습니다.',
+       '상시 10명 이상 사업장은 취업규칙에 직장 내 괴롭힘 예방과 발생 시 조치에 관한 사항을 넣어야 합니다(제93조).'],
+  pen:'사용자(친족 근로자 포함)가 괴롭힘을 한 경우 1천만원 이하 과태료', tags:'직장내괴롭힘 갑질 폭언 따돌림 괴롭힘 신고', rel:['lsa-76-3','lsa-93','eea-12'] },
+
+{ id:'lsa-76-3', law:'lsa', no:'제76조의3', title:'직장 내 괴롭힘 발생 시 조치', cat:'harass', u5:'N',
+  sum:'누구든지 직장 내 괴롭힘을 신고할 수 있고, 사용자는 신고를 받거나 알게 되면 지체 없이 객관적으로 조사하고 피해자 보호와 행위자 징계 등 필요한 조치를 해야 합니다.',
+  pts:['조사 중에도 피해 근로자가 원하면 근무 장소 변경, 유급휴가 등 보호 조치를 해야 합니다.',
+       '괴롭힘이 확인되면 행위자에게 징계·근무장소 변경 등 조치를 하되, 그 전에 피해 근로자의 의견을 들어야 합니다.',
+       '조사에 참여한 사람은 알게 된 비밀을 피해자 의사에 반해 누설해서는 안 됩니다.',
+       '신고자나 피해자에게 해고 등 불리한 처우를 해서는 안 됩니다.'],
+  pen:'불리한 처우 시 3년 이하 징역 또는 3천만원 이하 벌금, 조사·조치·비밀유지 의무 위반 시 500만원 이하 과태료', tags:'괴롭힘 조사 신고 피해자보호 징계 비밀유지', rel:['lsa-76-2','eea-14'] },
+
+{ id:'lsa-93', law:'lsa', no:'제93조', title:'취업규칙의 작성·신고', cat:'contract', scale:'상시 10명 이상',
+  sum:'상시 10명 이상을 사용하는 사용자는 취업규칙을 작성해 고용노동부장관에게 신고해야 하고, 변경할 때도 신고해야 합니다.',
+  pts:['업무 시작·종료 시각, 휴게, 휴일, 휴가, 임금, 퇴직, 퇴직급여, 출산전후휴가·육아휴직 등 일·가정 양립, 안전·보건, 직장 내 괴롭힘 예방·조치, 표창·제재 등을 반드시 담아야 합니다.',
+       '취업규칙은 근로자가 자유롭게 열람할 수 있는 장소에 게시하거나 갖춰 둬야 합니다(제14조).'],
+  pen:'500만원 이하 과태료', tags:'취업규칙 사규 신고 10인 인사규정', rel:['lsa-94','lsa-95'] },
+
+{ id:'lsa-94', law:'lsa', no:'제94조', title:'규칙의 작성, 변경 절차', cat:'contract', scale:'상시 10명 이상',
+  sum:'취업규칙을 만들거나 바꿀 때는 근로자 과반수로 조직된 노동조합(없으면 근로자 과반수)의 의견을 들어야 하고, 근로자에게 불리하게 바꿀 때는 동의를 받아야 합니다.',
+  pts:['불리한 변경의 동의는 회의 방식 등 집단적 의사결정으로 과반수 동의를 받아야 하며, 회사가 개입하지 않아야 합니다.',
+       '동의 없이 불리하게 바꾼 취업규칙은 기존 근로자에게 효력이 없고, 판례는 "사회통념상 합리성"만으로 유효성을 인정하지 않습니다(대법원 2023. 5. 11. 전원합의체).',
+       '신고할 때 의견서나 동의서를 함께 내야 합니다.'],
+  pen:'의견 청취·동의 절차 위반 시 500만원 이하 벌금', tags:'취업규칙 불이익변경 동의 과반수 의견청취', rel:['lsa-93'] },
+
+{ id:'lsa-95', law:'lsa', no:'제95조', title:'제재 규정의 제한', cat:'dismiss',
+  sum:'취업규칙에서 감급(감봉)을 정할 때 1회 금액은 평균임금 1일분의 2분의 1을, 총액은 1임금지급기 임금 총액의 10분의 1을 넘을 수 없습니다.',
+  pts:['예: 평균임금 1일분이 10만원, 월급이 300만원이면 1회 감봉은 5만원 이하, 한 달 총액은 30만원 이하입니다.',
+       '지각·조퇴로 일하지 않은 시간만큼 임금을 빼는 것(무노동 무임금)은 감급이 아닙니다.'],
+  tags:'감봉 감급 징계 제재 지각', rel:['lsa-23','lsa-93'] },
+
+/* ───────── 근로기준법 시행령 ───────── */
+{ id:'lsr-6', law:'lsr', no:'제6조', title:'통상임금', cat:'wage',
+  sum:'통상임금은 근로자에게 정기적·일률적으로 소정근로 또는 총 근로에 대해 지급하기로 정한 시간급·일급·주급·월급 또는 도급 금액으로, 연장·야간·휴일수당과 해고예고수당 등의 계산 기준이 됩니다.',
+  pts:['대법원 전원합의체(2024. 12. 19.)가 고정성 요건을 폐기해, 재직 조건이나 일정 근무일수 조건이 붙은 정기상여금도 통상임금에 해당할 수 있습니다.',
+       '새 법리는 판결 선고일 이후의 통상임금 산정분부터 적용됩니다.',
+       '월급제 통상시급은 월 통상임금을 월 소정근로시간(주 40시간이면 주휴 포함 209시간)으로 나눠 구합니다.'],
+  tags:'통상임금 정기상여금 고정성 재직자조건 통상시급 209시간', rel:['lsa-56','lsa-26','lsa-2'] },
+
+/* ───────── 최저임금법 ───────── */
+{ id:'mwa-5', law:'mwa', no:'제5조', title:'최저임금액', cat:'wage',
+  sum:'최저임금은 시간·일·주·월 단위로 정하되 시간급으로도 표시합니다. 2026년은 시간급 10,320원, 2027년은 10,700원입니다.',
+  pts:['월 환산액(주 40시간, 209시간 기준)은 2026년 2,156,880원, 2027년 2,236,300원입니다.',
+       '1년 이상 근로계약을 맺은 수습 근로자는 수습 시작일부터 3개월 동안 최저임금의 90%까지 줄 수 있습니다(2026년 9,288원, 2027년 9,630원). 단순노무 직종은 감액할 수 없습니다.',
+       '업종 구분 없이 모든 사업장에 같은 금액이 적용됩니다.'],
+  tags:'최저임금 최저시급 10320 10700 수습 감액 209시간 월급', rel:['mwa-6','lsr-6'], upd:{ d:'2027-01-01', t:'2027년 최저임금 10,700원 적용' } },
+
+{ id:'mwa-6', law:'mwa', no:'제6조', title:'최저임금의 효력', cat:'wage',
+  sum:'사용자는 최저임금액 이상을 지급해야 하며, 최저임금에 못 미치는 임금을 정한 근로계약 부분은 무효가 되어 최저임금액으로 정한 것으로 봅니다.',
+  pts:['매월 1회 이상 정기적으로 지급하는 상여금과 현금성 복리후생비는 2024년부터 전액 최저임금에 산입됩니다.',
+       '연장·야간·휴일근로 수당, 연차수당 등은 산입하지 않습니다.',
+       '월급제는 월급을 월 환산 기준시간(소정근로시간 + 주휴시간)으로 나눈 시급이 최저임금 이상인지 확인합니다.'],
+  pen:'3년 이하 징역 또는 2천만원 이하 벌금', tags:'최저임금 위반 산입범위 상여금 복리후생비 식대', rel:['mwa-5'] },
+
+/* ───────── 근로자퇴직급여 보장법 ───────── */
+{ id:'rba-4', law:'rba', no:'제4조', title:'퇴직급여제도의 설정', cat:'wage',
+  sum:'사용자는 퇴직하는 근로자에게 퇴직금제도나 퇴직연금제도(DB·DC) 중 하나 이상을 설정해야 합니다.',
+  pts:['계속근로기간이 1년 미만이거나 4주 평균 1주 소정근로시간이 15시간 미만인 근로자는 제외됩니다.',
+       '상시 근로자 수와 관계없이 5인 미만 사업장에도 적용됩니다.',
+       '퇴직급여제도를 새로 정하거나 바꾸려면 근로자 과반수(과반수 노조가 있으면 노조)의 동의가 필요합니다.'],
+  tags:'퇴직금 퇴직연금 DB DC 퇴직급여', rel:['rba-8','rba-9','rba-20'] },
+
+{ id:'rba-8', law:'rba', no:'제8조', title:'퇴직금제도의 설정 등', cat:'wage',
+  sum:'퇴직금은 계속근로기간 1년에 대해 30일분 이상의 평균임금으로 지급합니다.',
+  pts:['계산식: 1일 평균임금 × 30일 × (재직일수 ÷ 365).',
+       '중간정산은 무주택자의 주택 구입·전세금, 6개월 이상 요양, 파산·회생, 임금피크제 실시, 근로시간 단축 등 시행령이 정한 사유가 있을 때만 가능합니다.',
+       '중간정산을 하면 그 시점부터 계속근로기간을 새로 계산하며, 관련 증빙을 퇴직 후 5년간 보존해야 합니다.'],
+  tags:'퇴직금 계산 평균임금 중간정산 30일분', rel:['rba-4','rba-9','lsa-2'] },
+
+{ id:'rba-9', law:'rba', no:'제9조', title:'퇴직금의 지급 등', cat:'wage',
+  sum:'퇴직금은 퇴직한 날부터 14일 이내에 지급해야 하며, 특별한 사정이 있으면 당사자 합의로 지급 기일을 연장할 수 있습니다.',
+  pts:['퇴직금은 근로자의 개인형 퇴직연금(IRP) 계좌로 이전하는 방식으로 지급해야 합니다.',
+       '만 55세 이후 퇴직, 퇴직급여액 300만원 이하 등 시행령이 정한 경우에는 IRP 이전 없이 지급할 수 있습니다.'],
+  pen:'5년 이하 징역 또는 5천만원 이하 벌금(2026. 9. 18. 상향)', tags:'퇴직금 지급기한 14일 IRP 개인형퇴직연금',
+  rel:['rba-8','lsa-36'], upd:{ d:'2026-09-18', t:'퇴직급여 체불 벌칙 상향(5년·5천만원)' } },
+
+{ id:'rba-20', law:'rba', no:'제20조', title:'확정기여형퇴직연금(DC)의 설정', cat:'wage',
+  sum:'DC형을 설정한 사용자는 가입자의 연간 임금 총액의 12분의 1 이상을 부담금으로 현금 납입해야 합니다.',
+  pts:['정해진 납입 기일까지 내지 않으면 지연이자가 붙습니다.',
+       '근로자는 사용자 부담금 외에 스스로 추가 납입할 수 있습니다.',
+       'DB형은 퇴직 때 받을 급여가 미리 정해지고(퇴직금 이상 수준), DC형은 운용 결과에 따라 달라집니다.'],
+  tags:'DC형 확정기여형 퇴직연금 부담금 12분의1', rel:['rba-4'] },
+
+/* ───────── 남녀고용평등법 ───────── */
+{ id:'eea-7', law:'eea', no:'제7조', title:'모집과 채용', cat:'harass',
+  sum:'근로자를 모집·채용할 때 남녀를 차별해서는 안 되며, 직무 수행에 필요하지 않은 용모·키·체중 등 신체 조건이나 미혼 조건을 요구해서는 안 됩니다.',
+  pts:['채용 공고에 "남성만", "여성 우대"처럼 성별을 특정하는 표현을 쓰지 마세요. 직무 성질상 특정 성이 꼭 필요한 경우만 예외입니다.',
+       '면접에서 결혼·출산 계획을 묻는 것도 차별 소지가 큽니다.'],
+  pen:'500만원 이하 벌금', tags:'채용차별 성차별 채용공고 면접질문', rel:['ra-4-3','age-4-4'] },
+
+{ id:'eea-8', law:'eea', no:'제8조', title:'임금', cat:'harass',
+  sum:'같은 사업 안에서 동일 가치의 노동을 하면 남녀에게 동일한 임금을 지급해야 합니다.',
+  pts:['동일 가치 노동인지는 직무 수행에 필요한 기술, 노력, 책임, 작업 조건 등으로 판단합니다.',
+       '별개 사업이라도 차별 목적으로 따로 세운 경우에는 같은 사업으로 봅니다.'],
+  pen:'3년 이하 징역 또는 3천만원 이하 벌금', tags:'동일임금 성별 임금차별', rel:['eea-7'] },
+
+{ id:'eea-11', law:'eea', no:'제11조', title:'정년·퇴직 및 해고', cat:'harass',
+  sum:'정년·퇴직·해고에서 남녀를 차별해서는 안 되며, 혼인·임신·출산을 퇴직 사유로 정하는 근로계약을 해서는 안 됩니다.',
+  pts:['임신이나 출산을 이유로 한 해고나 사직 유도는 형사처벌 대상이 될 수 있습니다.'],
+  pen:'5년 이하 징역 또는 3천만원 이하 벌금', tags:'임신해고 출산퇴직 결혼퇴직 성차별', rel:['lsa-23','eea-19'] },
+
+{ id:'eea-12', law:'eea', no:'제12조', title:'직장 내 성희롱의 금지', cat:'harass',
+  sum:'사업주, 상급자 또는 근로자는 직장 내 성희롱을 해서는 안 됩니다.',
+  pts:['직장 내 성희롱은 지위를 이용하거나 업무와 관련해 성적 언동으로 성적 굴욕감·혐오감을 느끼게 하거나, 성적 요구에 응하지 않았다는 이유로 고용상 불이익을 주는 것입니다.',
+       '회식, 출장, 메신저 등 근무 시간·장소 밖이라도 업무 관련성이 있으면 해당합니다.',
+       '2026. 11. 27.부터 금지 대상에 법인 대표자가 명시되고, 사업주·법인 대표자의 친족인 상급자·근로자의 성희롱에도 과태료가 부과됩니다.'],
+  pen:'사업주가 직접 성희롱한 경우 1천만원 이하 과태료', tags:'성희롱 직장내성희롱 성적언동 회식',
+  rel:['eea-13','eea-14','lsa-76-2'], upd:{ d:'2026-11-27', t:'법인 대표자 명시, 친족 상급자 등 성희롱 과태료 확대' } },
+
+{ id:'eea-13', law:'eea', no:'제13조', title:'직장 내 성희롱 예방 교육', cat:'harass',
+  sum:'사업주는 직장 내 성희롱 예방 교육을 연 1회 이상 해야 하고, 사업주와 근로자 모두 교육을 받아야 합니다.',
+  pts:['교육 내용: 관련 법령, 사내 처리 절차와 조치 기준, 피해 근로자의 고충 상담·구제 절차 등.',
+       '상시 10명 미만 사업장 등은 교육 자료를 배포·게시하는 방식으로 할 수 있습니다.',
+       '예방 지침을 마련해 근로자가 자유롭게 볼 수 있는 곳에 게시해야 합니다.'],
+  pen:'500만원 이하 과태료', tags:'성희롱예방교육 법정의무교육 법정교육 연1회', rel:['eea-12','dea-5-2','rba-32','osh-29'] },
+
+{ id:'eea-14', law:'eea', no:'제14조', title:'직장 내 성희롱 발생 시 조치', cat:'harass',
+  sum:'사업주는 신고를 받거나 발생 사실을 알게 되면 지체 없이 객관적으로 조사하고, 피해 근로자 보호와 행위자 징계 등 필요한 조치를 해야 합니다.',
+  pts:['조사 중에도 피해 근로자가 원하면 근무 장소 변경, 유급휴가 등 적절한 조치를 해야 합니다.',
+       '성희롱이 확인되면 행위자를 징계하는 등 조치하되, 그 전에 피해 근로자의 의견을 들어야 합니다.',
+       '신고자와 피해 근로자에게 불리한 처우를 해서는 안 되고, 조사 관계자는 비밀을 지켜야 합니다.'],
+  pen:'불리한 처우 시 3년 이하 징역 또는 3천만원 이하 벌금, 조사·조치 의무 위반 시 500만원 이하 과태료', tags:'성희롱 조사 신고 피해자보호 징계 2차피해', rel:['eea-12','lsa-76-3'] },
+
+{ id:'eea-18-2', law:'eea', no:'제18조의2', title:'배우자 출산전후휴가', cat:'family',
+  sum:'배우자가 출산하면 20일의 유급휴가를 줘야 합니다. 2026. 9. 18.부터 이름이 배우자 출산전후휴가로 바뀌었고, 출산예정일 50일 전부터 출산 후 120일 이내에 쓸 수 있습니다.',
+  pts:['3회까지 나눠 쓸 수 있습니다(최대 4번 사용).',
+       '우선지원대상기업은 고용보험에서 휴가 급여를 지원받을 수 있고, 업무를 대신한 동료에게 보상하면 업무분담 지원금도 받을 수 있습니다(2026. 7. 1.부터).',
+       '휴가를 이유로 해고 등 불리한 처우를 해서는 안 됩니다.'],
+  pen:'휴가 미부여 시 500만원 이하 과태료', tags:'배우자출산휴가 배우자출산전후휴가 아빠휴가 남편출산휴가 20일 배우자 출산',
+  rel:['lsa-74','eea-19','eea-18-4'], upd:{ d:'2026-09-18', t:'명칭 변경, 출산예정일 50일 전부터 사용 가능' } },
+
+{ id:'eea-18-3', law:'eea', no:'제18조의3', title:'난임치료휴가', cat:'family',
+  sum:'근로자가 인공수정·체외수정 등 난임치료를 받으려고 청구하면 연간 6일 이내의 휴가를 줘야 하며, 지금은 최초 2일이 유급입니다.',
+  pts:['2026. 11. 27.부터 유급 기간이 최초 4일로 늘어납니다.',
+       '업무에 중대한 지장이 있으면 근로자와 협의해 시기를 바꿀 수 있습니다.',
+       '휴가를 이유로 한 불리한 처우는 금지됩니다.'],
+  pen:'휴가 미부여 시 500만원 이하 과태료', tags:'난임치료휴가 난임 시험관 인공수정', rel:['eea-18-2'], upd:{ d:'2026-11-27', t:'유급 기간 최초 2일 → 4일' } },
+
+{ id:'eea-18-4', law:'eea', no:'제18조의4', title:'배우자 유산·사산휴가', cat:'family',
+  sum:'배우자가 유산하거나 사산한 근로자가 청구하면 5일 이내의 휴가를 줘야 하며, 최초 3일은 유급입니다. 2026. 9. 18. 새로 생긴 제도입니다.',
+  pts:['유산 또는 사산한 날부터 20일 이내에 청구해야 합니다.',
+       '여성 근로자 본인의 유산·사산휴가는 근로기준법 제74조에 따릅니다.'],
+  tags:'배우자유산휴가 사산휴가 유산', rel:['lsa-74','eea-18-2'], upd:{ d:'2026-09-18', t:'제도 신설' } },
+
+{ id:'eea-19', law:'eea', no:'제19조', title:'육아휴직', cat:'family',
+  sum:'만 8세 이하 또는 초등학교 2학년 이하 자녀를 키우기 위해 신청하면 1년 이내의 육아휴직을 줘야 합니다. 부모가 각각 3개월 이상 쓰는 등 요건을 갖추면 6개월을 더해 최대 1년 6개월까지 가능합니다.',
+  pts:['3회까지 나눠 쓸 수 있습니다(최대 4번 사용). 계속근로 6개월 미만인 근로자의 신청은 거부할 수 있습니다.',
+       '2026. 8. 20.부터 방학·휴원·질병 등 단기 돌봄이 필요할 때 연 1회 1주 또는 2주의 단기 육아휴직을 쓸 수 있습니다. 전체 기간에서 빠지지만 분할 횟수에는 들어가지 않습니다.',
+       '2026. 9. 18.부터 배우자에게 유산·조산 위험이 있으면 자녀가 태어나기 전에도 육아휴직을 쓸 수 있습니다.',
+       '휴직 중에는 해고할 수 없고, 복귀하면 휴직 전과 같은 업무나 같은 수준의 임금을 받는 직무로 돌려보내야 합니다. 휴직 기간은 근속기간에 포함됩니다.'],
+  pen:'육아휴직 미부여 시 500만원 이하 벌금, 휴직을 이유로 한 해고·불리한 처우 시 3년 이하 징역 또는 3천만원 이하 벌금', tags:'육아휴직 육휴 단기육아휴직 1년6개월 분할 복직',
+  rel:['eea-19-2','eia-70','lsa-74'], upd:{ d:'2026-09-18', t:'단기 육아휴직(8. 20.)·임신 중 배우자 육아휴직(9. 18.)' } },
+
+{ id:'eea-19-2', law:'eea', no:'제19조의2', title:'육아기 근로시간 단축', cat:'family',
+  sum:'만 12세 이하 또는 초등학교 6학년 이하 자녀를 키우기 위해 신청하면 근로시간 단축을 허용해야 합니다. 단축 후 근로시간은 주 15시간 이상 35시간 이하입니다.',
+  pts:['기간은 1년 이내이고, 육아휴직을 쓰지 않은 기간이 있으면 그 기간의 2배를 더해 쓸 수 있습니다. 최소 1개월 단위로 나눠 쓸 수 있습니다.',
+       '2026. 9. 18.부터 "대체인력을 뽑지 못했다"는 이유만으로는 거부할 수 없습니다.',
+       '허용하지 않으려면 사유를 서면으로 알리고 출퇴근 시간 조정 등 다른 지원 방안을 협의해야 합니다.'],
+  pen:'단축 미허용 시 500만원 이하 과태료', tags:'육아기근로시간단축 단축근무 육아단축 12세 근로시간 단축',
+  rel:['eea-19','lsa-75'], upd:{ d:'2026-09-18', t:'대체인력 미채용 거부 사유 삭제' } },
+
+{ id:'eea-22-2', law:'eea', no:'제22조의2', title:'가족돌봄휴직·휴가', cat:'family',
+  sum:'조부모, 부모, 배우자, 배우자의 부모, 자녀, 손자녀가 질병·사고·노령으로 돌봄이 필요하면 연간 최장 90일의 가족돌봄휴직을 줘야 하고, 그중 연간 10일은 하루 단위 가족돌봄휴가로 쓸 수 있습니다.',
+  pts:['가족돌봄휴직은 1회 30일 이상으로 나눠 쓸 수 있습니다.',
+       '가족돌봄휴가는 자녀 양육(어린이집 휴원 등)으로도 쓸 수 있고, 휴가 일수는 휴직 기간에 포함됩니다.',
+       '법상 유급 의무는 없지만 근속기간에는 포함됩니다.'],
+  pen:'휴직·휴가 미부여 시 500만원 이하 과태료', tags:'가족돌봄휴직 가족돌봄휴가 간병 부모간병', rel:['eea-22-3'] },
+
+{ id:'eea-22-3', law:'eea', no:'제22조의3', title:'가족돌봄 등을 위한 근로시간 단축', cat:'family',
+  sum:'가족 돌봄, 본인 건강, 만 55세 이상 은퇴 준비, 학업을 위해 신청하면 근로시간 단축을 허용해야 합니다. 단축 후 근로시간은 주 15시간 이상 30시간 이하입니다.',
+  pts:['단축 기간은 1년 이내이며, 합리적 이유가 있으면 2년 범위에서 한 번 연장할 수 있습니다(학업 목적은 연장 불가).',
+       '계속근로 6개월 미만이거나 대체인력 채용이 불가능한 경우 등에는 허용하지 않을 수 있습니다.'],
+  pen:'단축 미허용 시 500만원 이하 과태료', tags:'근로시간 단축 가족돌봄 은퇴준비 학업 건강', rel:['eea-22-2','eea-19-2'] },
+
+/* ───────── 기간제법 ───────── */
+{ id:'nra-4', law:'nra', no:'제4조', title:'기간제근로자의 사용', cat:'nonreg', u5:'N',
+  sum:'기간제근로자는 2년을 넘지 않는 범위에서 사용할 수 있고, 예외 사유 없이 2년을 넘기면 기간의 정함이 없는 근로자(무기계약직)로 봅니다.',
+  pts:['예외: 사업 완료나 특정 업무 완성에 필요한 기간을 정한 경우, 휴직·파견 등 결원 대체, 학업·직업훈련, 만 55세 이상 고령자, 전문직·정부 일자리사업 등.',
+       '계약을 여러 번 갱신해도 계속근로기간은 합산되며, 계약 사이 공백이 짧으면 계속근로로 볼 수 있습니다.',
+       '2년 이내라도 갱신 기대권이 인정되면 합리적 이유 없는 갱신 거절은 부당해고가 될 수 있습니다.'],
+  tags:'계약직 기간제 2년 무기계약 정규직전환 갱신기대권 재계약', rel:['nra-8','nra-17','lsa-28'] },
+
+{ id:'nra-6', law:'nra', no:'제6조', title:'단시간근로자의 초과근로 제한', cat:'nonreg', u5:'P',
+  u5n:'초과근로 가산임금(제3항)은 5인 미만 사업장에 적용되지 않습니다.',
+  sum:'단시간근로자에게 소정근로시간을 넘겨 근로하게 하려면 동의를 받아야 하고, 초과근로는 1주 12시간을 넘을 수 없습니다.',
+  pts:['초과근로에는 통상임금의 50% 이상을 가산해야 합니다.',
+       '법정근로시간(주 40시간) 이내라도 계약한 소정근로시간을 넘기면 가산 대상입니다.',
+       '근로자는 동의하지 않은 초과근로를 거부할 수 있고, 이를 이유로 불리한 처우를 해서는 안 됩니다.'],
+  tags:'알바 단시간 초과근로 가산 파트타임', rel:['lsa-18','nra-17'] },
+
+{ id:'nra-8', law:'nra', no:'제8조', title:'차별적 처우의 금지', cat:'nonreg', u5:'N',
+  sum:'기간제·단시간근로자라는 이유로 같은 사업장에서 같거나 비슷한 업무를 하는 통상근로자에 비해 합리적 이유 없이 차별해서는 안 됩니다.',
+  pts:['임금, 정기상여금, 명절상여금, 경영성과급, 근로시간·휴게·휴가, 복리후생 등이 비교 대상입니다.',
+       '차별받은 근로자는 6개월 이내에 노동위원회에 시정을 신청할 수 있고(제9조), 고의·반복 차별은 손해의 최대 3배 배상 명령이 가능합니다.'],
+  tags:'비정규직 차별 계약직차별 차별시정 복리후생', rel:['nra-4'] },
+
+{ id:'nra-17', law:'nra', no:'제17조', title:'근로조건의 서면명시', cat:'contract',
+  sum:'기간제·단시간근로자와 근로계약을 맺을 때는 근로계약기간, 근로시간·휴게, 임금, 휴일·휴가, 취업 장소와 업무 등을 서면으로 명시해야 합니다.',
+  pts:['단시간근로자는 근로일과 근로일별 근로시간도 적어야 합니다.',
+       '근로기준법 제17조보다 적을 항목이 많으니 계약직·알바용 계약서 양식을 따로 두는 것이 좋습니다.'],
+  pen:'500만원 이하 과태료', tags:'근로계약서 계약직 알바 단시간 서면명시', rel:['lsa-17','nra-4'] },
+
+/* ───────── 파견법 ───────── */
+{ id:'dwa-5', law:'dwa', no:'제5조', title:'근로자파견 대상 업무 등', cat:'nonreg',
+  sum:'근로자파견은 제조업 직접생산공정 업무를 제외하고, 전문지식·기술·경험이나 업무 성질상 적합하다고 시행령이 정한 업무(32개)에만 허용됩니다.',
+  pts:['출산·질병·부상 등으로 결원이 생기거나 일시적·간헐적으로 인력이 필요하면 지정 업무가 아니어도 파견을 쓸 수 있습니다(3개월 이내, 1회 3개월 연장).',
+       '건설공사 현장, 하역, 선원, 유해·위험 업무 등은 어떤 경우에도 파견이 금지됩니다.',
+       '도급·용역 계약이라도 원청이 하청 근로자에게 직접 업무 지시를 하면 불법파견으로 판단될 수 있습니다.'],
+  tags:'파견 아웃소싱 도급 용역 불법파견', rel:['dwa-6-2'] },
+
+{ id:'dwa-6-2', law:'dwa', no:'제6조의2', title:'고용의무', cat:'nonreg',
+  sum:'파견 대상이 아닌 업무에 파견근로자를 쓰거나 2년을 넘겨 계속 사용하는 등 법을 어기면 사용사업주가 그 파견근로자를 직접 고용해야 합니다.',
+  pts:['파견 기간은 1년 이내가 원칙이고, 합의하면 1년 더 연장할 수 있습니다(총 2년, 고령자는 예외).',
+       '직접 고용할 때 근로조건은 같은 업무를 하는 기존 근로자 수준 이상이어야 합니다.',
+       '파견근로자가 명시적으로 반대하거나 정당한 이유가 있으면 예외입니다.'],
+  tags:'직접고용 불법파견 파견기간 2년', rel:['dwa-5'] },
+
+/* ───────── 산업안전보건법 ───────── */
+{ id:'osh-29', law:'osh', no:'제29조', title:'근로자에 대한 안전보건교육', cat:'safety',
+  sum:'사업주는 소속 근로자에게 정기적으로 안전보건교육을 해야 하며, 채용할 때와 작업 내용을 바꿀 때도 교육해야 합니다.',
+  pts:['교육 시간과 내용은 시행규칙 별표에 업종·직무별로 정해져 있습니다.',
+       '유해·위험 작업에 배치할 때는 특별교육을 추가로 해야 합니다.',
+       '업종·규모에 따라 일부 교육이 면제되는 사업장이 있으니 시행령 별표 1을 확인하세요.'],
+  pen:'500만원 이하 과태료', tags:'안전교육 산업안전보건교육 법정의무교육 정기교육 채용시교육', rel:['eea-13','osh-36'] },
+
+{ id:'osh-36', law:'osh', no:'제36조', title:'위험성평가의 실시', cat:'safety',
+  sum:'사업주는 건설물, 기계·기구, 작업 행동 등에서 생기는 유해·위험 요인을 찾아 위험성을 평가하고 필요한 조치를 해야 합니다.',
+  pts:['평가에 해당 작업 근로자를 참여시키고, 결과와 조치 내용을 기록·보존해야 합니다.',
+       '2027. 1. 1.부터 위험성평가 미실시, 근로자 참여 미보장, 결과 공유·기록 보존 위반에 과태료가 생깁니다. 50인 미만 사업장과 공사금액 50억원 미만 건설공사는 2028. 1. 1.부터 적용됩니다.'],
+  tags:'위험성평가 산업안전 유해위험요인', rel:['osh-29','sfa-4'], upd:{ d:'2027-01-01', t:'위험성평가 의무 위반 과태료 신설' } },
+
+{ id:'osh-41', law:'osh', no:'제41조', title:'고객의 폭언등으로 인한 건강장해 예방조치', cat:'safety',
+  sum:'고객 응대 근로자가 고객의 폭언·폭행 등으로 건강장해를 입지 않도록 예방 조치를 하고, 건강장해가 생기거나 생길 우려가 있으면 업무 일시 중단 등 필요한 조치를 해야 합니다.',
+  pts:['조치 예: 업무 일시 중단·전환, 휴게시간 연장, 치료·상담 지원, 고소·고발 등에 필요한 지원.',
+       '근로자가 조치를 요구했다는 이유로 해고 등 불리한 처우를 해서는 안 됩니다.'],
+  pen:'불리한 처우 시 1년 이하 징역 또는 1천만원 이하 벌금', tags:'감정노동 고객응대 콜센터 폭언 진상고객', rel:['lsa-76-2'] },
+
+{ id:'osh-54', law:'osh', no:'제54조', title:'중대재해 발생 시 사업주의 조치', cat:'safety',
+  sum:'중대재해가 발생하면 즉시 작업을 중지하고 근로자를 대피시키는 등 안전·보건 조치를 한 뒤, 지체 없이 관할 지방고용노동관서에 보고해야 합니다.',
+  pts:['중대재해: 사망자 1명 이상, 3개월 이상 요양이 필요한 부상자가 동시에 2명 이상, 부상자 또는 직업성 질병자가 동시에 10명 이상 발생한 재해.',
+       '천재지변 등 부득이한 사유가 있으면 그 사유가 없어진 때 지체 없이 보고합니다.'],
+  pen:'보고 의무 위반 시 3천만원 이하 과태료', tags:'중대재해 사망사고 산재보고 작업중지', rel:['sfa-4','osh-57'] },
+
+{ id:'osh-57', law:'osh', no:'제57조', title:'산업재해 발생 은폐 금지 및 보고 등', cat:'safety',
+  sum:'산업재해 발생 사실을 숨겨서는 안 되며, 사망자나 3일 이상 휴업이 필요한 부상·질병자가 생기면 1개월 이내에 산업재해조사표를 제출해야 합니다.',
+  pts:['산업재해의 원인과 재발 방지 계획을 기록·보존해야 합니다.',
+       '산재 처리를 하지 않고 공상으로 합의하더라도 보고 의무는 따로 있습니다.'],
+  pen:'은폐 시 1년 이하 징역 또는 1천만원 이하 벌금, 미보고 시 1천만원 이하 과태료', tags:'산재보고 산업재해조사표 공상처리 산재은폐', rel:['osh-54','iaci-37'] },
+
+{ id:'osh-129', law:'osh', no:'제129조', title:'일반건강진단', cat:'safety',
+  sum:'사업주는 상시 사용하는 근로자에게 주기적으로 일반건강진단을 실시해야 합니다.',
+  pts:['주기: 사무직은 2년에 1회 이상, 그 외 근로자는 1년에 1회 이상입니다(시행규칙).',
+       '국민건강보험 일반건강검진을 받으면 일반건강진단을 한 것으로 봅니다.',
+       '유해인자에 노출되는 업무는 특수건강진단 대상입니다(제130조).'],
+  pen:'1천만원 이하 과태료', tags:'건강검진 일반건강진단 특수건강진단', rel:['osh-29'] },
+
+/* ───────── 중대재해처벌법 ───────── */
+{ id:'sfa-4', law:'sfa', no:'제4조', title:'사업주와 경영책임자등의 안전 및 보건 확보의무', cat:'safety', u5:'N', scale:'상시 5명 이상',
+  sum:'사업주나 경영책임자는 실질적으로 지배·운영·관리하는 사업장에서 종사자의 안전·보건상 위험을 막기 위해 안전보건관리체계를 구축하고 이행해야 합니다.',
+  pts:['2024. 1. 27.부터 상시 5명 이상 모든 사업장(50인 미만 포함)에 적용됩니다.',
+       '시행령상 주요 의무: 안전보건 목표·경영방침 설정, 유해·위험요인 확인·개선 절차, 안전보건 예산 편성, 종사자 의견 청취, 비상 대응 매뉴얼, 반기 1회 이상 점검 등.',
+       '도급·용역·위탁 관계의 종사자도 보호 대상입니다.'],
+  tags:'중대재해처벌법 중처법 안전보건관리체계 경영책임자 중대재해', rel:['sfa-6','osh-54','osh-36'] },
+
+{ id:'sfa-6', law:'sfa', no:'제6조', title:'중대산업재해 사업주와 경영책임자등의 처벌', cat:'safety', u5:'N', scale:'상시 5명 이상',
+  sum:'안전·보건 확보의무를 위반해 사망자가 발생하면 1년 이상의 징역 또는 10억원 이하의 벌금, 부상·질병자가 발생하면 7년 이하의 징역 또는 1억원 이하의 벌금에 처합니다.',
+  pts:['형이 확정된 뒤 5년 안에 다시 위반하면 형의 2분의 1까지 가중합니다.',
+       '법인에는 따로 사망 시 50억원 이하, 부상·질병 시 10억원 이하의 벌금이 부과됩니다(제7조).'],
+  tags:'중대재해 처벌 경영책임자 징역 벌금', rel:['sfa-4'] },
+
+/* ───────── 고용보험법 ───────── */
+{ id:'eia-40', law:'eia', no:'제40조', title:'구직급여의 수급 요건', cat:'insure',
+  sum:'구직급여(실업급여)를 받으려면 이직일 이전 18개월 동안 피보험 단위기간이 180일 이상이고, 비자발적으로 이직했으며, 재취업을 위해 적극적으로 노력해야 합니다.',
+  pts:['피보험 단위기간은 보수 지급의 기초가 된 날(유급일)을 세는 것이라 달력 일수와 다릅니다.',
+       '스스로 그만뒀더라도 임금 체불, 통근 곤란, 직장 내 괴롭힘 등 정당한 사유가 있으면 받을 수 있습니다(시행규칙 별표 2).',
+       '근로자가 요청하면 회사는 이직확인서를 내야 하며, 이직 사유를 사실대로 적어야 합니다.'],
+  tags:'실업급여 구직급여 수급자격 권고사직 이직확인서 자발적퇴사', rel:['eia-46','eia-58','eia-50'] },
+
+{ id:'eia-46', law:'eia', no:'제46조', title:'구직급여일액', cat:'insure',
+  sum:'구직급여 1일 지급액은 퇴직 전 평균임금의 60%이며, 상한액과 하한액이 있습니다.',
+  pts:['2026. 1. 1. 이후 이직자의 1일 상한액은 68,100원입니다(종전 66,000원).',
+       '하한액은 최저임금의 80% × 1일 소정근로시간으로, 2026년 8시간 기준 66,048원입니다.',
+       '받는 총액 = 구직급여일액 × 소정급여일수(제50조).'],
+  tags:'실업급여 금액 상한액 하한액 68100 66048 계산', rel:['eia-40','eia-50'], upd:{ d:'2026-01-01', t:'1일 상한액 68,100원으로 인상' } },
+
+{ id:'eia-50', law:'eia', no:'제50조', title:'소정급여일수', cat:'insure',
+  sum:'구직급여를 받을 수 있는 날은 피보험기간과 이직 당시 나이에 따라 120일에서 270일까지입니다.',
+  pts:['예: 피보험기간 1년 미만은 120일, 10년 이상은 50세 미만 240일, 50세 이상과 장애인은 270일.',
+       '이직일 다음 날부터 12개월 안에 받아야 하므로 늦게 신청하면 남은 일수를 다 못 받을 수 있습니다(제48조).'],
+  tags:'실업급여 기간 소정급여일수 수급기간', rel:['eia-46'] },
+
+{ id:'eia-58', law:'eia', no:'제58조', title:'이직 사유에 따른 수급자격의 제한', cat:'insure',
+  sum:'중대한 귀책 사유로 해고되었거나 정당한 사유 없이 자기 사정으로 이직한 경우에는 구직급여를 받을 수 없습니다.',
+  pts:['중대한 귀책 사유 예: 형법·직무 관련 법률 위반으로 금고 이상의 형을 받은 경우, 회사에 막대한 손해를 끼친 경우, 정당한 사유 없는 장기 무단결근 등.',
+       '실제로는 자진 퇴사인데 권고사직으로 거짓 신고하면 부정수급과 고용지원금 제한 문제가 생길 수 있습니다.'],
+  tags:'실업급여 제한 자발적퇴사 권고사직 부정수급 해고', rel:['eia-40'] },
+
+{ id:'eia-70', law:'eia', no:'제70조', title:'육아휴직 급여', cat:'insure',
+  sum:'육아휴직을 30일 이상 쓴 피보험자에게 육아휴직 급여를 지급합니다. 1~3개월은 통상임금의 100%(월 상한 250만원), 4~6개월은 100%(상한 200만원), 7개월째부터는 80%(상한 160만원)입니다.',
+  pts:['육아휴직 시작일 이전 피보험 단위기간이 합산 180일 이상이어야 합니다.',
+       '휴직 시작 1개월 뒤부터 매월 신청하고, 휴직이 끝난 날부터 12개월 안에 신청해야 합니다.',
+       '부모가 함께 쓰면 특례(6+6 부모육아휴직제)로 상한액이 더 높아질 수 있습니다.'],
+  tags:'육아휴직급여 육휴급여 250만원 6+6 부모육아휴직', rel:['eea-19'] },
+
+/* ───────── 산재보험법 ───────── */
+{ id:'iaci-37', law:'iaci', no:'제37조', title:'업무상의 재해의 인정 기준', cat:'insure',
+  sum:'업무상 사고, 업무상 질병, 출퇴근 재해로 부상·질병·장해·사망이 생기면 업무상 재해로 인정됩니다. 업무와 재해 사이에 상당인과관계가 있어야 합니다.',
+  pts:['출퇴근 재해: 회사가 제공한 교통수단 등 사업주 관리 아래의 사고와, 통상적인 경로·방법으로 출퇴근하다 생긴 사고 모두 포함됩니다.',
+       '사업주가 주관하거나 지시한 행사·회식 중 사고도 업무상 재해가 될 수 있습니다.',
+       '직장 내 괴롭힘 등 업무상 정신적 스트레스로 생긴 질병도 인정될 수 있습니다.',
+       '근로자의 고의·자해·범죄행위로 생긴 것은 원칙적으로 제외됩니다.'],
+  tags:'산재 업무상재해 출퇴근재해 산재인정 회식사고 산업재해', rel:['iaci-40','iaci-52','osh-57'] },
+
+{ id:'iaci-40', law:'iaci', no:'제40조', title:'요양급여', cat:'insure',
+  sum:'업무상 부상·질병으로 4일 이상 요양이 필요하면 산재보험에서 치료비(요양급여)를 지급합니다.',
+  pts:['요양 기간이 3일 이내이면 산재보험이 아니라 사용자가 근로기준법에 따라 요양비와 휴업보상을 부담합니다.',
+       '산재 신청은 근로자가 근로복지공단에 직접 할 수 있으며, 사업주 확인(날인)은 필요하지 않습니다.'],
+  tags:'산재 요양급여 치료비 산재신청', rel:['iaci-37','iaci-52'] },
+
+{ id:'iaci-52', law:'iaci', no:'제52조', title:'휴업급여', cat:'insure',
+  sum:'업무상 재해로 요양하느라 일하지 못한 기간에 대해 1일당 평균임금의 70%를 휴업급여로 지급합니다.',
+  pts:['일하지 못한 기간이 3일 이내이면 지급하지 않습니다.',
+       '저소득 근로자는 최저 보장 기준에 따라 금액이 보정됩니다(제54조).'],
+  tags:'휴업급여 산재 70% 요양기간', rel:['iaci-37','iaci-40'] },
+
+/* ───────── 노동조합법 ───────── */
+{ id:'tua-2', law:'tua', no:'제2조', title:'정의(사용자·노동쟁의)', cat:'union',
+  sum:'2026. 3. 10. 시행 개정(일명 노란봉투법)으로, 근로계약 당사자가 아니더라도 근로조건을 실질적·구체적으로 지배·결정할 수 있는 지위에 있는 자는 그 범위에서 사용자로 봅니다.',
+  pts:['원청이 하청 근로자의 근로조건에 실질적 지배력을 가지면 하청 노조와의 단체교섭 의무가 생길 수 있습니다.',
+       '노동쟁의 대상이 근로조건의 "결정"에서 근로조건에 영향을 미치는 사업 경영상 결정 등으로 넓어졌습니다.',
+       '원·하청 교섭 절차는 시행령과 고용노동부 지침을 함께 확인해야 합니다.'],
+  tags:'노란봉투법 사용자범위 원청 하청 원하청교섭 노동쟁의', rel:['tua-3','tua-81'], upd:{ d:'2026-03-10', t:'사용자 범위·노동쟁의 대상 확대' } },
+
+{ id:'tua-3', law:'tua', no:'제3조', title:'손해배상 청구의 제한', cat:'union',
+  sum:'사용자는 정당한 단체교섭이나 쟁의행위로 손해를 입었다는 이유로 노동조합이나 근로자에게 손해배상을 청구할 수 없으며, 개정법은 그 밖의 경우에도 책임 범위를 제한했습니다.',
+  pts:['법원은 쟁의행위에 참여한 근로자 각자의 귀책 사유와 기여 정도에 따라 배상 책임을 개별적으로 정해야 합니다.',
+       '사용자의 불법행위에 맞서 부득이하게 한 행위로 손해가 생긴 경우 등은 책임이 면제될 수 있습니다.',
+       '신원보증인은 쟁의행위로 인한 손해에 책임을 지지 않습니다.'],
+  tags:'노란봉투법 손해배상 파업 쟁의행위 손배가압류', rel:['tua-2'], upd:{ d:'2026-03-10', t:'손해배상 책임 개별 산정·제한' } },
+
+{ id:'tua-81', law:'tua', no:'제81조', title:'부당노동행위', cat:'union',
+  sum:'노동조합 가입·활동을 이유로 한 불이익 취급, 노조 미가입·탈퇴를 고용 조건으로 하는 계약, 정당한 이유 없는 단체교섭 거부, 노조 운영에 대한 지배·개입 등을 해서는 안 됩니다.',
+  pts:['부당노동행위를 당한 근로자나 노조는 그날부터 3개월 이내에 노동위원회에 구제를 신청할 수 있습니다(제82조).',
+       '근로시간 면제 한도를 넘는 급여 지원이나 노조 운영비 원조도 지배·개입으로 볼 수 있습니다(일부 예외 있음).'],
+  pen:'2년 이하 징역 또는 2천만원 이하 벌금', tags:'부당노동행위 노조 단체교섭거부 지배개입 불이익취급', rel:['tua-2'] },
+
+/* ───────── 근로자참여법 ───────── */
+{ id:'wpa-4', law:'wpa', no:'제4조', title:'노사협의회의 설치', cat:'union', scale:'상시 30명 이상',
+  sum:'상시 30명 이상을 사용하는 사업이나 사업장에는 근로조건 결정권이 있는 단위로 노사협의회를 설치해야 합니다.',
+  pts:['노사 각 3명 이상 10명 이하의 같은 수 위원으로 구성하고, 근로자위원은 근로자가 직접 선출합니다(과반수 노조가 있으면 노조가 위촉).',
+       '노사협의회는 3개월마다 정기회의를 열고(제12조), 회의록을 3년간 보존해야 합니다.',
+       '상시 30명 이상 사업장은 고충처리위원도 둬야 합니다(제26조).'],
+  pen:'설치 거부·방해 시 1천만원 이하 벌금', tags:'노사협의회 근로자위원 30인 고충처리위원 정기회의', rel:['tua-81','osh-24'] },
+
+/* ───────── 고령자고용법 ───────── */
+{ id:'age-19', law:'age', no:'제19조', title:'정년', cat:'dismiss',
+  sum:'사업주는 근로자의 정년을 60세 이상으로 정해야 하며, 60세 미만으로 정했더라도 60세로 정한 것으로 봅니다.',
+  pts:['정년 65세 단계적 연장안이 국회에서 논의되고 있습니다. 최신 입법 여부를 꼭 확인하세요.',
+       '정년을 연장하는 사업장은 노사가 임금체계 개편 등 필요한 조치를 해야 합니다(제19조의2).',
+       '정년 도달일(생일, 해당 월말, 연말 등)은 취업규칙에 명확히 정해 두는 것이 좋습니다.'],
+  tags:'정년 60세 65세 정년연장 정년퇴직 임금피크', rel:['age-4-4'] },
+
+{ id:'age-4-4', law:'age', no:'제4조의4', title:'모집·채용 등에서의 연령차별 금지', cat:'harass',
+  sum:'모집·채용, 임금·복리후생, 교육·훈련, 배치·전보·승진, 퇴직·해고에서 합리적 이유 없이 나이를 이유로 차별해서는 안 됩니다.',
+  pts:['채용 공고에 "35세 이하" 같은 나이 제한을 두는 것은 원칙적으로 금지됩니다.',
+       '직무 성격상 특정 나이 기준이 불가피한 경우, 근속기간 차이에 따른 임금 차등, 정년 설정 등은 차별로 보지 않습니다(제4조의5).'],
+  pen:'모집·채용에서 연령차별 시 500만원 이하 벌금', tags:'연령차별 나이제한 채용공고 나이', rel:['eea-7','ra-4-3'] },
+
+/* ───────── 채용절차법 ───────── */
+{ id:'ra-4-3', law:'ra', no:'제4조의3', title:'출신지역 등 개인정보 요구 금지', cat:'contract', scale:'상시 30명 이상',
+  sum:'구인자는 직무 수행에 필요하지 않은 구직자 본인의 용모·키·체중 등 신체 조건, 출신 지역·혼인 여부·재산, 직계 존비속과 형제자매의 학력·직업·재산 정보를 요구하거나 수집해서는 안 됩니다.',
+  pts:['입사지원서 양식에 사진 부착란이나 가족관계·부모 직업란이 있다면 빼는 것이 안전합니다.',
+       '면접에서 말로 묻는 것도 "요구"에 해당합니다.',
+       '부정 채용 청탁·압력·강요나 금품 수수는 3천만원 이하 과태료 대상입니다(제4조의2).'],
+  pen:'500만원 이하 과태료', tags:'블라인드채용 입사지원서 개인정보 부모직업 채용절차법 면접질문', rel:['ra-11','eea-7','age-4-4'] },
+
+{ id:'ra-11', law:'ra', no:'제11조', title:'채용서류의 반환 등', cat:'contract', scale:'상시 30명 이상',
+  sum:'채용 여부가 확정된 뒤 최종 합격하지 못한 구직자가 채용서류 반환을 청구하면 14일 이내에 돌려줘야 합니다.',
+  pts:['구인자는 반환 청구 기간(14일~180일 범위)을 정해 채용 공고 등에 미리 알리고, 그 기간이 지나면 서류를 파기해야 합니다.',
+       '홈페이지나 이메일로 제출된 서류는 반환 대상이 아닙니다.',
+       '채용 일정과 채용 여부도 지체 없이 구직자에게 알려야 합니다(제8조·제10조).'],
+  pen:'300만원 이하 과태료', tags:'채용서류 반환 불합격 합격통보 채용절차법', rel:['ra-4-3'] },
+
+/* ───────── 장애인고용법 ───────── */
+{ id:'dea-5-2', law:'dea', no:'제5조의2', title:'직장 내 장애인 인식개선 교육', cat:'harass',
+  sum:'사업주는 직장 내 장애인에 대한 편견을 없애기 위해 사업주와 근로자를 대상으로 연 1회 이상 장애인 인식개선 교육을 해야 합니다.',
+  pts:['성희롱 예방, 산업안전 교육과 함께 대표적인 법정 의무교육입니다.',
+       '상시 50명 미만 사업장은 고용노동부가 보급하는 교육 자료를 배포·게시하는 방식으로 할 수 있습니다.'],
+  pen:'300만원 이하 과태료', tags:'장애인인식개선교육 법정의무교육 법정교육', rel:['eea-13','dea-28','dea-33'] },
+
+{ id:'dea-28', law:'dea', no:'제28조', title:'사업주의 장애인 고용 의무', cat:'large', scale:'상시 50명 이상',
+  sum:'상시 50명 이상을 고용하는 사업주는 근로자 총수의 일정 비율 이상을 장애인으로 고용해야 합니다. 민간기업 의무고용률은 2026년 3.1%이고, 2027년 3.3%, 2029년 3.5%로 오릅니다.',
+  pts:['상시 100명 이상 사업주가 의무고용률에 못 미치면 고용부담금을 내야 합니다(제33조).',
+       '중증장애인은 2명으로 인정하는 등 산정 특례가 있습니다.',
+       '2027년 상향에 맞춰 내년 채용 계획에 장애인 채용 인원을 미리 반영하세요.'],
+  tags:'장애인고용 의무고용률 3.1% 3.3% 부담금 장애인', rel:['dea-33','dea-5-2'], upd:{ d:'2027-01-01', t:'의무고용률 3.1% → 3.3%' } },
+
+/* ───────── 노동절법 ───────── */
+{ id:'ld-1', law:'ld', no:'전문', title:'노동절', cat:'time',
+  sum:'5월 1일을 노동절로 하고, 이날을 근로기준법에 따른 유급휴일로 합니다. 2025년 개정으로 "근로자의 날"에서 "노동절"로 이름이 바뀌었습니다.',
+  pts:['상시 근로자 수와 관계없이 5인 미만 사업장에도 유급휴일입니다.',
+       '법률이 날짜를 정한 휴일이라 다른 날로 휴일을 대체할 수 없고, 이날 일하면 휴일근로 임금(5인 이상은 가산 포함)을 지급해야 합니다.',
+       '사내 규정에 남아 있는 "근로자의 날" 표현은 "노동절"로 정비하세요.'],
+  tags:'노동절 근로자의날 근로자의 날 5월1일 유급휴일', rel:['lsa-55'], upd:{ d:'2025-11-01', m:true, t:'근로자의 날 → 노동절 명칭 변경' } },
+/* ───────── 4대보험 요율 ───────── */
+{ id:'npa-88', law:'npa', no:'제88조', title:'연금보험료의 부과·징수 등', cat:'insure',
+  sum:'사업장가입자의 연금보험료는 기준소득월액에 보험료율을 곱해 정하며 사용자와 근로자가 절반씩 부담합니다. 2026년 보험료율은 9.5%(각 4.75%)입니다.',
+  pts:['2025년 연금개혁으로 보험료율이 2026년부터 매년 0.5%p씩 올라 2033년 13%가 됩니다. 급여 시스템의 요율을 해마다 1월에 확인하세요.',
+       '기준소득월액의 상한·하한은 매년 7월에 조정됩니다.',
+       '사용자는 근로자 부담분을 임금에서 공제해 다음 달 10일까지 납부합니다.'],
+  tags:'국민연금 연금보험료 보험료율 9.5% 4.75% 연금개혁 4대보험 요율', rel:['nhi-73','ipa-14'], upd:{ d:'2026-01-01', t:'보험료율 9% → 9.5%' } },
+
+{ id:'nhi-73', law:'nhi', no:'제73조', title:'보험료율 등', cat:'insure',
+  sum:'직장가입자의 건강보험료율은 1천분의 80 범위에서 정하며, 2026년은 7.19%로 사용자와 근로자가 각각 3.595%를 부담합니다.',
+  pts:['장기요양보험료는 건강보험료에 장기요양보험료율을 곱해 따로 걷으며, 2026년은 건강보험료의 13.14%입니다(노인장기요양보험법).',
+       '전년도 보수총액을 신고하면 실제 보수에 맞춰 보험료를 다시 계산하는 정산이 4월분 보험료에 반영됩니다.',
+       '보수 외 소득이 일정 금액을 넘는 가입자에게는 소득월액 보험료가 따로 부과됩니다.',
+       '2027년 보험료율도 7.19%로 동결됐습니다(2026. 9. 8. 건강보험정책심의위원회 의결). 2027년 장기요양보험료율은 별도로 결정됩니다.'],
+  tags:'건강보험 건강보험료 보험료율 7.19% 장기요양 13.14% 4대보험 요율', rel:['npa-88','ipa-14'], upd:{ d:'2026-01-01', t:'보험료율 7.09% → 7.19%' } },
+
+{ id:'ipa-14', law:'ipa', no:'제14조', title:'보험료율의 결정 등', cat:'insure',
+  sum:'고용보험료율과 산재보험료율을 정하는 근거 조문입니다. 실업급여 보험료는 1.8%(사용자·근로자 각 0.9%)이고, 고용안정·직업능력개발사업 보험료는 사업주만 규모별로 부담합니다.',
+  pts:['고용안정·직업능력개발 요율(2026년): 150명 미만 0.25%, 150명 이상 우선지원대상기업 0.45%, 150명 이상 1,000명 미만 0.65%, 1,000명 이상 0.85%.',
+       '규모가 커져 다음 단계 요율에 해당하게 되면 그다음 해부터 3년간은 기존 요율을 적용합니다(시행령).',
+       '산재보험료율은 업종별로 고시되고 전액 사업주가 부담합니다. 임금채권보장기금 부담금은 2026년 보수총액의 0.09%로 올랐습니다.'],
+  tags:'고용보험료율 산재보험료율 실업급여 1.8% 고용안정 직업능력개발 0.65% 0.85% 임금채권 4대보험 보험료율 요율', rel:['npa-88','nhi-73','eia-40'] },
+
+{ id:'eia-75', law:'eia', no:'제75조', title:'출산전후휴가 급여 등', cat:'insure',
+  sum:'출산전후휴가나 유산·사산휴가를 쓴 피보험자에게 고용보험에서 휴가 급여를 지급합니다. 우선지원대상기업은 휴가 전체 기간을, 대규모기업은 최초 60일을 뺀 나머지 기간을 지원합니다.',
+  pts:['대규모기업(우선지원대상기업이 아닌 회사)은 최초 60일(다태아 75일)의 통상임금을 회사가 지급하고, 이후 30일(다태아 45일, 미숙아 40일)을 고용보험이 지급합니다.',
+       '고용보험 급여에는 상한액이 있어, 우선지원대상기업도 최초 60일 동안은 통상임금과 급여의 차액을 회사가 지급해야 합니다.',
+       '배우자 출산전후휴가 급여는 우선지원대상기업 근로자만 받습니다. 대규모기업은 20일 유급분을 회사가 모두 부담합니다.',
+       '휴가가 끝나는 날 이전 피보험 단위기간이 합산 180일 이상이어야 받을 수 있습니다.'],
+  tags:'출산휴가급여 출산전후휴가급여 대규모기업 우선지원대상기업 회사부담 배우자출산휴가급여 출산휴가', rel:['lsa-74','eea-18-2','eia-70'] },
+
+/* ───────── 규모별 의무·공시 ───────── */
+{ id:'epa-15-6', law:'epa', no:'제15조의6', title:'고용형태 현황 공시', cat:'large', scale:'상시 300명 이상',
+  sum:'상시 300명 이상을 고용하는 사업주는 매년 3월 31일 현재의 고용형태 현황을 4월 30일까지 고용노동부 공시 시스템에 공시해야 합니다.',
+  pts:['직접 고용한 근로자(기간의 정함 없음, 기간제, 단시간 등)뿐 아니라 사업장에서 일하는 파견·용역·하도급 등 소속 외 근로자도 함께 공시합니다.',
+       '300명 여부는 직접 고용한 근로자만으로 판단하며, 여러 사업장이 있으면 합산합니다.',
+       '이사·상무 등 명칭이어도 실질적인 업무집행권이 없으면 근로자로 보고 포함합니다.'],
+  tags:'고용형태공시 고용형태 공시 300인 소속외근로자 파견 용역 4월', rel:['dwa-5','age-12'] },
+
+{ id:'age-12', law:'age', no:'제12조', title:'사업주의 고령자 고용 노력의무', cat:'large', scale:'상시 300명 이상',
+  sum:'상시 300명 이상을 사용하는 사업주는 업종별 기준고용률 이상으로 55세 이상 고령자를 고용하도록 노력해야 합니다.',
+  pts:['기준고용률: 제조업 2%, 운수업·부동산 및 임대업 6%, 그 밖의 산업 3%(시행령).',
+       '전년도 고령자 고용현황을 매년 1월 31일까지 관할 지방고용노동관서에 제출해야 하며, 내지 않으면 과태료 대상입니다.'],
+  tags:'고령자 기준고용률 55세 고령자고용현황 1월 300인', rel:['age-19','epa-15-6'] },
+
+{ id:'eea-17-3', law:'eea', no:'제17조의3', title:'적극적 고용개선조치 시행계획의 수립·제출 등', cat:'large', scale:'상시 500명 이상',
+  sum:'상시 500명 이상(공시대상기업집단 소속은 300명 이상) 사업주는 매년 직종별·직급별 남녀 근로자 현황을 제출하고, 여성 고용 기준에 못 미치면 개선 시행계획을 수립·제출해야 합니다.',
+  pts:['여성 근로자나 여성 관리자 비율이 같은 업종·규모 평균의 70%에 못 미치면 시행계획 제출 대상입니다.',
+       '시행계획에는 여성 고용목표와 차별적 제도·관행 개선계획을 담고, 다음 해에 이행실적을 보고합니다.',
+       '이행실적이 계속 부진하면 이행촉구를 받고 명단이 공표될 수 있습니다.'],
+  tags:'적극적고용개선조치 AA 여성관리자 남녀근로자현황 500인 공시대상기업집단', rel:['eea-7','eea-8'] },
+
+{ id:'dea-33', law:'dea', no:'제33조', title:'사업주의 부담금 납부 등', cat:'large', scale:'상시 100명 이상',
+  sum:'의무고용률에 못 미치는 상시 100명 이상 사업주는 장애인 고용부담금을 내야 합니다. 2026년 부담기초액은 미달 인원 1명당 월 1,295,000원입니다.',
+  pts:['부담금은 월별 미달 인원에 부담기초액을 곱한 금액의 연간 합계입니다. 의무 인원의 4분의 3 이상을 고용하면 부담기초액이 그대로 적용되고, 고용률이 낮을수록 가산됩니다.',
+       '장애인을 한 명도 고용하지 않은 달에는 최저임금 월액(2026년 2,156,880원)이 적용됩니다.',
+       '전년도분을 다음 해 1월 말까지 신고·납부합니다.',
+       '장애인 표준사업장 등과 도급계약을 맺어 물품·용역을 사면 부담금을 감면받을 수 있습니다(연계고용).'],
+  tags:'장애인고용부담금 부담기초액 1295000 부담금 장애인 의무고용', rel:['dea-28','dea-5-2'], upd:{ d:'2026-01-01', t:'부담기초액 월 1,295,000원' } },
+
+{ id:'cca-14', law:'cca', no:'제14조', title:'직장어린이집의 설치 등', cat:'large', scale:'상시 500명 이상',
+  sum:'상시 여성 근로자 300명 이상 또는 상시 근로자 500명 이상을 고용하는 사업장은 직장어린이집을 설치해야 합니다.',
+  pts:['단독 설치가 어려우면 다른 사업장과 공동 설치하거나 지역 어린이집과 위탁계약을 맺어 의무를 이행할 수 있습니다.',
+       '의무를 이행하지 않으면 이행강제금(1년에 2회, 1회 1억원 이내)이 부과되고 명단이 공표될 수 있습니다.',
+       '매년 이행 실태를 조사하므로 위탁보육 이용 현황 등 증빙을 관리하세요.'],
+  tags:'직장어린이집 직장보육 위탁보육 500인 여성 300명 어린이집', rel:['eea-19','eea-19-2'] },
+
+{ id:'osh-24', law:'osh', no:'제24조', title:'산업안전보건위원회', cat:'safety',
+  sum:'일정 규모 이상 사업장은 노사 같은 수로 산업안전보건위원회를 구성해 분기마다 정기회의를 열고 안전·보건의 주요 사항을 심의·의결해야 합니다.',
+  pts:['설치 기준(시행령 별표): 대부분 업종은 상시 100명 이상, 소프트웨어·정보서비스·금융보험·전문서비스 등 사무 중심 업종은 상시 300명 이상, 일부 위험 업종은 50명 이상입니다.',
+       '심의·의결 사항: 산업재해 예방계획, 안전보건관리규정, 안전보건교육, 작업환경 측정·개선, 건강진단 등.',
+       '회의록을 작성해 갖춰 두고, 의결 내용은 근로자에게 알려야 합니다.'],
+  tags:'산업안전보건위원회 산안위 분기 정기회의 300인 노사동수', rel:['osh-29','wpa-4'] },
+
+{ id:'rba-32', law:'rba', no:'제32조', title:'사용자의 책무(퇴직연금 가입자 교육)', cat:'wage',
+  sum:'퇴직연금제도를 설정한 사용자는 매년 1회 이상 가입자에게 퇴직연금제도 운영 상황 등을 교육해야 합니다.',
+  pts:['교육은 퇴직연금사업자에게 위탁할 수 있지만, 실시 책임은 사용자에게 있습니다.',
+       '서면·이메일 발송, 온라인 교육 등으로 할 수 있으니 실시 기록을 남겨 두세요.'],
+  pen:'1천만원 이하 과태료', tags:'퇴직연금교육 가입자교육 법정의무교육 퇴직연금', rel:['rba-4','rba-20','eea-13'] }
+],
+
+/* 개정·시행 일정 */
+CHANGES: [
+  { d:'2025-02-23', title:'육아지원 3법 시행', body:'육아휴직 최대 1년 6개월·4번 분할, 배우자 출산휴가 20일, 육아기 근로시간 단축 대상 자녀 12세로 확대, 임신기 근로시간 단축 32주 이후로 확대, 미숙아 출산전후휴가 100일, 난임치료휴가 6일.', refs:['eea-19','eea-18-2','eea-19-2','lsa-74','eea-18-3'] },
+  { d:'2025-10-23', title:'상습 임금체불 제재 강화', body:'재직자 체불 임금에도 연 20% 지연이자, 고의·장기 체불 시 최대 3배 손해배상 청구, 상습체불 사업주 신용 제재·정부 지원 제한·출국금지.', refs:['lsa-37','lsa-43'] },
+  { d:'2025-11-01', m:true, title:'근로자의 날 → 노동절', body:'「노동절 제정에 관한 법률」로 이름이 바뀌었습니다. 5월 1일 유급휴일은 그대로입니다.', refs:['ld-1'] },
+  { d:'2026-01-01', title:'2026년 최저임금·구직급여 상한 적용', body:'최저임금 시간급 10,320원(월 2,156,880원), 국민연금 9.5%, 건강보험 7.19%, 장애인 고용부담 기초액 월 1,295,000원. 구직급여 1일 상한 68,100원(2026년 이직자부터).', refs:['mwa-5','npa-88','nhi-73','dea-33','eia-46'] },
+  { d:'2026-03-10', title:'개정 노동조합법(노란봉투법) 시행', body:'근로조건을 실질적으로 지배·결정하는 자를 사용자로 인정, 노동쟁의 대상 확대, 쟁의행위 손해배상 책임 제한.', refs:['tua-2','tua-3'] },
+  { d:'2026-07-01', title:'배우자 출산휴가 업무분담 지원금', body:'우선지원대상기업이 배우자 출산휴가자의 업무를 대신한 동료에게 보상하면 월 최대 60만원(30인 이상은 40만원)을 지원합니다.', refs:['eea-18-2'] },
+  { d:'2026-08-20', title:'단기 육아휴직 신설', body:'만 8세 이하(초등 2학년 이하) 자녀 돌봄 공백 시 연 1회 1주 또는 2주 사용. 분할 횟수에는 들어가지 않습니다.', refs:['eea-19'] },
+  { d:'2026-09-18', title:'배우자 지원 확대·퇴직급여 체불 처벌 강화', body:'배우자 출산전후휴가(출산예정일 50일 전부터 사용), 배우자 유산·사산휴가 5일 신설, 임신 중 배우자 돌봄 육아휴직, 육아기 단축 거부 사유 축소, 퇴직급여 체불 5년·5천만원.', refs:['eea-18-2','eea-18-4','eea-19','eea-19-2','rba-9'] },
+  { d:'2026-10-08', title:'임금 체불 법정형 상향', body:'3년 이하 징역·3천만원 이하 벌금 → 5년 이하 징역·5천만원 이하 벌금.', refs:['lsa-36','lsa-43'] },
+  { d:'2026-11-27', title:'난임치료휴가 유급 확대·성희롱 규정 강화', body:'난임치료휴가 유급 최초 4일. 직장 내 성희롱 금지 대상에 법인 대표자 명시, 친족 상급자 등에도 과태료.', refs:['eea-18-3','eea-12'] },
+  { d:'2026-12-10', title:'4시간 근무 시 휴게 면제', body:'1일 4시간 근무자가 명시적으로 요청하면 휴게 없이 근무를 마칠 수 있습니다.', refs:['lsa-54'] },
+  { d:'2027-01-01', title:'2027년 최저임금·위험성평가 과태료', body:'최저임금 시간급 10,700원(월 2,236,300원), 국민연금 10%, 건강보험 7.19% 동결, 민간 장애인 의무고용률 3.3%, 위험성평가 의무 위반 과태료 신설(50인 미만은 2028년부터).', refs:['mwa-5','dea-28','osh-36'] },
+  { d:'2027-06-10', title:'연차 분할 사용 근거·불이익 금지', body:'연차를 나눠 쓸 근거 명시(시행령안: 연 5일 한도 반일 단위). 연차 청구·사용을 이유로 한 불리한 처우 금지, 위반 시 500만원 이하 벌금.', refs:['lsa-60'] }
+]
+};
+
+</script>
+<script>
+/* =====================================================================
+   노무핸드북 화면 동작
+   ===================================================================== */
+(function () {
+'use strict';
+
+const D = window.NOMU_DATA;
+const { CONFIG, LAWS, CATS, ARTICLES, GLANCE, CHANGES, SYN, CHIPS } = D;
+const LAW_ORDER = Object.keys(LAWS);
+const byId = new Map(ARTICLES.map(a => [a.id, a]));
+/* 법제처 원문 연동: http(s)로 배포됐을 때만 켜짐 (PC에서 파일로 열면 꺼짐) */
+const API_ON = !!CONFIG.LAW_API_ENDPOINT && /^https?:$/.test(location.protocol);
+/* 기준표: 묶음(group) 구조와 예전 평면 배열 모두 지원 */
+const GLANCE_GROUPS = (GLANCE.length && GLANCE[0].items) ? GLANCE : [{ group: '', items: GLANCE }];
+
+/* ── 공통 도구 ── */
+const $ = (s, el) => (el || document).querySelector(s);
+const $$ = (s, el) => Array.from((el || document).querySelectorAll(s));
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const norm = s => String(s || '').toLowerCase().replace(/\s+/g, ' ').trim();
+
+function noKey(no) {
+  const m = /제(\d+)조(?:의(\d+))?/.exec(no || '');
+  return m ? Number(m[1]) + (m[2] ? Number(m[2]) / 100 : 0) : 0;
+}
+function lawUrl(a) {
+  const name = LAWS[a.law].full.replace(/\s+/g, '');
+  let u = 'https://www.law.go.kr/법령/' + name;
+  if (/^제\d/.test(a.no)) u += '/' + a.no;
+  return encodeURI(u);
+}
+
+/* 날짜 */
+function parseDate(s) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s || '');
+  if (!m) return null;
+  const d = new Date(+m[1], +m[2] - 1, +m[3]);
+  return d.getMonth() === +m[2] - 1 ? d : null;
+}
+function toISO(d) { return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+function today() { const n = new Date(); return new Date(n.getFullYear(), n.getMonth(), n.getDate()); }
+function addDays(d, n) { return new Date(d.getFullYear(), d.getMonth(), d.getDate() + n); }
+function addMonths(d, n) {
+  const y = d.getFullYear(), m = d.getMonth() + n;
+  const last = new Date(y, m + 1, 0).getDate();
+  return new Date(y, m, Math.min(d.getDate(), last));
+}
+function addYears(d, n) { return addMonths(d, n * 12); }
+function diffDays(a, b) { return Math.round((Date.UTC(b.getFullYear(), b.getMonth(), b.getDate()) - Date.UTC(a.getFullYear(), a.getMonth(), a.getDate())) / 86400000); }
+function nextMonth15(d) { return new Date(d.getFullYear(), d.getMonth() + 1, 15); }
+const WD = '일월화수목금토';
+function fmt(d, withWd) { return d.getFullYear() + '. ' + (d.getMonth() + 1) + '. ' + d.getDate() + '.' + (withWd ? ' (' + WD[d.getDay()] + ')' : ''); }
+function fmtUpd(u) { const d = parseDate(u.d); return u.m ? d.getFullYear() + '. ' + (d.getMonth() + 1) + '.' : fmt(d); }
+function won(n) { return Math.floor(n).toLocaleString('ko-KR') + '원'; }
+function parseMoney(s) { const v = Number(String(s || '').replace(/[^\d]/g, '')); return isFinite(v) ? v : 0; }
+function minWageOn(d) {
+  const g = findCell('minwage');
+  if (g) { const c = stepOn(g, d).cur; return { year: c.d.getFullYear(), wage: Number(String(c.val).replace(/[^\d]/g, '')) }; }
+  return d >= new Date(2027, 0, 1) ? { year: 2027, wage: 10700 } : { year: 2026, wage: 10320 };
+}
+
+/* 저장소 (브라우저 저장이 막힌 환경에서는 메모리로 대체) */
+const store = (() => {
+  const mem = {};
+  let ok = false;
+  try { localStorage.setItem('__nomu', '1'); localStorage.removeItem('__nomu'); ok = true; } catch (e) { ok = false; }
+  return {
+    get(k, def) {
+      try { if (ok) { const v = localStorage.getItem(k); return v == null ? def : JSON.parse(v); } } catch (e) { /* 무시 */ }
+      return k in mem ? mem[k] : def;
+    },
+    set(k, v) { mem[k] = v; try { if (ok) localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* 무시 */ } }
+  };
+})();
+
+/* 아이콘 */
+const ICON = {
+  chev: '<svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  star: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>',
+  copy: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8.5" y="8.5" width="11" height="11" rx="2"/><path d="M15.5 8.5V6.5a2 2 0 0 0-2-2h-7a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h2"/></svg>',
+  ext: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 3H3.5A.5.5 0 0 0 3 3.5v9a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V10M9 3h4v4M13 3L7.5 8.5"/></svg>'
+};
+
+/* ── 검색 준비 ── */
+ARTICLES.forEach(a => {
+  const law = LAWS[a.law];
+  a.u5 = a.u5 || 'Y';
+  a._num = noKey(a.no);
+  a._h = {
+    title: norm(a.title + ' ' + a.no),
+    tags: norm(a.tags),
+    sum: norm(a.sum),
+    law: norm(law.full + ' ' + law.short),
+    body: norm((a.pts || []).join(' ') + ' ' + (a.pen || '') + ' ' + (a.u5n || ''))
+  };
+});
+
+function parseQuery(q) {
+  let s = norm(q);
+  const nums = [];
+  s = s.replace(/제?\s*(\d+)\s*조(?:\s*의\s*(\d+))?/g, (_, a, b) => { nums.push(Number(a) + (b ? Number(b) / 100 : 0)); return ' '; });
+  const words = s.split(' ').filter(Boolean).map(w => {
+    const alts = new Set([w]);
+    (SYN[w] || []).forEach(x => alts.add(norm(x)));
+    return Array.from(alts);
+  });
+  return { nums, words };
+}
+function scoreArticle(a, pq) {
+  if (pq.nums.length && pq.nums.indexOf(a._num) === -1) return -1;
+  let s = pq.nums.length ? 20 : 0;
+  for (const alts of pq.words) {
+    let best = 0;
+    for (const w of alts) {
+      let v = 0;
+      if (a._h.title.includes(w)) v = 6;
+      else if (a._h.tags.includes(w)) v = 4;
+      else if (a._h.sum.includes(w)) v = 3;
+      else if (a._h.law.includes(w)) v = 2;
+      else if (a._h.body.includes(w)) v = 1;
+      if (v > best) best = v;
+    }
+    if (!best) return -1;
+    s += best;
+  }
+  return s;
+}
+function highlighter(pq) {
+  const terms = [];
+  pq.words.forEach(alts => alts.forEach(w => { if (w.length >= 1) terms.push(w); }));
+  if (!terms.length) return t => esc(t);
+  terms.sort((x, y) => y.length - x.length);
+  const re = new RegExp('(' + terms.map(t => esc(t).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')', 'gi');
+  return t => esc(t).replace(re, '<mark>$1</mark>');
+}
+
+/* ── 상태 ── */
+const state = { glanceOpen: null, q: '', cat: 'all', law: 'all', fav: false, u5: false, sort: 'rel', open: new Set(), tab: 'laws' };
+let favs = new Set(store.get('nomu.favs', []).filter(id => byId.has(id)));
+
+function updStatus(a) {
+  if (!a.upd) return null;
+  const d = parseDate(a.upd.d);
+  const diff = diffDays(today(), d);
+  if (diff > 0) return { cls: 'b-soon', text: fmtUpd(a.upd) + ' 시행 예정' };
+  if (diff >= -365) return { cls: 'b-new', text: fmtUpd(a.upd) + ' 개정 시행' };
+  return null;
+}
+
+function compute() {
+  const pq = parseQuery(state.q);
+  const hasQ = !!state.q.trim();
+  const matches = new Map();
+  ARTICLES.forEach(a => { const s = hasQ ? scoreArticle(a, pq) : 0; if (s >= 0) matches.set(a.id, s); });
+  return { pq, hasQ, matches };
+}
+
+/* ── 렌더링: 사이드바 ── */
+function renderSide(ctx) {
+  const inLaw = a => state.law === 'all' || a.law === state.law;
+  const inCat = a => state.cat === 'all' || a.cat === state.cat;
+  const matched = ARTICLES.filter(a => ctx.matches.has(a.id));
+  const catCount = k => matched.filter(a => inLaw(a) && (k === 'all' || a.cat === k)).length;
+  const lawCount = k => matched.filter(a => inCat(a) && (k === 'all' || a.law === k)).length;
+
+  let h = '';
+  [['all', '전체 분야']].concat(Object.entries(CATS)).forEach(([k, label]) => {
+    const on = !state.fav && state.cat === k;
+    h += '<li><button type="button" class="nav-item' + (on ? ' is-on' : '') + '" data-cat="' + k + '" aria-pressed="' + on + '"><span>' + esc(label) + '</span><span class="cnt num">' + catCount(k) + '</span></button></li>';
+  });
+  h += '<li><button type="button" class="nav-item' + (state.fav ? ' is-on' : '') + '" data-fav="1" aria-pressed="' + state.fav + '"><span>★ 즐겨찾기</span><span class="cnt num">' + favs.size + '</span></button></li>';
+  $('#catList').innerHTML = h;
+
+  let l = '';
+  [['all', { short: '전체 법령', full: '전체 법령' }]].concat(Object.entries(LAWS)).forEach(([k, law]) => {
+    const on = state.law === k;
+    const n = lawCount(k);
+    l += '<li><button type="button" class="nav-item' + (on ? ' is-on' : '') + '" data-law="' + k + '" aria-pressed="' + on + '" title="' + esc(law.full) + '"' + (n === 0 && !on && k !== 'all' ? ' disabled' : '') + '><span>' + esc(law.short) + '</span><span class="cnt num">' + n + '</span></button></li>';
+  });
+  $('#lawList').innerHTML = l;
+}
+
+/* ── 렌더링: 한눈에 보는 기준 ── */
+/* ── 기준표: 날짜 자동 전환 + 변경 감시 ── */
+const REVIEWED = D.REVIEWED_LAW_DATES || {};
+const watchState = new Map();               // 법제처 확인 결과
+let watchPhase = API_ON ? 'loading' : 'off';
+const watchKey = w => w.admrul ? 'a|' + w.admrul : 'l|' + w.law + '|' + w.jo;
+const ymdToDate = v => { const m = /^(\d{4})-?(\d{2})-?(\d{2})/.exec(String(v || '')); return m ? new Date(+m[1], +m[2] - 1, +m[3]) : null; };
+
+function stepOn(g, date) {
+  const steps = (g.steps || []).map(x => Object.assign({}, x, { d: parseDate(x.from) })).filter(x => x.d).sort((a, b) => a.d - b.d);
+  let cur = null, next = null;
+  steps.forEach(x => { if (x.d <= date) cur = x; else if (!next) next = x; });
+  return { cur: cur || steps[0], next, steps };
+}
+function findCell(id) { for (const gr of GLANCE_GROUPS) for (const c of gr.items) if (c.id === id) return c; return null; }
+
+/* 날짜만으로 정해지는 값과 표시 (API 없이도 동작)
+   main: 첫 화면 한 줄 (다음 변경 예고 > brief > 설명) / detail: 칸을 눌렀을 때 보이는 설명 */
+function cellView(g, date) {
+  const flags = [];
+  if (!g.steps) return { val: g.val, main: g.brief || g.sub || '', detail: g.sub || '', next: null, flags };
+  const { cur, next, steps } = stepOn(g, date);
+  let nextText = '';
+  if (next) {
+    const jan1 = next.d.getMonth() === 0 && next.d.getDate() === 1;
+    const when = jan1 ? next.d.getFullYear() + '년' : fmt(next.d);
+    nextText = when + (next.val === cur.val ? '에도 ' : '부터 ') + next.val + (g.nextUnit || '');
+  }
+  if (g.kind === 'annual') {
+    const Y = date.getFullYear();
+    const has = y => steps.some(x => x.d.getFullYear() === y);
+    if (!has(Y)) flags.push(Y + '년 값이 아직 입력되지 않았어요');
+    else if (g.due) {
+      const due = new Date(Y, +g.due.slice(0, 2) - 1, +g.due.slice(3, 5));
+      if (date >= due && !has(Y + 1)) flags.push((Y + 1) + '년 값 발표 시기가 지났어요');
+    }
+  }
+  return { val: cur.val, main: nextText || cur.brief || g.brief || cur.sub || '', detail: cur.sub || '', next, flags };
+}
+
+/* 법제처 확인 결과 반영 */
+function watchFlags(g) {
+  const flags = []; let unknown = 0; const unknownNames = [];
+  (g.watch || []).forEach(w => {
+    const r = watchState.get(watchKey(w));
+    if (!r) return;
+    if (!r.ok) { unknown++; unknownNames.push((w.name || w.law || w.admrul) + (w.jo ? ' ' + w.jo : '')); return; }
+    const checked = parseDate(w.checked || CONFIG.DATA_DATE);
+    if (w.admrul) {
+      const items = (r.data.items || []).filter(it => String(it.name || '').indexOf(w.match || w.admrul) !== -1)
+        .map(it => Object.assign({}, it, { d: ymdToDate(it.issued || it.effective) })).filter(it => it.d).sort((a, b) => b.d - a.d);
+      if (!items.length) { unknown++; unknownNames.push(w.name || w.admrul); return; }
+      if (items[0].d > checked) flags.push('새 ' + (w.name || '고시') + ' 발령(' + fmt(items[0].d) + ')');
+      return;
+    }
+    const precise = !!r.data.joEffectiveDate;
+    const eff = ymdToDate(r.data.joEffectiveDate || r.data.effectiveDate);
+    if (!eff || eff <= checked) return;
+    if ((REVIEWED[w.law] || []).indexOf(toISO(eff)) !== -1) return;
+    flags.push((w.name || w.law) + ' ' + w.jo + (precise ? ' 개정' : ' 포함 법령 개정') + '(시행 ' + fmt(eff) + ')');
+  });
+  return { flags, unknown, unknownNames };
+}
+
+const KIND_TEXT = {
+  schedule: '정해진 일정에 따라 날짜가 되면 자동으로 바뀌어요.',
+  annual: '매년 새로 정해지는 값이에요. 새 값이 나오거나 입력이 늦으면 빨간색으로 알려줘요.',
+  law: '법령에 정해진 값이에요. 법령이 개정되면 빨간색으로 알려줘요.'
+};
+function glanceDetail(g, now) {
+  const v = cellView(g, now), wf = watchFlags(g), flags = v.flags.concat(wf.flags);
+  const a = byId.get(g.ref);
+  let check;
+  if (!(g.watch && g.watch.length)) check = '자동 확인 대상이 아니에요.';
+  else if (watchPhase === 'off') check = '배포된 주소에서 법제처 개정 여부를 매일 확인해요.';
+  else if (watchPhase === 'loading') check = '법제처에서 확인하는 중이에요…';
+  else if (Array.from(watchState.values()).every(r => !r.ok)) check = '법제처 연결이 아직 안 돼서 확인하지 못했어요.';
+  else if (wf.unknown) check = '일부 확인하지 못했어요(' + wf.unknownNames.join(', ') + '). 직접 확인하세요.';
+  else check = wf.flags.length ? '개정 또는 새 고시가 확인됐어요.' : '법제처 확인 결과 변동이 없어요.';
+  const rows = [];
+  const desc = [v.detail, g.note].filter(Boolean).join(' ');
+  if (desc) rows.push(['설명', esc(desc)]);
+  if (v.next) rows.push(['다음 변경', esc(fmt(v.next.d) + '부터 ' + v.next.val + (g.nextUnit || '') + (v.next.sub ? ' (' + v.next.sub + ')' : ''))]);
+  if (flags.length) rows.push(['확인 필요', esc(flags.join(' / ')), 'is-red']);
+  rows.push(['갱신 방식', esc(KIND_TEXT[g.kind] || '')]);
+  rows.push(['자동 확인', esc(check)]);
+  return '<div class="g-detail" id="gd-' + esc(g.id) + '" role="region" aria-label="' + esc(g.label) + ' 상세">' +
+    '<div class="gd-head"><strong>' + esc(g.label) + '</strong><span class="gd-val">' + esc(v.val) + esc(g.unit) + '</span>' +
+    '<button type="button" class="gd-close" data-close="1" aria-label="상세 닫기"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>' +
+    '<dl class="gd-rows">' + rows.map(r => '<dt>' + r[0] + '</dt><dd' + (r[2] ? ' class="' + r[2] + '"' : '') + '>' + r[1] + '</dd>').join('') + '</dl>' +
+    (a ? '<div class="gd-foot"><span class="gd-ref-label">근거 조문</span><button type="button" class="gd-ref" data-go="' + a.id + '">' + esc(LAWS[a.law].short) + ' ' + esc(a.no) + ' ' + esc(a.title) + '</button></div>' : '') +
+    '</div>';
+}
+
+function renderGlance() {
+  const now = today();
+  let alerts = 0, unknown = 0; const unknownNames = [];
+  const cell = g => {
+    const v = cellView(g, now), wf = watchFlags(g), flags = v.flags.concat(wf.flags);
+    unknown += wf.unknown; unknownNames.push.apply(unknownNames, wf.unknownNames);
+    if (flags.length) alerts++;
+    const dim = state.u5 && g.u5 === 'N';
+    const open = state.glanceOpen === g.id;
+    return '<button type="button" class="g-cell' + (dim ? ' is-dim' : '') + (flags.length ? ' is-alert' : '') + '" data-cell="' + esc(g.id) + '" aria-expanded="' + open + '" aria-controls="gd-' + esc(g.id) + '">' +
+      '<span class="g-label">' + esc(g.label) + (flags.length ? ' <span class="g-alert">확인 필요</span>' : '') + '</span>' +
+      '<span class="g-val">' + esc(v.val) + '<span class="g-unit">' + esc(g.unit) + '</span></span>' +
+      '<span class="g-sub">' + esc(v.main) + '</span>' +
+      (dim ? '<span class="g-flag">5인 미만 미적용</span>' : '') +
+      '</button>';
+  };
+  $('#glance').innerHTML = GLANCE_GROUPS.map(gr =>
+    (gr.group ? '<div class="g-group" role="heading" aria-level="3">' + esc(gr.group.replace('{Y}', now.getFullYear())) + '</div>' : '') +
+    gr.items.map(cell).join('') +
+    (gr.items.some(c => c.id === state.glanceOpen) ? glanceDetail(findCell(state.glanceOpen), now) : '')
+  ).join('');
+
+  const st = $('#glanceStatus');
+  let msg = '';
+  if (alerts) msg = '확인이 필요한 항목이 ' + alerts + '개 있어요. 칸을 누르면 이유와 근거를 볼 수 있어요.';
+  if (watchPhase === 'loading') msg += (msg ? ' ' : '') + '법제처에서 변경 여부를 확인하고 있어요…';
+  else if (watchPhase === 'done') {
+    const results = Array.from(watchState.values());
+    if (results.length && results.every(r => !r.ok)) {
+      msg += (msg ? ' ' : '') + '법제처 연결이 아직 안 돼서 개정 여부를 자동으로 확인하지 못했어요. 배포 가이드 4번으로 연결 상태를 확인하세요.';
+    } else {
+      if (!alerts) msg = '법제처 확인 결과 바뀐 기준이 없어요.';
+      if (unknown) msg += ' 자동 확인하지 못한 항목 ' + unknown + '개는 직접 확인하세요.';
+    }
+  }
+  st.textContent = msg;
+  st.title = unknownNames.length ? '확인하지 못한 항목: ' + unknownNames.join(', ') : '';
+  st.classList.toggle('has-alert', alerts > 0);
+}
+function toggleGlance(id) {
+  state.glanceOpen = state.glanceOpen === id ? null : id;
+  renderGlance();
+  const btn = $('.g-cell[data-cell="' + id + '"]');
+  if (btn) btn.focus({ preventScroll: true });
+}
+
+async function runWatch() {
+  const list = [], seen = new Set();
+  GLANCE_GROUPS.forEach(gr => gr.items.forEach(c => (c.watch || []).forEach(w => { const k = watchKey(w); if (!seen.has(k)) { seen.add(k); list.push(w); } })));
+  let i = 0;
+  const worker = async () => {
+    while (i < list.length) {
+      const w = list[i++];
+      const url = CONFIG.LAW_API_ENDPOINT + (w.admrul ? '?admrul=' + encodeURIComponent(w.admrul) : '?law=' + encodeURIComponent(w.law) + '&jo=' + encodeURIComponent(w.jo));
+      const ctrl = new AbortController(); const timer = setTimeout(() => ctrl.abort(), 15000);
+      try {
+        const res = await fetch(url, { signal: ctrl.signal, headers: { Accept: 'application/json' } });
+        const data = await res.json();
+        if (!res.ok || data.error) throw new Error(data.error || String(res.status));
+        watchState.set(watchKey(w), { ok: true, data });
+      } catch (e) { watchState.set(watchKey(w), { ok: false, error: e.message }); }
+      finally { clearTimeout(timer); }
+    }
+  };
+  await Promise.all([worker(), worker(), worker(), worker()]);
+  watchPhase = 'done';
+  renderGlance();
+}
+
+/* ── 렌더링: 조문 목록 ── */
+function articleBodyHtml(a, hl) {
+  let h = '<ul class="pts">' + (a.pts || []).map(p => '<li>' + hl(p) + '</li>').join('') + '</ul>';
+  if (a.u5n) h += '<p class="meta-row"><span class="tag">5인 미만</span><span>' + esc(a.u5n) + '</span></p>';
+  if (a.pen) h += '<p class="meta-row"><span class="tag tag-pen">벌칙</span><span>' + esc(a.pen) + '</span></p>';
+  if (a.upd) h += '<p class="meta-row"><span class="tag tag-upd">개정</span><span>' + fmtUpd(a.upd) + ' ' + esc(a.upd.t) + '</span></p>';
+  const rel = (a.rel || []).map(id => byId.get(id)).filter(Boolean);
+  if (rel.length) {
+    h += '<div class="rel"><span class="rel-label">관련 조문</span>' + rel.map(r =>
+      '<button type="button" class="rel-chip" data-go="' + r.id + '">' + esc(LAWS[r.law].short) + ' ' + esc(r.no) + ' ' + esc(r.title) + '</button>').join('') + '</div>';
+  }
+  h += '<div class="art-foot"><a class="ext" href="' + lawUrl(a) + '" target="_blank" rel="noopener">국가법령정보센터에서 원문 보기 ' + ICON.ext + '</a>' +
+    '<button type="button" class="text-btn" data-act="copy">요약 복사</button>' +
+    (API_ON ? '<button type="button" class="text-btn api-btn" data-act="orig" aria-expanded="false">법령 원문 보기</button>' : '') + '</div>' +
+    '<div class="orig" hidden></div>';
+  return h;
+}
+function articleHtml(a, hl) {
+  const open = state.open.has(a.id);
+  const dim = state.u5 && a.u5 === 'N';
+  const isFav = favs.has(a.id);
+  let badges = '';
+  if (state.u5 && a.u5 === 'N') badges += '<span class="badge b-u5">5인 미만 미적용</span>';
+  else if (state.u5 && a.u5 === 'P') badges += '<span class="badge b-u5">5인 미만 일부 적용</span>';
+  if (a.scale) badges += '<span class="badge b-scale">' + esc(a.scale) + '</span>';
+  const st = updStatus(a);
+  if (st) badges += '<span class="badge ' + st.cls + '">' + esc(st.text) + '</span>';
+  return '<article class="art' + (open ? ' is-open' : '') + (dim ? ' is-dim' : '') + '" id="art-' + a.id + '" data-id="' + a.id + '">' +
+    '<div class="art-row">' +
+      '<button type="button" class="art-toggle" aria-expanded="' + open + '" aria-controls="body-' + a.id + '">' +
+        '<span class="art-no"><b>' + esc(a.no) + '</b><small>' + esc(LAWS[a.law].short) + '</small></span>' +
+        '<span class="art-main"><span class="art-title">' + hl(a.title) + '</span>' + (badges ? '<span class="badges">' + badges + '</span>' : '') +
+        '<span class="art-sum">' + hl(a.sum) + '</span></span>' + ICON.chev +
+      '</button>' +
+      '<div class="art-actions">' +
+        '<button type="button" class="icon-btn" data-act="fav" aria-pressed="' + isFav + '" aria-label="' + (isFav ? '즐겨찾기 해제' : '즐겨찾기 추가') + '" title="즐겨찾기">' + ICON.star + '</button>' +
+      '</div>' +
+    '</div>' +
+    '<div class="art-body" id="body-' + a.id + '"' + (open ? '' : ' hidden') + '>' + (open ? articleBodyHtml(a, hl) : '') + '</div>' +
+  '</article>';
+}
+
+let lastRows = [];
+let lastHl = t => esc(t);
+function renderList(ctx) {
+  const lawIdx = a => LAW_ORDER.indexOf(a.law);
+  let rows = ARTICLES
+    .filter(a => ctx.matches.has(a.id))
+    .filter(a => state.fav ? favs.has(a.id) : (state.cat === 'all' || a.cat === state.cat))
+    .filter(a => state.law === 'all' || a.law === state.law)
+    .map(a => ({ a, s: ctx.matches.get(a.id) }));
+
+  rows.sort((x, y) => {
+    if (state.sort === 'rel' && ctx.hasQ && y.s !== x.s) return y.s - x.s;
+    if (state.sort === 'recent') {
+      const dx = x.a.upd ? x.a.upd.d : '', dy = y.a.upd ? y.a.upd.d : '';
+      if (dx !== dy) return dx < dy ? 1 : -1;
+    }
+    return lawIdx(x.a) - lawIdx(y.a) || x.a._num - y.a._num;
+  });
+  lastRows = rows.map(r => r.a);
+  lastHl = highlighter(ctx.pq);
+
+  $('#listCount').textContent = rows.length;
+  const dimN = state.u5 ? lastRows.filter(a => a.u5 === 'N').length : 0;
+  const notice = $('#u5Notice');
+  notice.hidden = !state.u5;
+  if (state.u5) notice.textContent = dimN ? '5명 미만 사업장에 적용되지 않는 조문 ' + dimN + '건을 흐리게 표시했어요. "일부 적용" 조문은 펼쳐서 설명을 확인하세요.' : '목록의 조문은 모두 5명 미만 사업장에도 적용돼요.';
+
+  if (!rows.length) {
+    let msg;
+    if (state.fav && !favs.size) msg = '<strong>아직 즐겨찾기한 조문이 없어요</strong>조문 오른쪽의 별 아이콘을 누르면 여기에 모아 볼 수 있어요.';
+    else if (ctx.hasQ) msg = '<strong>‘' + esc(state.q.trim()) + '’에 맞는 조문이 없어요</strong>다른 표현(예: 월차 → 연차)으로 찾아보거나 분야·법령 필터를 해제해 보세요.';
+    else msg = '<strong>조건에 맞는 조문이 없어요</strong>분야·법령 필터를 해제해 보세요.';
+    $('#list').innerHTML = '<div class="empty">' + msg + '<br><button type="button" class="btn" data-reset="1">필터 초기화</button></div>';
+  } else {
+    $('#list').innerHTML = rows.map(r => articleHtml(r.a, lastHl)).join('');
+  }
+  const allOpen = rows.length && rows.every(r => state.open.has(r.a.id));
+  $('#expandAll').textContent = allOpen ? '모두 접기' : '모두 펼치기';
+  $('#expandAll').disabled = !rows.length;
+}
+
+function renderChipsState() {
+  $$('#chips .chip').forEach(c => c.classList.toggle('is-on', norm(c.dataset.q) === norm(state.q)));
+}
+
+function renderLaws() {
+  const ctx = compute();
+  /* 분야·법령·즐겨찾기로 좁혀 보는 중에는 '한눈에 보는 기준'을 숨김 */
+  $('.glance-sec').hidden = state.cat !== 'all' || state.law !== 'all' || state.fav;
+  renderSide(ctx);
+  renderGlance();
+  renderList(ctx);
+  renderChipsState();
+  $('#qClear').hidden = !state.q;
+}
+
+/* ── 조문 동작 ── */
+function toggleArticle(id, force) {
+  const el = document.getElementById('art-' + id);
+  const willOpen = force != null ? force : !state.open.has(id);
+  if (willOpen) state.open.add(id); else state.open.delete(id);
+  if (!el) return;
+  const a = byId.get(id);
+  const body = $('.art-body', el);
+  if (willOpen && !body.innerHTML) body.innerHTML = articleBodyHtml(a, lastHl);
+  body.hidden = !willOpen;
+  el.classList.toggle('is-open', willOpen);
+  $('.art-toggle', el).setAttribute('aria-expanded', String(willOpen));
+  const allOpen = lastRows.length && lastRows.every(r => state.open.has(r.id));
+  $('#expandAll').textContent = allOpen ? '모두 접기' : '모두 펼치기';
+}
+
+function goTo(id) {
+  if (!byId.has(id)) return;
+  setTab('laws', true);
+  const ctx = compute();
+  const a = byId.get(id);
+  const visible = ctx.matches.has(id) && (state.fav ? favs.has(id) : (state.cat === 'all' || state.cat === a.cat)) && (state.law === 'all' || state.law === a.law);
+  if (!visible) { state.q = ''; $('#q').value = ''; state.cat = 'all'; state.law = 'all'; state.fav = false; }
+  state.open.add(id);
+  renderLaws();
+  const el = document.getElementById('art-' + id);
+  if (el) {
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    el.scrollIntoView({ block: 'start', behavior: reduce ? 'auto' : 'smooth' });
+    el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash');
+    $('.art-toggle', el).focus({ preventScroll: true });
+  }
+}
+
+function toggleFav(id, btn) {
+  if (favs.has(id)) favs.delete(id); else favs.add(id);
+  store.set('nomu.favs', Array.from(favs));
+  const on = favs.has(id);
+  if (btn) { btn.setAttribute('aria-pressed', String(on)); btn.setAttribute('aria-label', on ? '즐겨찾기 해제' : '즐겨찾기 추가'); }
+  toast(on ? '즐겨찾기에 추가했어요' : '즐겨찾기에서 뺐어요');
+  if (state.fav) renderLaws(); else renderSide(compute());
+}
+
+function articleText(a) {
+  const lines = ['「' + LAWS[a.law].full + '」 ' + (a.no === '전문' ? '' : a.no) + '(' + a.title + ')', '', a.sum];
+  if (a.pts && a.pts.length) { lines.push('', '실무 포인트'); a.pts.forEach(p => lines.push('- ' + p)); }
+  if (a.pen) lines.push('', '벌칙: ' + a.pen);
+  lines.push('', '원문: ' + decodeURI(lawUrl(a)));
+  lines.push('(노무핸드북 요약, ' + fmt(parseDate(CONFIG.DATA_DATE)) + ' 기준)');
+  return lines.join('\n');
+}
+function copyText(text) {
+  if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text);
+  return new Promise((resolve, reject) => {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    let ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    ta.remove();
+    ok ? resolve() : reject(new Error('copy failed'));
+  });
+}
+
+/* 법제처 원문 불러오기 — Vercel 함수(/api/law)가 법제처 Open API를 대신 호출해 돌려줌
+   응답: { law, no, title, text, effectiveDate:'YYYYMMDD', promulgationDate, source } / 오류: { error, hint } */
+const origCache = new Map();
+async function fetchOriginal(a) {
+  if (origCache.has(a.id)) return origCache.get(a.id);
+  const url = CONFIG.LAW_API_ENDPOINT + '?law=' + encodeURIComponent(LAWS[a.law].full) + '&jo=' + encodeURIComponent(a.no);
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), 15000);
+  try {
+    const res = await fetch(url, { signal: ctrl.signal, headers: { Accept: 'application/json' } });
+    let data = null;
+    try { data = await res.json(); } catch (e) { data = null; }
+    if (!res.ok || !data || data.error) throw new Error((data && data.error) || ('서버 응답 ' + res.status + ' — 배포 상태와 /api/law 함수를 확인하세요.'));
+    if (!data.text) throw new Error('원문이 비어 있어요.');
+    origCache.set(a.id, data);
+    return data;
+  } catch (e) {
+    if (e.name === 'AbortError') throw new Error('응답 시간이 초과됐어요. 잠시 뒤 다시 시도하세요.');
+    throw e;
+  } finally { clearTimeout(timer); }
+}
+function ymd(s) { const m = /^(\d{4})(\d{2})(\d{2})$/.exec(String(s || '')); return m ? new Date(+m[1], +m[2] - 1, +m[3]) : null; }
+function origHtml(r) {
+  const eff = ymd(r.effectiveDate);
+  const dataDate = parseDate(CONFIG.DATA_DATE);
+  let h = '<p class="orig-meta">법제처 국가법령정보 현행 원문' + (eff ? ' (법령 시행일 ' + fmt(eff) + ')' : '') + '</p>';
+  if (eff && dataDate && eff > dataDate) h += '<p class="orig-warn">이 법령은 요약 작성일(' + fmt(dataDate) + ') 이후 개정 시행됐어요. 위 요약이 지금도 맞는지 원문으로 확인하세요.</p>';
+  h += '<div class="orig-text">' + esc(r.text) + '</div>';
+  return h;
+}
+
+/* ── 토스트 ── */
+let toastTimer;
+function toast(msg) {
+  const t = $('#toast');
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove('show'), 1800);
+}
+
+/* ── 탭 ── */
+function setTab(name, silent) {
+  state.tab = name;
+  $$('.tab').forEach(t => t.setAttribute('aria-selected', String(t.dataset.tab === name)));
+  ['laws', 'calc', 'deadline', 'changes'].forEach(v => { $('#view-' + v).hidden = v !== name; });
+  if (!silent) {
+    const h = name === 'laws' ? '' : '#' + name;
+    if (location.hash !== h) history.replaceState(null, '', location.pathname + location.search + h);
+  }
+}
+
+/* =====================================================================
+   계산기 (순수 함수 — 화면과 분리해 검증 가능)
+   ===================================================================== */
+function annualLeave(hire, ref) {
+  if (!hire) return { error: '입사일을 넣어 주세요.' };
+  ref = ref || today();
+  if (diffDays(hire, ref) < 0) return { error: '기준일이 입사일보다 빨라요.' };
+  let months = 0; while (diffDays(addMonths(hire, months + 1), ref) >= 0) months++;
+  let years = 0; while (diffDays(addYears(hire, years + 1), ref) >= 0) years++;
+  const daysFor = n => Math.min(25, 15 + Math.floor((n - 1) / 2));
+  const tenure = { y: Math.floor(months / 12), m: months % 12, d: diffDays(addMonths(hire, months), ref) };
+  let r;
+  if (years === 0) {
+    const k = Math.min(months, 11);
+    r = { phase: 'under1', current: k, label: '입사 1년 미만 · 1개월 개근마다 1일',
+          nextDate: months < 11 ? addMonths(hire, months + 1) : addYears(hire, 1), nextDays: months < 11 ? 1 : 15,
+          usableUntil: addDays(addYears(hire, 1), -1) };
+  } else {
+    r = { phase: 'over1', current: daysFor(years), label: '근속 ' + years + '년 시점에 생긴 연차',
+          nextDate: addYears(hire, years + 1), nextDays: daysFor(years + 1), usableUntil: addDays(addYears(hire, years + 1), -1) };
+  }
+  let total = Math.min(months, 11);
+  for (let n = 1; n <= years; n++) total += daysFor(n);
+  const schedule = [{ label: '1년 미만', date: hire, until: addDays(addYears(hire, 1), -1), days: '최대 11', cur: years === 0 }];
+  const start = Math.max(1, years - 2), end = start + 6;
+  for (let n = start; n <= end; n++) schedule.push({ label: n + '년 근속', date: addYears(hire, n), until: addDays(addYears(hire, n + 1), -1), days: daysFor(n), cur: n === years });
+  return Object.assign(r, { years, months, tenure, total, schedule });
+}
+
+function weeklyHoliday(wage, hours, refDate) {
+  const mw = minWageOn(refDate || today());
+  if (!(wage > 0) || !(hours > 0)) return { error: '시급과 1주 소정근로시간을 넣어 주세요.' };
+  const capped = Math.min(hours, 40);
+  const eligible = capped >= 15;
+  const hHours = eligible ? capped / 40 * 8 : 0;
+  const weekPay = wage * hHours;
+  const monthHours = Math.round((capped + hHours) * 365 / 7 / 12);
+  return { eligible, capped, over40: hours > 40, hHours, weekPay, weekTotal: wage * (capped + hHours), monthHours, monthPay: wage * monthHours, minWage: mw, belowMin: wage < mw.wage };
+}
+
+function severance(o) {
+  if (!o.hire || !o.last) return { error: '입사일과 마지막 근무일을 넣어 주세요.' };
+  const quit = addDays(o.last, 1);
+  const tenureDays = diffDays(o.hire, quit);
+  if (tenureDays <= 0) return { error: '마지막 근무일이 입사일보다 빨라요.' };
+  const start3 = addMonths(quit, -3);
+  const days3 = diffDays(start3, quit);
+  const base = o.wage3 + o.bonus * 3 / 12 + o.leave * 3 / 12;
+  const avg = base / days3;
+  const pay = avg * 30 * tenureDays / 365;
+  return { quit, tenureDays, eligible: tenureDays >= 365, start3, days3, base, avg, pay };
+}
+
+const DEADLINES = {
+  join: { label: '입사', dateLabel: '입사일', hint: '근로를 시작한 날을 넣으세요.', build: d => [
+    { date: d, label: '근로계약서 작성·교부', note: '임금·소정근로시간·휴일·연차는 서면으로 교부해요. 일을 시작하기 전에 작성하세요.', ref: 'lsa-17' },
+    { date: addDays(d, 14), label: '건강보험 자격취득 신고', due: true, note: '취득일(입사일)부터 14일 이내', refText: '국민건강보험법' },
+    { date: nextMonth15(d), label: '국민연금·고용보험·산재보험 취득 신고', due: true, note: '취득일이 속한 달의 다음 달 15일까지', refText: '국민연금법·고용보험법 등' },
+    { date: addDays(addMonths(d, 3), -1), label: '수습 3개월 종료', note: '1년 이상 계약이고 단순노무 직종이 아니면 이 날까지 최저임금의 90%를 줄 수 있어요.', ref: 'mwa-5' },
+    { date: addMonths(d, 3), label: '해고예고 적용 시작', note: '계속근로 3개월 미만은 해고예고 예외예요. 이 날부터는 30일 전 예고가 필요해요.', ref: 'lsa-26' },
+    { date: addYears(d, 1), label: '1년 근속 · 연차 15일 발생, 퇴직금 요건 충족', note: '1년 미만 기간에 생긴 연차(최대 11일)는 전날까지 사용해야 해요.', ref: 'lsa-60' },
+    { date: addYears(d, 2), label: '기간제라면 2년 사용 한도', note: '예외 사유 없이 2년을 넘기면 무기계약직으로 봐요.', ref: 'nra-4' }
+  ] },
+  quit: { label: '퇴사', dateLabel: '마지막 근무일', hint: '실제로 마지막으로 일한 날을 넣으세요. 퇴직일은 그다음 날이에요.', build: d => {
+    const q = addDays(d, 1);
+    return [
+      { date: q, label: '퇴직일 · 4대보험 자격상실일', note: '마지막 근무일의 다음 날이에요.' },
+      { date: addDays(q, 14), label: '임금·퇴직금 등 금품청산 기한', due: true, note: '퇴직일부터 14일 이내. 합의하면 연장할 수 있고, 넘기면 연 20% 지연이자가 붙어요.', ref: 'lsa-36' },
+      { date: addDays(q, 14), label: '건강보험 자격상실 신고', due: true, note: '상실일부터 14일 이내', refText: '국민건강보험법' },
+      { date: nextMonth15(q), label: '국민연금·고용보험·산재보험 상실 신고', due: true, note: '상실일이 속한 달의 다음 달 15일까지', refText: '국민연금법·고용보험법 등' },
+      { date: null, label: '이직확인서 제출', note: '근로자가 실업급여 신청을 위해 요청하면 요청받은 날부터 10일 이내에 내야 해요.', ref: 'eia-40' },
+      { date: addYears(q, 3), label: '퇴직금 청구권 소멸시효', due: true, note: '퇴직일부터 3년', ref: 'lsa-49' }
+    ];
+  } },
+  fire: { label: '해고', dateLabel: '해고일(퇴직일)', hint: '근로관계가 끝나는 날을 넣으세요.', build: d => [
+    { date: addDays(d, -30), label: '해고예고 마감', note: '적어도 30일 전에 예고해야 해요. 하루 이상 여유를 두세요. 예고하지 않으면 30일분 통상임금을 지급해야 해요.', ref: 'lsa-26' },
+    { date: null, label: '해고 사유·시기 서면통지', note: '해고 전에 서면으로 알려야 효력이 있어요(5인 이상). 서면 예고에 사유와 시기를 적었다면 통지로 봐요.', ref: 'lsa-27' },
+    { date: addDays(d, 14), label: '금품청산 기한', due: true, note: '퇴직일부터 14일 이내', ref: 'lsa-36' },
+    { date: nextMonth15(d), label: '국민연금·고용보험·산재보험 상실 신고', due: true, note: '상실일이 속한 달의 다음 달 15일까지 (건강보험은 14일 이내)', refText: '국민연금법·고용보험법 등' },
+    { date: addMonths(d, 3), label: '근로자의 부당해고 구제신청 기한', due: true, note: '해고일부터 3개월 이내에 노동위원회에 신청할 수 있어요(5인 이상).', ref: 'lsa-28' }
+  ] },
+  birth: { label: '출산', dateLabel: '출산(예정)일', hint: '예정일로 계산한 뒤, 실제 출산일이 정해지면 다시 확인하세요.', build: d => [
+    { date: addDays(d, -50), label: '배우자 출산전후휴가 사용 시작 가능', note: '출산예정일 50일 전부터 쓸 수 있어요(20일 유급, 3회 분할 가능).', ref: 'eea-18-2' },
+    { date: addDays(d, -44), label: '출산전후휴가 시작 가능한 가장 이른 날', note: '출산 후 45일 이상이 남아야 해서 출산 전에는 최대 44일까지 써요(다태아는 출산 후 60일 이상).', ref: 'lsa-74' },
+    { date: null, label: '육아휴직 신청', note: '휴직 시작 예정일 30일 전까지 신청해요(조기 출산 등은 예외).', ref: 'eea-19' },
+    { date: addDays(d, 120), label: '배우자 출산전후휴가 사용 기한', due: true, note: '출산일부터 120일 이내. 기간 계산 방식에 따라 하루 차이가 날 수 있으니 여유 있게 쓰세요.', ref: 'eea-18-2' },
+    { date: addDays(addYears(d, 1), -1), label: '육아시간(수유시간) 청구 가능 기간 끝', note: '생후 1년 미만 유아를 둔 여성 근로자에게 1일 2회 30분 유급', ref: 'lsa-75' }
+  ] }
+};
+function deadlines(type, date) {
+  const ev = DEADLINES[type];
+  if (!ev || !date) return [];
+  const items = ev.build(date);
+  return items.filter(i => i.date).sort((x, y) => x.date - y.date).concat(items.filter(i => !i.date));
+}
+
+/* ── 계산기 화면 ── */
+function renderAnnual() {
+  const r = annualLeave(parseDate($('#an-hire').value), parseDate($('#an-ref').value));
+  const out = $('#an-out'), sch = $('#an-sched');
+  if (r.error) { out.innerHTML = '<p class="res-empty">' + esc(r.error) + '</p>'; sch.innerHTML = ''; return; }
+  out.innerHTML =
+    '<div class="res-cap">' + esc(r.label) + '</div>' +
+    '<div class="res-big">' + r.current + '<small>일</small></div>' +
+    '<dl class="res-rows">' +
+      '<dt>근속 기간</dt><dd>' + r.tenure.y + '년 ' + r.tenure.m + '개월 ' + r.tenure.d + '일</dd>' +
+      '<dt>사용 기한</dt><dd>' + fmt(r.usableUntil) + '까지</dd>' +
+      '<dt>다음 발생</dt><dd>' + fmt(r.nextDate) + ' · ' + r.nextDays + '일</dd>' +
+      '<dt>입사 후 누적 발생</dt><dd>' + r.total + '일</dd>' +
+    '</dl>' +
+    (r.phase === 'under1' ? '<p class="res-note">1년 미만 기간의 연차는 입사일부터 1년 안에 써야 해요. 1년 근속 시점(' + fmt(addYears(parseDate($('#an-hire').value), 1)) + ')에 15일이 새로 생겨요.</p>' : '');
+  sch.innerHTML = '<table class="sched"><caption>연차 발생표</caption><thead><tr><th scope="col">구분</th><th scope="col">발생일</th><th scope="col">사용 기한</th><th scope="col">일수</th></tr></thead><tbody>' +
+    r.schedule.map(s => '<tr class="' + (s.cur ? 'is-cur' : '') + '"><td>' + esc(s.label) + '</td><td>' + (s.label === '1년 미만' ? '매월' : fmt(s.date)) + '</td><td>' + fmt(s.until) + '</td><td>' + s.days + '일</td></tr>').join('') +
+    '</tbody></table>';
+}
+function renderWeekly() {
+  const r = weeklyHoliday(parseMoney($('#wk-wage').value), Number($('#wk-hours').value));
+  const out = $('#wk-out');
+  if (r.error) { out.innerHTML = '<p class="res-empty">' + esc(r.error) + '</p>'; return; }
+  out.innerHTML =
+    '<div class="res-cap">1주 주휴수당</div>' +
+    '<div class="res-big">' + won(r.weekPay) + '</div>' +
+    '<dl class="res-rows">' +
+      '<dt>주휴시간</dt><dd>' + (Math.round(r.hHours * 100) / 100) + '시간</dd>' +
+      '<dt>주급(소정 + 주휴)</dt><dd>' + won(r.weekTotal) + '</dd>' +
+      '<dt>월 환산 시간</dt><dd>약 ' + r.monthHours + '시간</dd>' +
+      '<dt>월 환산액</dt><dd>' + won(r.monthPay) + '</dd>' +
+    '</dl>' +
+    (!r.eligible ? '<p class="res-warn">1주 소정근로시간이 15시간 미만이라 주휴수당이 생기지 않아요.</p>' : '') +
+    (r.over40 ? '<p class="res-warn">소정근로시간은 법정근로시간(주 40시간)을 넘을 수 없어 40시간으로 계산했어요.</p>' : '') +
+    (r.belowMin ? '<p class="res-warn">시급이 ' + r.minWage.year + '년 최저임금(' + r.minWage.wage.toLocaleString('ko-KR') + '원)보다 낮아요.</p>' : '') +
+    '<p class="res-note">그 주 소정근로일을 개근해야 주휴수당이 생겨요. 월 환산은 (소정 + 주휴시간) × 365 ÷ 7 ÷ 12로 계산했어요.</p>';
+}
+function renderSeverance() {
+  const r = severance({
+    hire: parseDate($('#rt-hire').value), last: parseDate($('#rt-last').value),
+    wage3: parseMoney($('#rt-wage3').value), bonus: parseMoney($('#rt-bonus').value), leave: parseMoney($('#rt-leave').value)
+  });
+  const out = $('#rt-out');
+  if (r.error) { out.innerHTML = '<p class="res-empty">' + esc(r.error) + '</p>'; return; }
+  out.innerHTML =
+    '<div class="res-cap">예상 퇴직금(세전)</div>' +
+    '<div class="res-big">' + (r.eligible ? won(r.pay) : '지급 의무 없음') + '</div>' +
+    '<dl class="res-rows">' +
+      '<dt>퇴직일</dt><dd>' + fmt(r.quit) + '</dd>' +
+      '<dt>재직일수</dt><dd>' + r.tenureDays.toLocaleString('ko-KR') + '일</dd>' +
+      '<dt>평균임금 산정기간</dt><dd>' + fmt(r.start3) + ' ~ ' + fmt(addDays(r.quit, -1)) + ' (' + r.days3 + '일)</dd>' +
+      '<dt>1일 평균임금</dt><dd>' + won(r.avg) + '</dd>' +
+    '</dl>' +
+    (!r.eligible ? '<p class="res-warn">계속근로기간이 1년 미만이라 퇴직금 지급 의무가 없어요.</p>' : '') +
+    '<p class="res-note">상여금과 연차수당은 3/12만 반영했어요. 평균임금이 통상임금보다 낮으면 통상임금으로 계산해야 하고, 3개월 안에 육아휴직·업무상 요양 등 기간이 있으면 그 기간과 임금을 빼고 계산해요. 실제 지급액에서는 퇴직소득세가 공제돼요.</p>';
+}
+
+/* ── 법정 기한 화면 ── */
+function renderDeadlines() {
+  const type = ($('input[name="dlType"]:checked') || {}).value || 'quit';
+  const ev = DEADLINES[type];
+  $('#dlDateLabel').textContent = ev.dateLabel;
+  $('#dlHint').textContent = ev.hint;
+  const d = parseDate($('#dlDate').value);
+  const list = $('#dlList');
+  if (!d) { list.innerHTML = '<li class="dl-item"><div class="dl-body"><p class="res-empty">날짜를 넣으면 기한을 계산해요.</p></div></li>'; return; }
+  const t = today();
+  list.innerHTML = deadlines(type, d).map(i => {
+    let dd = '<span class="dday none">기한 확인</span>';
+    if (i.date) {
+      const n = diffDays(t, i.date);
+      if (n === 0) dd = '<span class="dday soon">D-day</span>';
+      else if (n > 0) dd = '<span class="dday' + (n <= 7 ? ' soon' : '') + '">D-' + n + '</span>';
+      else dd = '<span class="dday past">' + (-n) + '일 지남</span>';
+    }
+    const ref = i.ref && byId.get(i.ref);
+    return '<li class="dl-item">' +
+      '<div class="dl-date">' + (i.date ? fmt(i.date) + '<small>' + WD[i.date.getDay()] + '요일</small>' : '—<small>날짜 미정</small>') + '</div>' +
+      '<div class="dl-body"><div class="dl-label">' + esc(i.label) + '</div><div class="dl-note">' + esc(i.note) + '</div>' +
+        (ref ? '<button type="button" class="dl-ref" data-go="' + ref.id + '">' + esc(LAWS[ref.law].short) + ' ' + esc(ref.no) + ' 보기</button>' : '') +
+        (i.refText ? '<span class="dl-ref-text">근거: ' + esc(i.refText) + '</span>' : '') +
+        (i.due && i.date && (i.date.getDay() === 0 || i.date.getDay() === 6) ? '<span class="dl-wknd">마지막 날이 주말이에요. 다음 평일로 늘어날 수 있지만 미리 처리하는 것이 안전해요</span>' : '') +
+      '</div>' + dd + '</li>';
+  }).join('');
+}
+
+/* ── 개정·시행 일정 화면 ── */
+function renderChanges() {
+  const t = today();
+  const items = CHANGES.map(c => ({ c, d: parseDate(c.d) }));
+  const upcoming = items.filter(x => diffDays(t, x.d) > 0).sort((a, b) => a.d - b.d);
+  const done = items.filter(x => diffDays(t, x.d) <= 0).sort((a, b) => b.d - a.d);
+  const row = x => {
+    const n = diffDays(t, x.d);
+    const pill = n > 0 ? '<span class="dday' + (n <= 30 ? ' soon' : '') + '">D-' + n + '</span>' : (n === 0 ? '<span class="dday soon">오늘 시행</span>' : '<span class="dday past">시행 중</span>');
+    const refs = (x.c.refs || []).map(id => byId.get(id)).filter(Boolean);
+    return '<li class="chg"><div class="chg-date">' + fmtUpd(x.c) + '<br>' + pill + '</div><div><div class="chg-title">' + esc(x.c.title) + '</div><div class="chg-body">' + esc(x.c.body) + '</div>' +
+      (refs.length ? '<div class="rel">' + refs.map(r => '<button type="button" class="rel-chip" data-go="' + r.id + '">' + esc(LAWS[r.law].short) + ' ' + esc(r.no) + '</button>').join('') + '</div>' : '') + '</div></li>';
+  };
+  $('#chgWrap').innerHTML =
+    (upcoming.length ? '<section class="chg-group"><h3>시행 예정</h3><ol class="chg-list">' + upcoming.map(row).join('') + '</ol></section>' : '') +
+    '<section class="chg-group"><h3>최근 시행</h3><ol class="chg-list">' + done.map(row).join('') + '</ol></section>';
+}
+
+/* =====================================================================
+   초기화 · 이벤트
+   ===================================================================== */
+function init() {
+  const dataDate = parseDate(CONFIG.DATA_DATE);
+  $('#stamp').textContent = fmt(dataDate) + ' 기준';
+  $('#footStamp').textContent = fmt(dataDate) + ' 기준 데이터예요. 법령 ' + LAW_ORDER.length + '개, 핵심 조문 ' + ARTICLES.length + '개를 담았어요.';
+  $('#glanceNote').textContent = '상시 300명 이상 기업 기준';
+  $('#chips').insertAdjacentHTML('beforeend', CHIPS.map(c => '<button type="button" class="chip" data-q="' + esc(c.q) + '">' + esc(c.t) + '</button>').join(''));
+
+  /* 검색 */
+  const q = $('#q');
+  let timer;
+  q.addEventListener('input', () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => { state.q = q.value; if (state.tab !== 'laws') setTab('laws'); renderLaws(); }, 120);
+  });
+  q.addEventListener('keydown', e => {
+    if (e.key === 'Enter') { clearTimeout(timer); state.q = q.value; setTab('laws'); renderLaws(); $('#listSec').scrollIntoView({ block: 'start' }); }
+    if (e.key === 'Escape') { q.value = ''; state.q = ''; renderLaws(); }
+  });
+  $('#qBtn').addEventListener('click', () => { clearTimeout(timer); state.q = q.value; setTab('laws'); renderLaws(); $('#listSec').scrollIntoView({ block: 'start' }); });
+  $('#qClear').addEventListener('click', () => { q.value = ''; state.q = ''; renderLaws(); q.focus(); });
+  $('#chips').addEventListener('click', e => {
+    const c = e.target.closest('.chip'); if (!c) return;
+    const same = norm(state.q) === norm(c.dataset.q);
+    state.q = same ? '' : c.dataset.q; q.value = state.q;
+    state.cat = 'all'; state.law = 'all'; state.fav = false;
+    setTab('laws'); renderLaws();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    const tag = (document.activeElement && document.activeElement.tagName) || '';
+    if (/INPUT|TEXTAREA|SELECT/.test(tag)) return;
+    e.preventDefault(); q.focus(); q.select();
+  });
+
+  /* 사이드바 */
+  $('#u5').addEventListener('change', e => { state.u5 = e.target.checked; renderLaws(); });
+  $('.side').addEventListener('click', e => {
+    const b = e.target.closest('.nav-item'); if (!b || b.disabled) return;
+    if (b.dataset.cat) { state.cat = b.dataset.cat; state.fav = false; }
+    else if (b.dataset.fav) { state.fav = !state.fav; }
+    else if (b.dataset.law) { state.law = b.dataset.law; }
+    renderLaws();
+    const top = $('#listSec').getBoundingClientRect().top;
+    if (top < 0) $('#listSec').scrollIntoView({ block: 'start' });
+  });
+  $('#sort').addEventListener('change', e => { state.sort = e.target.value; renderLaws(); });
+  $('#expandAll').addEventListener('click', () => {
+    const allOpen = lastRows.length && lastRows.every(a => state.open.has(a.id));
+    lastRows.forEach(a => toggleArticle(a.id, !allOpen));
+  });
+
+  /* 조문 목록 */
+  $('#list').addEventListener('click', async e => {
+    const art = e.target.closest('.art');
+    const go = e.target.closest('[data-go]');
+    if (go) { goTo(go.dataset.go); return; }
+    if (e.target.closest('[data-reset]')) { state.q = ''; q.value = ''; state.cat = 'all'; state.law = 'all'; state.fav = false; renderLaws(); return; }
+    if (!art) return;
+    const id = art.dataset.id, a = byId.get(id);
+    const act = e.target.closest('[data-act]');
+    if (act) {
+      const kind = act.dataset.act;
+      if (kind === 'fav') toggleFav(id, act);
+      if (kind === 'copy') copyText(articleText(a)).then(() => toast('조문 요약을 복사했어요'), () => toast('복사하지 못했어요. 브라우저 권한을 확인하세요'));
+      if (kind === 'orig') {
+        const box = $('.orig', art);
+        if (box.dataset.loaded && !box.hidden) { box.hidden = true; act.textContent = '법령 원문 보기'; act.setAttribute('aria-expanded', 'false'); return; }
+        box.hidden = false; act.textContent = '원문 접기'; act.setAttribute('aria-expanded', 'true');
+        if (box.dataset.loaded) return;
+        box.innerHTML = '<p class="orig-meta">법제처에서 원문을 불러오는 중이에요…</p>';
+        act.disabled = true;
+        try { box.innerHTML = origHtml(await fetchOriginal(a)); box.dataset.loaded = '1'; }
+        catch (err) {
+          box.innerHTML = '<p class="orig-meta">원문을 불러오지 못했어요. ' + esc(err.message) + ' 국가법령정보센터 링크로 확인할 수 있어요.</p>';
+          act.textContent = '다시 시도'; act.setAttribute('aria-expanded', 'false');
+        } finally { act.disabled = false; }
+      }
+      return;
+    }
+    if (e.target.closest('.art-toggle')) toggleArticle(id);
+  });
+  /* 기준표: 칸을 누르면 상세(근거 조문 등) 펼침 */
+  $('#glance').addEventListener('click', e => {
+    if (e.target.closest('[data-go]')) return;
+    if (e.target.closest('[data-close]')) { const id = state.glanceOpen; if (id) toggleGlance(id); return; }
+    const c = e.target.closest('.g-cell'); if (c) toggleGlance(c.dataset.cell);
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && state.glanceOpen && !/INPUT|TEXTAREA|SELECT/.test((document.activeElement || {}).tagName || '')) toggleGlance(state.glanceOpen);
+  });
+  /* 기준표 상세·기한·개정 화면의 조문 이동 */
+  ['#glance', '#dlList', '#chgWrap'].forEach(sel => $(sel).addEventListener('click', e => {
+    const go = e.target.closest('[data-go]'); if (go) goTo(go.dataset.go);
+  }));
+
+  /* 탭 */
+  $$('.tab').forEach(t => t.addEventListener('click', () => { setTab(t.dataset.tab); window.scrollTo({ top: 0 }); }));
+  $('.brand').addEventListener('click', () => { setTab('laws'); window.scrollTo({ top: 0 }); });
+  $('.tabs').addEventListener('keydown', e => {
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+    const tabs = $$('.tab'); const i = tabs.indexOf(document.activeElement); if (i < 0) return;
+    const n = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+    n.focus(); n.click();
+  });
+
+  /* 계산기 */
+  const ref = today();
+  $('#an-hire').value = toISO(addMonths(addYears(ref, -3), -2));
+  $('#wk-wage').value = minWageOn(ref).wage.toLocaleString('ko-KR');
+  ['#an-hire', '#an-ref'].forEach(s => $(s).addEventListener('input', renderAnnual));
+  ['#wk-wage', '#wk-hours'].forEach(s => $(s).addEventListener('input', renderWeekly));
+  ['#rt-hire', '#rt-last', '#rt-wage3', '#rt-bonus', '#rt-leave'].forEach(s => $(s).addEventListener('input', renderSeverance));
+  $$('.money').forEach(inp => inp.addEventListener('input', () => {
+    const v = parseMoney(inp.value); inp.value = v ? v.toLocaleString('ko-KR') : '';
+  }));
+
+  /* 법정 기한 */
+  $('#dlType').innerHTML = Object.entries(DEADLINES).map(([k, ev], i) =>
+    '<label><input type="radio" name="dlType" value="' + k + '"' + (k === 'quit' ? ' checked' : '') + '><span>' + esc(ev.label) + '</span></label>').join('');
+  $('#dlDate').value = toISO(ref);
+  $('#dlType').addEventListener('change', renderDeadlines);
+  $('#dlDate').addEventListener('input', renderDeadlines);
+
+  renderLaws(); renderAnnual(); renderWeekly(); renderSeverance(); renderDeadlines(); renderChanges();
+  if (API_ON) runWatch();
+
+  /* 주소 # 처리: #calc, #deadline, #changes, #art=lsa-60 (페이지가 열린 상태에서 바뀌어도 반응) */
+  const handleHash = () => {
+    const h = decodeURIComponent(location.hash.slice(1));
+    if (h.indexOf('art=') === 0) goTo(h.slice(4));
+    else if (['calc', 'deadline', 'changes'].indexOf(h) !== -1) setTab(h, true);
+    else if (h === '') setTab('laws', true);
+  };
+  window.addEventListener('hashchange', handleHash);
+  handleHash();
+}
+
+/* 검증·테스트용으로 계산 함수 노출 */
+window.NomuApp = { apiOn: API_ON, cellView: (id, d) => cellView(findCell(id), parseDate(d)), minWageOn: d => minWageOn(parseDate(d)), annualLeave, weeklyHoliday, severance, deadlines, parseQuery, scoreArticle, parseDate, addMonths, diffDays, lawUrl: id => lawUrl(byId.get(id)) };
+
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+
+</script>
+</body>
+</html>

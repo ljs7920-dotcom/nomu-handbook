@@ -1,0 +1,6 @@
+{
+  "name": "nomu-handbook",
+  "private": true,
+  "type": "module",
+  "description": "인사담당자용 노동법 핸드북 (정적 화면 + 법제처 Open API 중계 함수)"
+}
