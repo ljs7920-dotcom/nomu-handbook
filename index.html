@@ -61,6 +61,7 @@ img,svg{max-width:100%}
 .tabs{display:flex;gap:4px;height:100%;flex:1;min-width:0}
 .tab{position:relative;height:100%;padding:0 12px;background:none;border:0;color:var(--ink-2);font-size:15px;font-weight:600;white-space:nowrap}
 .tab:hover{color:var(--ink)}
+.t-short{display:none}
 .tab[aria-selected="true"]{color:var(--blue-ink);font-weight:700}
 .tab[aria-selected="true"]::after{content:"";position:absolute;left:12px;right:12px;bottom:-1px;height:3px;border-radius:3px 3px 0 0;background:var(--blue)}
 .stamp{flex:none;font-size:13px;color:var(--muted)}
@@ -171,6 +172,7 @@ details[open]>summary.side-h::after{transform:translateY(1px) rotate(-135deg)}
 .lv-no{flex:none;min-width:84px;color:var(--blue-ink);font-weight:800;font-variant-numeric:tabular-nums}
 .lv-t{flex:1;min-width:0;font-size:15px;font-weight:600}
 .lv-toggle .chev{margin:0 0 0 4px;flex:none}
+.lv-badges{display:inline-flex;flex-wrap:wrap;gap:4px;flex:none}
 .lv-art.is-open .chev{transform:rotate(180deg)}
 .lv-body{padding:0 20px 18px 114px}
 .lv-text{max-height:none;margin-top:0;padding:14px 16px;border-radius:10px;background:var(--surface-2);border:1px solid var(--line)}
@@ -205,6 +207,8 @@ textarea.input.tall{min-height:150px}
 .log-row:first-child{border-top:0}
 .log-row .btn{flex:none}
 .log-memo{display:block;color:var(--muted);font-size:12.5px}
+.to-top{position:fixed;right:16px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:40;display:grid;place-items:center;width:46px;height:46px;border:1px solid var(--line-2);border-radius:50%;background:var(--surface);color:var(--blue-ink);box-shadow:0 6px 18px rgba(20,30,60,.16)}
+.to-top:hover{border-color:var(--blue)}
 .fatal{margin:16px;padding:16px 18px;border-radius:12px;border:1px solid var(--red-ink);background:var(--red-tint);color:var(--red-ink);font-size:14.5px;line-height:1.6}
 .fatal strong{font-size:16px}
 .fatal p{margin:6px 0 0}
@@ -318,7 +322,7 @@ mark{background:var(--mark);color:inherit;border-radius:3px;padding:0 1px}
 .res-empty{color:var(--muted);font-size:14px;padding:6px 0}
 .sched{width:100%;border-collapse:collapse;font-size:14px}
 .sched caption{text-align:left;font-size:13px;font-weight:700;color:var(--ink-2);padding-bottom:8px}
-.sched th,.sched td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;font-variant-numeric:tabular-nums}
+.sched th,.sched td{white-space:nowrap;padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;font-variant-numeric:tabular-nums}
 .sched th{font-size:12.5px;color:var(--muted);font-weight:700}
 .sched td:last-child,.sched th:last-child{text-align:right}
 .sched tr.is-cur td{background:var(--blue-tint);color:var(--blue-ink);font-weight:700}
@@ -374,7 +378,8 @@ footer p{margin:0 0 4px}
   .nav-list{flex-direction:row;flex-wrap:wrap;gap:6px}
   .nav-item{width:auto;padding:5px 11px;border:1px solid var(--line-2);border-radius:999px;font-size:13.5px}
   .nav-item.is-on{border-color:var(--blue)}
-  .layout{display:flex;flex-direction:column}
+  .layout{display:flex;flex-direction:column;align-items:stretch}
+  .side,.glance-sec,.list-sec{min-width:0;max-width:100%}
   .content{display:contents}
   .glance-sec{order:1}
   .side{order:2}
@@ -404,6 +409,39 @@ footer p{margin:0 0 4px}
   .art-main{margin-top:2px}
   .art .chev{position:absolute;top:19px;right:52px;margin:0}
   .art-actions{position:absolute;top:10px;right:8px;padding:0}
+  /* 메뉴 탭: 짧은 이름으로 한 줄에 */
+  .t-full{display:none}
+  .t-short{display:inline}
+  .tabs{justify-content:space-between;overflow-x:visible}
+  .tab{padding:0 6px;font-size:15px}
+  .tab[aria-selected="true"]::after{left:6px;right:6px}
+  /* 아이폰 자동 확대 방지: 입력칸 글자 16px 이상 */
+  .input,.select,textarea.input,.lv-search{font-size:16px}
+  .select{height:40px}
+  /* 손가락으로 누르기 쉬운 크기 */
+  .icon-btn{width:40px;height:40px}
+  .chip{min-height:36px;display:inline-flex;align-items:center}
+  .nav-item{min-height:36px}
+  .rel-chip{min-height:34px}
+  .art .chev{right:56px}
+  /* 분야 버튼: 옆으로 넘기는 한 줄 */
+  #catList{flex-wrap:nowrap;overflow-x:auto;margin:0 -16px;padding:0 16px 6px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  #catList::-webkit-scrollbar{display:none}
+  #catList li{flex:none}
+  #catList .nav-sep{display:block;width:1px;height:24px;margin:6px 2px;background:var(--line-2)}
+  .nav-item{white-space:nowrap}
+  /* 목록 위 도구: 줄바꿈 없이 한 줄 */
+  .list-tools{width:100%;justify-content:space-between;margin-top:6px}
+  .switch-sm,.list-tools .text-btn{white-space:nowrap}
+  /* 법령 전문: 배지는 제목 아래 줄로 */
+  .lv-toggle{flex-wrap:wrap;row-gap:4px;align-items:flex-start}
+  .lv-t{flex:1 1 0}
+  .lv-toggle .chev{order:2;margin-top:2px}
+  .lv-badges{order:3;flex-basis:100%}
+  .to-top{right:12px}
+  /* 연차 발생표: 일수 칸까지 한 화면에 */
+  .sched{font-size:13px}
+  .sched th,.sched td{padding:8px 5px}
   .chips{flex-wrap:nowrap;overflow-x:auto;margin:14px -16px 0;padding:0 16px 4px;scrollbar-width:none}
   .chips::-webkit-scrollbar{display:none}
   .chip,.chips-label{flex:none}
@@ -447,10 +485,10 @@ footer p{margin:0 0 4px}
       <span class="mark" aria-hidden="true">§</span><span class="brand-name">노무핸드북</span>
     </button>
     <nav class="tabs" role="tablist" aria-label="메뉴">
-      <button class="tab" role="tab" id="tab-laws" aria-controls="view-laws" aria-selected="true" data-tab="laws">조문 찾기</button>
-      <button class="tab" role="tab" id="tab-calc" aria-controls="view-calc" aria-selected="false" data-tab="calc">실무 계산기</button>
-      <button class="tab" role="tab" id="tab-deadline" aria-controls="view-deadline" aria-selected="false" data-tab="deadline">법정 기한</button>
-      <button class="tab" role="tab" id="tab-changes" aria-controls="view-changes" aria-selected="false" data-tab="changes">개정·시행 일정</button>
+      <button class="tab" role="tab" id="tab-laws" aria-controls="view-laws" aria-selected="true" data-tab="laws"><span class="t-full">조문 찾기</span><span class="t-short">조문</span></button>
+      <button class="tab" role="tab" id="tab-calc" aria-controls="view-calc" aria-selected="false" data-tab="calc"><span class="t-full">실무 계산기</span><span class="t-short">계산기</span></button>
+      <button class="tab" role="tab" id="tab-deadline" aria-controls="view-deadline" aria-selected="false" data-tab="deadline"><span class="t-full">법정 기한</span><span class="t-short">법정 기한</span></button>
+      <button class="tab" role="tab" id="tab-changes" aria-controls="view-changes" aria-selected="false" data-tab="changes"><span class="t-full">개정·시행 일정</span><span class="t-short">개정 일정</span></button>
     </nav>
     <span class="stamp" id="stamp"></span>
     <div class="admin-bar" id="adminBar" hidden><span class="admin-tag">관리자</span><span id="adminName"></span><button type="button" class="text-btn" id="adminLogBtn">변경 기록</button><button type="button" class="text-btn" id="adminOut">로그아웃</button></div>
@@ -610,6 +648,7 @@ footer p{margin:0 0 4px}
 </footer>
 
 <dialog id="dlg" class="dlg" aria-labelledby="dlgTitle"></dialog>
+<button type="button" class="to-top" id="toTop" aria-label="맨 위로" hidden><svg viewBox="0 0 20 20" width="20" height="20" fill="none" aria-hidden="true"><path d="M10 15V5M5 9.5L10 4.5l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>window.__nomuErr=null;window.addEventListener('error',function(e){if(!window.NOMU_DATA&&!window.__nomuErr){window.__nomuErr={msg:e.message,line:e.lineno};}});</script>
@@ -1592,6 +1631,7 @@ function diffDays(a, b) { return Math.round((Date.UTC(b.getFullYear(), b.getMont
 function nextMonth15(d) { return new Date(d.getFullYear(), d.getMonth() + 1, 15); }
 const WD = '일월화수목금토';
 function fmt(d, withWd) { return d.getFullYear() + '. ' + (d.getMonth() + 1) + '. ' + d.getDate() + '.' + (withWd ? ' (' + WD[d.getDay()] + ')' : ''); }
+function fmtTight(d) { return d.getFullYear() + '.' + (d.getMonth() + 1) + '.' + d.getDate() + '.'; }
 function fmtUpd(u) { const d = parseDate(u.d); return u.m ? d.getFullYear() + '. ' + (d.getMonth() + 1) + '.' : fmt(d); }
 function won(n) { return Math.floor(n).toLocaleString('ko-KR') + '원'; }
 function parseMoney(s) { const v = Number(String(s || '').replace(/[^\d]/g, '')); return isFinite(v) ? v : 0; }
@@ -2124,9 +2164,9 @@ function renderLawBody() {
     const open = state.lvOpen.has(it.no);
     const am = ymdToDate(it.amended);
     return '<article class="lv-art' + (open ? ' is-open' : '') + '" data-no="' + esc(it.no) + '">' +
-      '<button type="button" class="lv-toggle" aria-expanded="' + open + '"><b class="lv-no">' + esc(it.no) + '</b><span class="lv-t">' + hl(it.title || '') + '</span>' +
-      (curatedNos.has(it.no) ? '<span class="badge b-scale">핵심 요약</span>' : '') +
-      (am && am >= yearAgo ? '<span class="badge b-new">최근 1년 개정</span>' : '') + ICON.chev + '</button>' +
+      '<button type="button" class="lv-toggle" aria-expanded="' + open + '"><b class="lv-no">' + esc(it.no) + '</b><span class="lv-t">' + hl(it.title || (/삭제/.test(it.text || '') ? '(삭제)' : '')) + '</span>' +
+      ((curatedNos.has(it.no) || (am && am >= yearAgo)) ? '<span class="lv-badges">' + (curatedNos.has(it.no) ? '<span class="badge b-scale">핵심 요약</span>' : '') +
+        (am && am >= yearAgo ? '<span class="badge b-new">최근 1년 개정</span>' : '') + '</span>' : '') + ICON.chev + '</button>' +
       '<div class="lv-body"' + (open ? '' : ' hidden') + '>' + (open ? lvBodyHtml(it, hl) : '') + '</div></article>';
   }).join('');
   const allOpen = list.filter(i => i.type === 'article').every(i => state.lvOpen.has(i.no));
@@ -2634,7 +2674,7 @@ function renderAnnual() {
     '</dl>' +
     (r.phase === 'under1' ? '<p class="res-note">1년 미만 기간의 연차는 입사일부터 1년 안에 써야 해요. 1년 근속 시점(' + fmt(addYears(parseDate($('#an-hire').value), 1)) + ')에 15일이 새로 생겨요.</p>' : '');
   sch.innerHTML = '<table class="sched"><caption>연차 발생표</caption><thead><tr><th scope="col">구분</th><th scope="col">발생일</th><th scope="col">사용 기한</th><th scope="col">일수</th></tr></thead><tbody>' +
-    r.schedule.map(s => '<tr class="' + (s.cur ? 'is-cur' : '') + '"><td>' + esc(s.label) + '</td><td>' + (s.label === '1년 미만' ? '매월' : fmt(s.date)) + '</td><td>' + fmt(s.until) + '</td><td>' + s.days + '일</td></tr>').join('') +
+    r.schedule.map(s => '<tr class="' + (s.cur ? 'is-cur' : '') + '"><td>' + esc(s.label) + '</td><td>' + (s.label === '1년 미만' ? '매월' : fmtTight(s.date)) + '</td><td>' + fmtTight(s.until) + '</td><td>' + s.days + '일</td></tr>').join('') +
     '</tbody></table>';
 }
 function renderWeekly() {
@@ -2731,6 +2771,19 @@ function init() {
   $('#footStamp').textContent = '핵심 조문 요약은 ' + fmt(dataDate) + ' 기준이고, 법령 원문과 전체 조문은 법제처에서 그때그때 불러와요. 법령 ' + LAW_ORDER.length + '개, 핵심 조문 ' + ARTICLES.length + '개를 담았어요.';
   $('#glanceNote').textContent = '상시 300명 이상 기업 기준';
   $('#chips').insertAdjacentHTML('beforeend', CHIPS.map(c => '<button type="button" class="chip" data-q="' + esc(c.q) + '">' + esc(c.t) + '</button>').join(''));
+
+  /* 좁은 화면: 검색 안내문 짧게 */
+  if (window.matchMedia && window.matchMedia('(max-width: 480px)').matches) $('#q').placeholder = '예: 연차, 주휴, 해고 예고';
+  /* 맨 위로 버튼: 화면 1.5배 이상 내려가면 표시 */
+  const toTop = $('#toTop');
+  const onScroll = () => { toTop.hidden = window.scrollY < window.innerHeight * 1.5; };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  toTop.addEventListener('click', () => {
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    $('#q').focus({ preventScroll: true });
+  });
+  onScroll();
 
   /* 검색 */
   const q = $('#q');
